@@ -1,0 +1,66 @@
+
+
+title: CSCI-UA.0479 Spring 2021, Section 001
+
+baseurl: ""
+resource_prefix: "resources/"
+github_username: jversoza
+slides_lib: "../../resources/lib"
+
+markdown: kramdown
+kramdown:
+  entity_output: numeric
+  smart_quotes: apos,apos,quot,quot
+permalink: none
+exclude: [bower_components, README.md, bower.json, gruntfile.js, node_modules]
+
+vars:
+  survey_github: "https://docs.google.com/forms/d/e/1FAIpQLSdsV7B-M4ayL1CMoc3MDvY6wAsjee8eFMB-8okYYkfrObYMLw/viewform"
+  piazza: "https://piazza.com/class/k5r0rdmk6jcov"
+  email: "jversoza at cs dot nyu dot edu"
+  slides_img_prefix: "../../resources/img"
+  
+  # course
+  course_number: "CSCI-UA.0479"
+  course_section: "001"
+  course_name: "Data Management and Analysis"
+  course_semester: "Spring 2021"
+  # 1/28/2021 - 5/10/2021
+  course_time: "M and W, 11:00AM - 12:15PM"
+  course_room: "Remote"
+  course_site: https://cs.nyu.edu/courses/spring21/CSCI-UA.0479-001/ 
+  course_site_alt: http://cs.nyu.edu/~jversoza
+  
+  # office hours
+  office_hours: "TBD"
+  office_hours_room: Remote
+  
+  # midterm
+  midterm1_date: "N/A"
+  midterm1_time: "N/A"
+  
+  # finals
+  final_date: "N/A"
+  final_time: "N/A"
+  final_room: "N/A"
+  
+  
+  book1: "Python for Data Analysis Book, 2nd Edition"
+  book1_link: "https://learning-oreilly-com.proxy.library.nyu.edu/library/view/python-for-data/9781491957653/"
+  book1_author: "Wes McKinney"
+
+  book2: "Practical SQL"
+  book2_link: "https://learning-oreilly-com.proxy.library.nyu.edu/library/view/practical-sql/9781492067580/"
+  book2_author:  "Anthony DeBarros"
+  
+  book3: "Think Stats"
+  book3_link: "http://greenteapress.com/thinkstats/"
+  book3_author: "Allen B. Downey"
+
+  book4: "Data Science from Scratch, 2nd Edition"
+  book4_link: "https://learning-oreilly-com.proxy.library.nyu.edu/library/view/data-science-from/9781492041122/"
+  book4_author: "Joel Grus"
+  
+  book5: "Relational Database Design and Implementation, 3rd Edition"
+  book5_link: "https://learning-oreilly-com.proxy.library.nyu.edu/library/view/relational-database-design/9780123747303/"
+  book5_author: "Jan L. Harrington"

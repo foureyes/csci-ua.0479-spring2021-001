@@ -1,0 +1,55 @@
+	<td markdown="block">
+* Homework #4 Solutions
+* [String Basics](slides/06/strings.html)
+* [Strings as Characters](slides/06/strings_as_list.html)
+* [Strings as Objects](slides/06/strings_as_objects.html)
+* [Strings and Built-In Functions](slides/06/strings_built_in_functions.html) 
+
+Class Notes
+
+* [Strings!](resources/code/class06.py) (slides are in previous class)
+
+{% comment %}
+* [Lists - references, comprehensions, built-in functions](slides/06/lists-references-map.html)
+* [Dictionaries](slides/06/dictionaries.html)
+{% endcomment %}
+
+</td>
+{% comment %}
+	<td markdown="block">
+From {{ site.book1 }}
+
+* Ch 4 - A Nest of Snakes
+</td>
+{% endcomment %}
+	<td markdown="block">
+    {% comment %}
+Today, in-class…
+
+* [Lists and Dictionaries in-class programming assignment](https://docs.google.com/a/nyu.edu/forms/d/17TW2NwN2guGO8vf7zSj4Lwp_kRIiOcFWouuXnhPN158/viewform)
+    {% endcomment %}
+
+<!--
+* [](assignments/.html)
+-->
+
+Homework #6 - Due Friday, Oct 20th at 11pm
+
+Minimum
+
+* [string_practice.py](assignments/hw06/string_practice.py) 
+* [is_palindrome](assignments/hw06/is_palindrome.py)
+* [pig_latin.py](assignments/hw06/pig_latin.py)
+* [translate_passage](assignments/hw06/translate_passage.py) \* this one may be tricky!
+    * there are two versions of this, easy and medium
+    * they are outlined in the instructions
+
+Optional Challenge
+
+* [secret_messages.py](assignments/hw06/secret_messages.py) 
+
+{% comment %}
+* [barcode generator](assignments/hw06.html) (instructions on web page)
+{% endcomment %}
+
+</td>

@@ -1,0 +1,35 @@
+	<td markdown="block">
+
+* [Exceptions](slides/08/exceptions.html)
+* [Tuples](slides/08/tuples.html)
+* [Dictionaries](slides/08/dictionaries.html)
+* [Dictionary Exercises](slides/08/exercises.html)
+
+Class Notes
+
+* [exceptions, tuples](resources/code/class08.py)
+* [dictionaries, dice](resources/code/class08_dice.py)
+* [turtle animation, stars](resources/code/class08_stars.py)
+* [turtle animation and dictionaries](resources/code/class08_more_stars.py)
+
+</td>
+
+
+{% comment %}
+	<td markdown="block">
+
+From {{ site.book1 }}
+
+* Ch 5 - Earthquakes ...
+<!--* [Debugging](lynda.com?)-->
+</td>
+{% endcomment %}
+	<td markdown="block">
+Due Friday, 11/3, at 11pm
+
+* [mystery_solved.py](assignments/hw08/mystery_solved.py) 
+    * encoded text as a variable in a module: [secret.py](assignments/hw08/secret.py) 
+    * sorting using `sorted`: [test_ordering.py](assignments/hw08/test_ordering.py) 
+* [many_things.py](assignments/hw08/many_things.py) 
+
+</td>

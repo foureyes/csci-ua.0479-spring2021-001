@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+</head>
+<body>
+<svg class="scooterChart"></svg>
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+<script>
+firebase.initializeApp({
+    apiKey: "AIzaSyBD_maHzzzl14GOhN16dSHwKmrLjZtL3zA",
+    authDomain: "csci0480-007-scratch-6b18d.firebaseapp.com",
+    projectId: "csci0480-007-scratch-6b18d",
+});
+// Initialize Cloud Firestore through Firebase
+const db = firebase.firestore();
+// Disable deprecated features
+db.settings({
+  timestampsInSnapshots: true
+});
+db.collection("scooters").get().then((querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+    let d = doc.data();
+    console.log(d.manufacturer, d.model, d.acquired, d.retired);
+  });
+});
+
+</script>
+<!-- your code goes here -->
+</body>
+</html>

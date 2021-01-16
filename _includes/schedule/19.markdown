@@ -1,0 +1,22 @@
+	<td markdown="block">
+* [Flask Demo](https://github.com/jversoza/p4a-spring-16-examples/blob/master/p4a-class19/flask_demo.py)
+* [About HTTP](https://github.com/jversoza/p4a-spring-16-examples/blob/master/p4a-class19/http.md)
+
+</td>
+	<td markdown="block">
+[Check out flask's quickstart guide!](http://flask.pocoo.org/docs/0.10/quickstart/)
+</td>
+	<td markdown="block">
+
+Due Wednesday April 13th
+
+* [Final Project Milestone #1](assignments/final-project.html)
+
+Due Friday April 15th
+
+* [Homework #6](assignments/hw06.html)
+
+<!--
+* [](assignments/.html)
+-->
+</td>

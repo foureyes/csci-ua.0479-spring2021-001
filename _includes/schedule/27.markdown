@@ -1,0 +1,13 @@
+	<td markdown="block">
+
+<a id="27"></a>
+* [repository for recursion and serial demo](https://github.com/jversoza/p4a-spring-16-examples/tree/master/p4a-class27)
+</td>
+	<td markdown="block">
+
+* __Chapter 9__ - Fractals: The Geometry of Nature (Recursion)
+
+</td>
+	<td markdown="block">
+
+</td>

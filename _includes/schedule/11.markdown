@@ -1,0 +1,30 @@
+	<td markdown="block">
+
+* [Quick Classes and Objects Review](slides/11/classes-review.html)
+    * [Dog class example](resources/code/class11/class_review.py) (full code from slides above)
+* [Magic Methods, Static Methods, Inheritance](slides/11/more-classes.html)
+    * [Demo Shapes Class and Inheritance](resources/code/class11/shapes.py)
+    * [Demo Using turtle and classes defined above](resources/code/class11/drawing.py)
+    * [Person and Student classes](resources/code/class11/person_student.py) (full code from slides above)
+    * [Fraction](resources/code/class11/fraction.py) (full code from slides above)
+* [A New Editor, Tools](slides/11/editor.html)
+* [File Formats and Sources, Extra File I/O](slides/10/data-files-advanced.html)
+* demo matplotlib
+
+</td>
+{% comment %}
+	<td markdown="block">
+
+* Ch 10 - Astronomy (Classes and Objects)
+
+</td>
+{% endcomment %}
+	<td markdown="block">
+    {% comment %}
+__Midterm Practice__ (these questions don't indicate the number of _actual_ questions on the exam; the exam will likely have a couple more questions)
+
+
+* [Sample questions for midterm](resources/handouts/midterm/midterm_practice.pdf)
+* [Sample questions solutions](resources/handouts/midterm/midterm_practice_solutions.pdf)
+    {% endcomment %}
+</td>

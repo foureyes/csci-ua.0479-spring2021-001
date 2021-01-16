@@ -1,0 +1,13 @@
+	<td markdown="block">
+
+* [repository on schedule and k-means](https://github.com/jversoza/p4a-spring-16-examples/tree/master/p4a-class26)
+
+</td>
+	<td markdown="block">
+
+* __Chapter 7__ - Data Mining: Cluster Analysis
+
+</td>
+	<td markdown="block">
+
+</td>

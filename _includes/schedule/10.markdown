@@ -1,0 +1,47 @@
+	<td markdown="block">
+
+* Download PyCharm?
+* Some Advertisements:
+    * [CSCI-GA.1122 Web Development (4 points)](http://dhss.hosting.nyu.edu/wp-content/uploads/2017/03/CSCI_GA_1122_WebDevelopment_Description-1.pdf)
+    * Programming and Working with NYC Historical Data
+* [Classes and Objects](slides/10/classes-objects.html)
+* Break for Exercises / Review
+    * A quick look at `turtle` + classes!
+    * [Lousy Plasma](resources/code/class10/lousy_plasma.html)
+
+Class Notes
+
+* [Classes Part 1](resources/code/class10/classes.py)
+* [Classes Part 2](resources/code/class10/classes2.py)
+* [File I/O Example - Doubling Ingredients](resources/code/class10/cook.py)
+    * [ingredients.txt](resources/code/class10/ingredients.txt)
+* [lousy_plasma.py 0](resources/code/class10/lousy_plasma.py)
+* [lousy_plasma.py 1](resources/code/class10/lousy_plasma_01.py)
+* [lousy_plasma.py 2](resources/code/class10/lousy_plasma_02.py)
+* [lousy_plasma.py 3](resources/code/class10/lousy_plasma_03.py)
+
+{% comment %}
+* [PIL, IO, Requests, DOM/HTML/CSS, BS4](slides/10/pil-bs4.html)
+{% endcomment %}
+
+
+{% comment %}
+* [More (Advanced?) Image Processing](slides/10/advanced-image-processing.html)
+{% endcomment %}
+
+</td>
+{% comment %}
+	<td markdown="block">
+From {{ site.book1 }}
+
+* Ch 6 - Pycture Perfect... (Image Processing)
+* Ch 10 - Astronomy (Classes and Objects)
+
+</td>
+{% endcomment %}
+	<td markdown="block">
+
+Due Saturday, 11/18 at 11pm:
+
+* [Quizzical](assignments/hw10.html)
+</td>

@@ -1,0 +1,202 @@
+---
+layout: homework
+title: "Assignment #12"
+---
+
+<style>
+img {
+    border: 1px solid #000;
+}
+
+.warning {
+    background-color: yellow;
+    color: #aa1122;
+    font-weight: bold;
+}
+</style>
+
+# Image Processing Practice!
+
+* __Part 1__ readings
+* __Part 2__ insta.py
+
+## Part 1 - Readings
+
+
+#### Online Resources
+
+Pillow (PIL) has decent [documentation (check out the tutorial, concepts, the Image module and class, and the PixelAccess class)](http://pillow.readthedocs.org/en/3.1.x/index.html). 
+
+PIL has a lot of functionality that we never covered, so some things you can try doing manually or instead, using one of the pre-built functions/methods/classes.
+     
+
+## Part 2 - Insta.py
+
+For this project, __you'll be making an _Instagram-ish_ app__. But... it'll be on the commandline. And it won't take pictures. And it'll be in Python. And the "filters" will be kind of silly. So maybe, not so much Instagram, but insta.py.
+
+You'll be creating __a small interactive commandline program__ that allows you to load an image, apply _Instagram style filters_ to it, and display it.
+
+#### Setup
+
+1. again, you'll need to [install an external python module with pycharm](../help.html)(this covers matplot lib, __but install Pillow__ instead)
+2. Create two files (name them exactly as specified below):
+    * __insta.py__ - this is your main program
+    * __image_utils.py__ - the module where you'll put the functions that you'll be using in your main program
+
+#### Technical Requirements
+
+* __the following PIL functionality is all you'll need to create some simple filters__
+    1. the <code>Image</code> module:
+        * <code>Image.new(...)</code>
+        * <code>Image.open(...)</code>
+    2. Assuming an <code>Image</code> object called <code>img</code>:
+        * <code>img.size</code>
+        * <code>img.load()</code>
+    3. Assuming an <code>PixelAccess</code> object called <code>pixels</code>:
+        * getting a pixel using []'s
+        * setting a pixel using []'s
+* create the two files described above, <code>insta.py</code> and <code>image_utils.py</code>
+* try to create functions in <code>image_utils.py</code>:
+    * break up the problem into smaller pieces
+    * make functions reasonably reusable
+
+
+#### Insta.py Requirements
+
+Here's what your commandline image processing app should do:
+
+1. Display a banner (obviously)
+2. Continually ask the user if they want to (f)ilter an image or (q)uit
+3. If they choose (f)ilter... 
+    1. Ask the user for a path to an image. 
+    2. Prompt the user to select a series of image processing algorithms (we'll call 'em _filters_) to apply
+        * The filters are represented by letters:
+            <pre><code data-trim contenteditable>(p)ixelate
+(k)aleidoscope
+(g)ray-day
+(r)ighty</code></pre>
+        * So... the user input should just be a series of letters: <code>kp</code> (kaleidoscope, then pixelate)
+        * If any of the letters don't correspond to a filter, ignore that individual letter
+        * If no user input corresponds to a filter, just display the original image
+    3. Apply the series of user specified filters to the image
+    4. Display the image
+4. Go back to step 2
+
+Here's an example of how the interface should work:
+
+![commandline interaction](../resources/img/hw04_commandline.gif)
+
+And the _actual text_:
+
+<pre><code data-trim contenteditable>(f)ilter an image or (q)uit
+> f
+What's the full path to your image?
+> /tmp/raccoon.jpg
+Write a series of filters to apply:
+(p)ixelate
+(k)aleidoscope
+(g)ray-day
+(r)ighty
+Example: kpkr will run keleidoscope, pixelate, kaleidoscope and gray-day in sequence
+>pk
+</code></pre>
+
+#### Filters
+
+Try implementing the following filters:
+
+* pixelate
+* kaleidoscope
+* gray-day
+* righty
+
+In the descriptions below, the source image used is:
+
+![normal](../resources/img/hw_04_01.png)
+
+<br>
+
+__Pixelate__
+
+* maintain dimensions of original image
+* the finished effect should make the image look like it's composed of large square blocks
+* __hint__: one way to do this is to
+    * choose pixels at regular intervals in the original image...
+    * and use the color of that pixel to color a larger region of the new image
+* the image below shows the original image composed of squares that are 10 x 10 pixels large. (Your pixelated image's single square dimension should be minimally 10 x 10 too):
+    <br>
+    ![pixelate](../resources/img/hw_04_02.png)
+
+<br>
+
+__Kaleidoscope__
+
+* maintain dimensions of original image
+* the finished effect should have the original image repeated 4 times
+    * the original image will be in the lower left quadrant
+    * the lower right will be the original image flipped on the vertical axis
+    * the two top images will be the bottom two images flipped on the horizontal axis
+* __hint__: this filter can be broken down into a series of other image processing operations
+    1. flip vertical / horizontal
+    2. scale / downscale 
+    3. _paste_ or _copy_ region
+* the image below shows the original image after this filter has been applied to it:
+    <br>
+    ![kaleidoscope](../resources/img/hw_04_03.png)
+
+<br>
+
+__Gray-day__
+
+* create a gray scale version of the original image
+* check out the first set of slides on image processing or chapter 6 in our book for hints
+* here's what the original would look like after applying this filter:
+    <br>
+    ![gray-day](../resources/img/hw_04_05.png)
+
+
+<br>
+
+__Righty__
+
+* rotate the image to the right 90 degrees (clockwise)
+* the image below shows the original image after this filter has been applied to it:
+    <br>
+    ![righty](../resources/img/hw_04_04.png)
+
+
+<br>
+
+__Multiple Filters__
+
+Note that multiple pixels can be applied. For example:
+
+* using kaleidoscope, kaleidoscope, and gray-day:
+    <br>
+    ![kkg](../resources/img/hw_04_06.png)
+* using pixelate... followed by righty twice
+    <br>
+    ![prr](../resources/img/hw_04_07.png)
+ 
+<br>
+
+#### Aaand Your Own!
+
+1. Create your own filter...
+2. We've done these in class, so try doing something other than
+    * <strike>inverse / negative</strike>
+    * <strike>increase red, green, or blue to highest possible value (hot wallaby!)</strike>
+    * <strike>scaling up</strike>
+    * <strike>chromakey</strike>
+    * <strike>weighted average</strike>
+3. Some ideas...
+	* add a filter that overlays an image (like _stickers_)
+    * implement edge detection or blurs using  kernel convolution
+		* [check out this article!](http://setosa.io/ev/image-kernels/)
+4. __Add your new filter to the list of filters in the commandline app__
+
+
+
+
+
+

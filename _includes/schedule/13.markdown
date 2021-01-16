@@ -1,0 +1,28 @@
+	<td markdown="block">
+
+Slides
+
+* Volunteer for Evaluation? (15 min)
+* [Polonsky Foundation, Digital Humanities Internship program](http://gsas.nyu.edu/financial-support/fellowships/polonsky-foundation.html)
+* [Matplotlib Review](slides/13/matplotlib-review.html)
+* [Matplotlib Extras](slides/13/matplotlib-extras.html)
+* [csvs (from previous slides)](slides/10/data-files-advanced.html#8) (again)
+    * [Sample csv: movies.csv](resources/code/class13/movies.csv)
+* Demo: [Population by Country, 1980 to 2010](https://catalog.data.gov/dataset/population-by-country-1980-2010)
+    * hm... what country had the highest growth rate?
+* [Web Formats: html, json, sourcing data](slides/10/data-files-advanced.html#14)
+    * json
+* [Web Review, APIs, Making Requests](slides/13/api-request.html)
+* Evaluations
+
+Class Notes / Demo Code:
+
+* [JSON](resources/code/class13/demojson.py)
+* [Determining Highest Growth Rate!](resources/code/class13/pop.py)
+
+</td>
+	<td markdown="block">
+<!--
+* [](assignments/.html)
+-->
+</td>

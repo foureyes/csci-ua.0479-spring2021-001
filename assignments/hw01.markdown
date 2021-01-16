@@ -1,0 +1,94 @@
+---
+layout: homework
+title: "Assignment #1"
+---
+
+<style>
+img {
+    border: 1px solid #000;
+}
+</style>
+
+# Assignment #1 - Due Thursday, February 4th
+
+## Part 1 - Readings
+
+From {{ site.book1 }}, read the following chapters. The first chapter should mostly be an easy read, as it's mostly review.
+
+* Ch 1 Python Overview
+* Ch 2 &pi;thon
+
+These readings provide background information for Parts 2 and 3.
+
+## Part 2 - Falling Blocks Game 
+
+#### Setup
+
+1. create a new Python file called <code>blocks_game.py</code>
+2. (you can use an existing project or create a new one)
+
+#### Implement a Game Where a Player Dodges Falling Blocks
+
+Implement the following game by using information from the readings in {{ site.book1 }} as well as the resources listed below:
+
+* [slides on turtle](../slides/02/turtle.html)
+* [sample code for key presses](../resources/code/keys.py) (using left and right arrow keys)
+* [sample code for intersection](../resources/code/intersects.py) (naive collision detection algorithm)
+* [official Python 3 docs for turtle module](https://docs.python.org/3.5/library/turtle.html) (lists all turtle and screen methods)
+
+Create at least one falling block (a rectangle or square... filled in with a color that you choose). 
+
+* the block (or blocks) should move from the top of the screen to the bottom along a randomly generated x-coordinate
+* the block (or blocks)  _passes_ through the bottom of the screen, reset the block's position so that it starts falling from the top of the screen again, with its x coordinate regenerated
+
+The player is represented by a square (dimensions and colors of your choosing)... and is controlled by arrow keys
+
+* the player continually moves either left or right (that is, in each _frame_, regardless of whether or an arrow key is pressed, the player will their position)
+* pressing the left arrow key will make the square move left (regardless of its current direction)
+* pressing the right arrow key will make the square move right (regardless of its current direction)
+* if the square hits the left side of the window or the right side of the window... 
+* reverse its direction so that it moves away from the window edge that it collided with
+    * (bounce off of the left and right window edges)
+    * a small amount of error is ok without penalty (square goes beyond edges a little bit)
+
+The following examples demonstrate the player control features described above...
+
+* Example of pressing the left and right keys
+    <br>
+    ![Pressing the left and right keys](../resources/img/hw01_game_key_sm.gif)
+* Example of bouncing off the edge of the window
+    <br>
+    ![Bouncing off the edge of the window](../resources/img/hw01_game_bounce_sm.gif)
+
+If the falling block (or blocks) touches the player, the game should end
+
+* the game end state should be triggered on collision between the player and a block
+    * for collision detection, a small amount of error is allowable without penalty
+    * (it's ok if the collision detection between player and block is slightly off) 
+* if the game is over, stop all animation
+* and change the background color
+    <br>
+    ![Game ends](../resources/img/hw01_game_over_sm.gif)
+
+
+#### Additional Challenges
+
+If the first part went quickly, you can try adding some polish to your game. Some optional features to implement include... &rarr;
+
+* add more than one falling block
+* display game over text when game ends (research how to write text in turtle)
+* add reset button functionality - move falling blocks back up to top
+* keep track of score - whenever the player successfully dodges a block/blocks, increment the score (research how to write text in turtle)
+
+Example of score, game over text, and more than one falling block.
+
+![Additional challenges](../resources/img/hw01_game_extra_sm.gif)
+
+## Part 3 
+
+1. Read section 2.6 in {{ site.book1 }} (you can skip the sections on conditionals - 2.6.1 to 2.6.3)
+2. [Download <code>plot_monte.py</code>](../resources/code/plot_monte.py) and place into your project folder
+3. Read the file's instructions... 
+4. ...and finish the partial implementation of the program by filling in the blank portions underneath the numbered comments
+5. (if you're having trouble with your project folder, you can also create a new Python file and copy the contents of <code>plot_monte.py</code> into it)
+

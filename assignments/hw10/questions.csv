@@ -1,0 +1,4 @@
+question,answer,choice_a,choice_b,choice_c,choice_d
+What method do you have to define so that you can specify what gets printed out when you pass an instance of your class to print?,d,__print__,__unicode__,toString,__str__
+What method do you have to define to create a constructor for a class?,b,a method with the same name as the class,__init__,__constructor__,__class__
+Which of the following is an immutable type?,a,tuple,list,dictionary,none of the above

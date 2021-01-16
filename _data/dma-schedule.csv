@@ -1,0 +1,1300 @@
+draft,type,num,date,day,slides,readings,assignments,,old schedule,
+,,1,28-Jan ,Tue,"Introductions
+
+* [Course Overview](slides/intro/overview.html) 
+* [Github Usage Form]({{ site.survey_github }}) (survey)
+* Discuss Quizzes/Readings (one class ahead)
+
+Python 3 Ecosystem and Installation
+
+* [Python Development Environment](slides/python/tools.html)
+
+Python Basics 
+
+* See readings on Python Basics
+* Different Ways to Run Python (demo)
+  * running python on the commandline
+  * interactive shell, IPython
+  * jupyter notebook / lab
+* Modules (demo)
+  * [creating modules screencast](https://www.youtube.com/watch?v=1lrsLvwACPc&feature=youtu.be) 
+  * pro tip: set to 2x speed
+  * (I talk too slowly)
+
+File I/O
+
+* [Working with Files](notebooks/py/file-io.ipynb) (notebook)
+
+Unicode and Strings
+
+* [Encodings, Bytes and Strings](notebooks/py/unicode-bytes-strings.ipynb) (notebook)
+
+","Python for Data Analysis
+ 
+ * Ch 1: Preliminaries
+ * Ch 2: Python Language Basics, Ipython, Jupyter Notebooks
+ 
+ Data Science from Scratch
+ 
+ * Ch 2: A Crash Course in Python (The Zen of Python to Modules, Control Flow)
+ 
+ Online Resources
+ 
+ * [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
+ * [What Every Programmer Absolutely, Positively Needs To Know About Encodings And Character Sets To Work With Text](http://kunststube.net/encoding/)
+ * [Unicode HOWTO](https://docs.python.org/3/howto/unicode.html)","__Quiz #01__ – due Thur, 1/30, at 9:30am (before class)
+
+* find it on NYU Classes
+* check the Tests and Quizzes section 
+
+__Homework #00__ – due Thur, 1/30, at 9:30am (before class)
+
+0. [Fill out this survey!]({{ site.survey_github }})
+1. Install a Python 3 Environment
+  * use [Anaconda](https://conda.io/docs/user-guide/install/index.html)
+  * if you’re already familiar with Python, you can manually install:
+  * Python 3 (using `apt`, `homebrew`, etc.)
+  * `matplotlib`, `jupyterlab` (or notebook), `pandas`, `numpy` (using `easy-install`, `pip`, etc.)
+2. Try to view class note by downloading notebooks and using `jupyter-lab`
+3. Go over readings for class 1 and 2
+
+<!--
+3. [Homework #00 Instructions](assignments/00.html)
+-->
+",,,
+,,2,30-Jan ,Thu,"Sequence Types, Mapping Types, Sets
+
+<!--
+* [Sequence Types](slides/python/sequence-types.html)
+* [Mapping Types](slides/python/mapping-types.html)
+* [Sets](slides/python/sets.html)
+-->
+
+* [Sequences, Dictionaries and Sets](notebooks/py/sequences.ipynb) (notebook)
+* Additional Resources from Prof. Bloomberg
+  * [Slides](https://nyu-computer-science.github.io/data-management-and-analysis/useful-types/)
+  * [Notebook](https://raw.githubusercontent.com/nyu-computer-science/data-management-and-analysis/master/notebooks/sequences.ipynb)
+
+Functions and Functions as Objects
+
+* [\* and \*\*, Keyword Arguments](notebooks/py/functions.ipynb) (notebook)
+* Functions as Objects,  sorted, max, etc.
+* Lambdas
+* [Decorators](slides/python/decorators.html)
+
+<!--
+* @functools.wraps
+-->
+
+Classes
+
+* [Named Tuples and Classes](slides/python/classes-objects.html)
+
+Type Annotations (optional)
+
+<!--
+* [Type Annotations](slides/python/type-annotations.html)
+-->","Python for Data Analysis
+ 
+ * Ch 3: Built-in Data Structures, Functions and Files
+ 
+ Data Science from Scratch
+ 
+ * Ch 2: A Crash Course in Python (Functions to Sets, Automated Testing and Asserts to Object Oriented Programming, Functional Programming to Type Annotations)
+ 
+ Online Resources
+ 
+ * [Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/)","
+__Quiz #02__ – due Tue __morning__, 2/4, at 9:30am (just before class)
+
+* find it on NYU Classes
+* check the Tests and Quizzes section
+
+__Homework #01__ – due Thursday 2/6 at 11pm
+
+* [Homework #01 Instructions](assignments/01.html)
+
+",,,
+,,3,04-Feb ,Tue,"Classes Continued (protocols / double underscore)
+
+* [Double Underscore Methods](notebooks/py/classes.ipynb) (notebook)
+* [Another Look at iter and getitem](notebooks/py/iter_getitem.ipynb)  (notebook)
+
+List/Dictionary/Set Comprehension, Looping, Iterables
+
+* [Tuples, Enumerate, and Items](notebooks/py/tuples-enumerate-items.ipynb)  (notebook)
+* [Iterables and List, Set, Dict Comprehensions](notebooks/py/iter-comprehensions.ipynb)  (notebook)
+
+Functions Revisited (Variadic, As Arguments/Return Values)
+
+* [Using \*, Functions as Objects](notebooks/py/functions-args.ipynb)  (notebook)
+
+Manual Data Extraction and Transformation
+
+* [Quick CSV Parse Example](notebooks/etl/parse-csv.ipynb)  (notebook)
+
+","Online Articles
+
+[Operator Overloading from Real Python](https://realpython.com/operator-function-overloading/)
+
+Data Science from Scratch
+ 
+ * Ch 2: A Crash Course in Python (Sorting and List Comprehensions)
+ * Ch 5: Statistics (Describing a Single Set of Data)
+ 
+ Think Stats
+ 
+ * Ch 1: Exploratory Data Analysis
+ * Ch 2: Distributions","__Quiz #03-A and #03-B__ – due Tue, 2/11, at 9:30am
+
+* (see NYU Classes)","LECTURE:
+=======
+<!--
+  * vector class
+  * simple data load, transform and 
+  * analysis  with file data: requires lists, 
+  * requires dictionaries
+  * create csv class, allow delimiter change, watch out for commas in data
+  * write tests?
+  * text analysis 
+* histogram
+* birthday paradox
+* syllabic poetry
+* mean, median, mode, etc.
+
+__Quiz #03__ – due Wed, 9/26, at 11pm
+
+* (see NYU Classes)
+-->","LECTURE:
+>>>>>>> 81afb09fc6c9b1c9c99b2bca32ce59081d959269
+ * central tendency (mean, average)
+ * dispersion (spread, min, max, standard * deviation std dev pop)
+ * other (mode, frequency, skewedness)
+ 
+ MATERIAL:
+ * TODO - unbiased vs biased (n - 1 vs n)
+ https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-sample/a/population-and-sample-standard-deviation-review
+ * TODO - descriptive / summary statistics
+ * TODO - manual data extraction
+ * TODO - magic methods
+ * TODO DEMO - need data set to show exploratory..
+ 
+ HW 01:
+ * vector class
+ * simple data load, transform and * analysiswith file data: requires lists, * requires dictionaries
+ * create csv class, allow delimiter change, watch out for commas in data
+ * write tests?
+ * text analysis",
+,,4,06-Feb ,Thu,"Iterators and Generators
+
+* [Iterators, Generators](notebooks/py/generators.ipynb) (notebook)
+
+Descriptive Statistics Preview
+
+* [Max, Min, Length, Mean, Median](notebooks/stats/descriptive-statistics-central.ipynb) (notebook)
+
+File Formats
+
+* [Data File Formats](slides/python/file-types.html) (slides)
+
+Vectors and Matrices (numpy)
+
+* [Numpy Array Basics](slides/python/numpy-basics.html) (slides)
+* [quick numpy demo](notebooks/numpy/numpy-basics.ipynb) (notebook)","Data Science from Scratch
+ 
+ * Ch 2: A Crash Course in Python (Iterators and Generators)
+ * Ch 4: Linear Algebra
+ 
+ Python for Data Analysis
+ 
+ * Ch 4: Numpy Basics: Arrays and Vectors
+ * Ch 6. Data Loading, Storage, and File Formats (Skip Web Requests and Database)","__Homework #02__ – due Thu 2/13 at 11pm
+
+
+* [Homework #02 Instructions](assignments/02.html)
+
+<!--
+  * vector class
+  * simple data load, transform and 
+  * analysis  with file data: requires lists, 
+  * requires dictionaries
+  * create csv class, allow delimiter change, watch out for commas in data
+  * write tests?
+  * text analysis 
+* histogram
+* birthday paradox
+* syllabic poetry
+* mean, median, mode, etc.
+-->
+","DEMO:
+ * load file with numeric data
+ * use loops or comprehensions to calculate
+ * vectorized operation
+ 
+ MATERIAL
+ * TODO - add linear algebra
+ * motivation for linear algebra… some example? Maybe https://www.youtube.com/watch?v=Qz58vTa8-SY",,
+,,5,11-Feb ,Tue,"Vectors and Matrices (numpy) continued
+
+* See slides from previous class
+
+Distributions and Descriptive / Summary Statistics
+
+* [Central Tendency, Dispersion](notebooks/stats/central-tendency-and-dispersion.ipynb)
+
+Plotting and Visualization
+
+* [Matplotlib pt 1](slides/viz/matplotlib-review.html)
+* [Matplotlib pt 2](slides/viz/matplotlib-extras.html)
+
+<!--
+* figure, add_subplot, oop
+* [What is this .txt file?](notebooks/viz/files/enc.txt)
+ * clue: etaonisrhdlumcfwgpybvkxjqz
+* [Y U Grow So Fast?](https://catalog.data.gov/dataset/population-by-country-1980-2010)
+* [Pandas Pops (same as above) or Hot pandas (Global Surface Temperature Change)](https://data.giss.nasa.gov/gistemp/tabledata_v3/GLB.Ts+dSST.txt)
+* [Matplotlib Basics Class Notes](notebooks/viz/matplotlib-basics.ipynb) (notebook)
+-->","Data Science from Scratch
+ 
+ * Ch 3: Visualizing Data
+ * Ch 10: Working with Data
+ 
+ Python for Data Analysis
+ 
+ * Ch 9: Plotting and Visualization","__Quiz #04__ – due Tue morning, 2/18, at 9:30am","
+* Use data from previous homework, and focus on a column
+* Get some descriptive statistics
+  * Implement stddev
+ * Choose data set and visualize… motivate usage of numpy maybe?
+ * Create data frame like library - no loops, only generator expressions 
+ * Manual Cleaning
+ * music generator (numpy) no loops only vector operations",,
+,,6,13-Feb ,Thu,"See Previous Slides on Matplotlib
+
+* [matplotlib – charts and graphs](notebooks/viz/charts-graphs-decode.ipynb) (notebook)
+* [What is this .txt file?](notebooks/viz/files/enc.txt)
+* clue: etaonisrhdlumcfwgpybvkxjqz
+
+Data ""Munging"" (Cleaning and Prepping Data with Pure Python)
+
+Tabular Data (pandas)
+
+* [Pandas Basics](slides/python/pandas-basics.html) (slides)
+* [Arithmetic, Basic Selection, Indexing, etc.](slides/python/pandas-review-arithmetic-index.html) (slides)
+* [Pandas Functions, Function Application](slides/python/pandas-func-ops.html) (slides)
+
+
+<!--
+* TODO - moar data munging
+-->
+
+Descriptive Statistics Revisited
+
+
+Correlation and Covariance
+","Data Science from Scratch
+ 
+ * Ch 5: Statistics (Correlation, Correlation and Causation)
+ 
+ Python for Data Analysis
+ 
+ * Ch 5. Getting Started with pandas","__Homework #03__ – due Thu 2/20 at 11pm
+
+
+* [Homework #03 Instructions](assignments/03.html)
+
+","<!-- 
+HW 02:
+ * Choose data set and visualize… motivate usage of numpy maybe?
+ * Create data frame like library - no loops, only generator expressions 
+ * Manual Cleaning
+ * music generator (numpy) no loops only vector operations
+-->",,
+,,7,18-Feb ,Tue,"Tabular Data (pandas)
+
+* See slides from previous class
+* [pandas basics](notebooks/pandas/fa19-class07-pandas-basics.ipynb) (notebook)",,"__Quiz #05__ – due Tue morning, 2/25, at 9:30am",,,"Data Science from Scratch
+ 
+ * Ch 9: Getting Data (Using APIs, Example: Using the Twitter APIs)
+ 
+ Python for Data Analysis
+ 
+ * Ch 6: Data Loading, Storage, and File Formats
+ * Focus on Scraping
+ * Focus on APIs
+ * Ch 7: Data Cleaning and Preparation"
+,,8,20-Feb ,Thu,"Cleaning / Preparing Data, Loading Data With Pandas
+
+* [Missing Data, Basic Transformations](slides/python/pandas-clean.html)
+* [Cleaning Data with Pandas](notebooks/pandas/cleaning-data-pandas.ipynb) (notebook)
+* Sample Data
+  * [DOHMH Dog Bite Data](https://data.cityofnewyork.us/Health/DOHMH-Dog-Bite-Data/rsgh-akpg)
+    * ([Direct Download](https://data.cityofnewyork.us/api/views/rsgh-akpg/rows.csv?accessType=DOWNLOAD))
+  * [NBA news](https://stats-prod.nba.com/wp-json/statscms/v1/rotowire/player/?team=sixers&limit=3)
+  * [UK Carbon Intensity](https://api.carbonintensity.org.uk/)
+
+Using APIs
+
+* [Data Formats on the Web](slides/data/web-data.html)
+* [Making Requests](slides/data/api-request.html)","Data Science from Scratch
+ 
+ * Ch 9: Getting Data (Using APIs, Example: Using the Twitter APIs)
+ 
+ Python for Data Analysis
+ 
+ * Ch 6: Data Loading, Storage, and File Formats
+ * Focus on Scraping
+ * Focus on APIs
+ * Ch 7: Data Cleaning and Preparation","__Homework #04__ – due Thu 2/27 at 11pm
+
+* [Homework #04 Instructions](assignments/04.html)
+","HW 03 
+* use an API
+* clean data
+* standalone analysis
+* password cracker
+
+MATERIAL
+* TODO - using an API
+* TODO - formal approach to cleaning data, what to do with missing values, etc.
+* TODO - look at ""Bad Data"" book?
+","Cleaning / Preparing Data, Loading Data Revisited (with pandas)
+
+* [Pandas for reading files, About APIs, cleaning / preparing data (and pandas basics review)](notebooks/pandas/basics-review-cleaning-regex-api.ipynb) (notebook)
+* Sample Data
+  * [DOHMH Dog Bite Data](https://data.cityofnewyork.us/api/views/rsgh-akpg/rows.csv?accessType=DOWNLOAD)
+  * [NBA news](https://stats-prod.nba.com/wp-json/statscms/v1/rotowire/player/?team=sixers&limit=3)
+  * [UK Carbon Intensity](https://api.carbonintensity.org.uk/)
+
+Using APIs
+
+* [Data Formats on the Web](slides/data/web-data.html)
+* [Making Requests](slides/data/api-request.html)
+  * TODO -  A little bit about the web, urllib, request vs actual library
+* Using an API 
+  * Pagination and Flattening
+  * .append method
+  * export to csv
+  * .reset_index
+* [Scraping, Using an API Class Notes](notebooks/web/data-from-the-web.ipynb) (notebook)
+  * note that you must manually fill in url for API example
+* pandas for writing files","Data Science from Scratch
+ 
+ * Ch 2: A Crash Course in Python (Regular Expressions)
+ * Ch 9: Getting Data (Scraping the Web)
+ 
+ Python for Data Analysis
+ 
+ * Ch 8: Data Wrangling: Join, Combine and Reshape"
+,,9,25-Feb ,Tue,"Regular Expressions
+
+* [Basic Regular Expression Syntax](slides/python/regex.html)
+
+
+Screen Scraping
+
+<!--
+Curating Data
+
+
+API and Screen Scraping
+* [Pandas for reading files, About APIs, cleaning / preparing data (and pandas basics review)](notebooks/pandas/basics-review-cleaning-regex-api.ipynb) (notebook)
+* Using an API 
+  * Pagination and Flattening
+  * .append method
+  * export to csv
+  * .reset_index
+
+* pandas for writing files
+-->
+
+* [Scraping, Using an API Class Notes](notebooks/web/data-from-the-web.ipynb) (notebook)
+  * note that you must manually fill in url for API example
+  * [What happened to my F.R.I.E.N.D.S? (imdb scrape)](https://www.imdb.com/title/tt0108778/fullcredits?ref_=tt_cl_sm#cast)
+  * requests + beautiful soup
+  * re.find, match object
+
+
+
+Join Combine and Reshape
+
+* [Cheatsheet for Combining DataFrames](slides/python/pandas-join-combine.html)","Data Science from Scratch
+ 
+ * Ch 2: A Crash Course in Python (Regular Expressions)
+ * Ch 9: Getting Data (Scraping the Web)
+ 
+ Python for Data Analysis
+ 
+ * Ch 8: Data Wrangling: Join, Combine and Reshape",,"MATERIAL:
+ TODO - slides for join, combine
+ TODO - slides for regular expressions
+ TODO - data set for joins?","Regular Expressions
+
+* TODO - regular expressions
+
+Curating Data
+
+* TODO - bad data?
+
+Screen Scraping
+
+* see above for scraping
+* [What happened to my F.R.I.E.N.D.S? (imdb scrape)](https://www.imdb.com/title/tt0108778/fullcredits?ref_=tt_cl_sm#cast)
+  * requests + beautiful soup
+  * re.find, match object
+
+Join Combine and Reshape
+
+* TODO - join combine and reshape","Python for Data Analysis
+ 
+ * Ch 10: Data Aggregation and Group Operations
+ * Ch 11: Time Series"
+,,10,27-Feb ,Thu,"Revisit Data from the Web
+
+* (see previous class note / slides)
+
+Data Aggregation
+
+* [More About Indexes, Multi Index, Grouping](slides/python/pandas-hier-agg.html)
+
+<!--
+* TODO - data aggregation
+* Group By
+* Aggregations (sum, count, etc.)
+-->
+
+
+
+<!--
+Time Series
+
+* TODO - time series, top things you get wrong about times!
+* datetime
+* Time Zones
+* Time Series
+* Windowing
+-->
+
+","Python for Data Analysis
+ 
+ * Ch 10: Data Aggregation and Group Operations
+ * Ch 11: Time Series","__Homework #05__ – due Thursday 3/5 at 11pm
+
+
+* [Homework #05 Instructions](assignments/05.html)
+","MATERIAL:
+ TODO - Aggregation
+ TODO - Time Series
+ TODO - find data for aggregation and time series demo","Data Aggregation
+
+* TODO - data aggregation
+* Group By
+* Aggregations (sum, count, etc.)
+
+Time Series
+
+* TODO - time series, top things you get wrong about times!
+* datetime
+* Time Zones
+* Time Series
+* Windowing","Practical SQL
+ 
+ * Introduction
+ * Ch 1: Creating Your First Database and Table
+ * Ch 2: Beginning Data Exploration with SELECT
+ * Ch 16: Using Postgres from the Commandline
+ 
+ Postgres Documentation
+ 
+ * [creating tables](https://www.postgresql.org/docs/current/static/sql-createtable.html)
+ * [INSERT](https://www.postgresql.org/docs/current/static/sql-insert.html)
+ * [SELECT](https://www.postgresql.org/docs/current/static/sql-select.html)"
+,,11,03-Mar ,Tue,"Relational Database Overview
+
+* [Databases Intro](slides/db/intro.html)
+
+<!--
+
+
+* TODO - create, insert and select
+-->
+
+Commandline Client, SQL, and
+
+* graphical clients demo
+  * datagrip
+  * pgadmin
+* commandline client demo
+  * psql
+* [Postgres, SQL Basics](slides/db/postgres.html)
+
+ Single Table Queries
+
+* CREATE, INSERT, and SELECT
+* [Movies](sql/basics/movies.sql) (sql file for import)
+* [Transcript of SQL for SELECT, GROUP BY, etc.](sql/basics/basics-transcript.sql) (sql file)
+
+
+
+<!--
+Single Table
+
+* TODO - single table querying
+* TODO - review previous slides
+* Insert
+* Select
+-->","Practical SQL
+ 
+ * Introduction
+ * Ch 1: Creating Your First Database and Table
+ * Ch 2: Beginning Data Exploration with SELECT
+ * Ch 3: Understanding Data Types
+ * Ch 4: Importing and Exporting Data
+ * Ch 5: Basic Math and Stats With SQL
+ * Ch 16: Using Postgres from the Commandline
+ 
+ Postgres Documentation
+ 
+ * [SELECT](https://www.postgresql.org/docs/current/static/sql-select.html)
+ * [creating tables](https://www.postgresql.org/docs/current/static/sql-createtable.html)
+ * [INSERT](https://www.postgresql.org/docs/current/static/sql-insert.html)
+ 
+Postgrestutorial
+
+ * [SELECT](http://www.postgresqltutorial.com/postgresql-select/)
+ * [ORDER BY](http://www.postgresqltutorial.com/postgresql-order-by/)
+ * [DISTINCT](http://www.postgresqltutorial.com/postgresql-select-distinct/)
+ * [WHERE](http://www.postgresqltutorial.com/postgresql-where/)
+ * [LIMIT](http://www.postgresqltutorial.com/postgresql-limit/)
+","<!--
+HW 04:
+ * time based data analysis with aggregation using pandas
+ * use joins
+ 
+ -->",,"Relational Database Overview
+
+* [Databases intro](slides/db/intro.html)
+* [Slides for all topics below (Postgres, SQL Basics)](slides/db/postgres.html)
+
+
+CREATE, INSERT, and SELECT
+
+* TODO - create, insert and select
+
+Single Table
+
+* TODO - single table querying
+
+Commandline Client, SQL, and Simple Queries
+
+* TODO - review previous slides
+* commandline vs graphical / datagrip
+* psql
+* Insert
+* Select","Practical SQL
+ 
+ * Ch 3: Understanding Data Types
+ * Ch 4: Importing and Exporting Data
+ * Ch 5: Basic Math and Stats With SQL
+ 
+ Postgres Documentation
+ 
+ * [Data Types](https://www.postgresql.org/docs/10/static/datatype.html)
+ * [COPY, Import](https://www.postgresql.org/docs/10/static/sql-copy.html)
+ 
+ postgresqltutorial
+ 
+ * [SELECT](http://www.postgresqltutorial.com/postgresql-select/)
+ * [ORDER BY](http://www.postgresqltutorial.com/postgresql-order-by/)
+ * [DISTINCT](http://www.postgresqltutorial.com/postgresql-select-distinct/)
+ * [WHERE](http://www.postgresqltutorial.com/postgresql-where/)
+ * [LIMIT](http://www.postgresqltutorial.com/postgresql-limit/)
+ * [COPY, Import](http://www.postgresqltutorial.com/import-csv-file-into-posgresql-table/)"
+,,12,05-Mar ,Thu,"Basic Postgres Administration
+
+Data Types
+
+Basic Math and Stats
+
+* review previous slides for all topics above
+
+Importing Data
+
+* [Importing Data](slides/db/import.html)
+* [2010 Census Data](https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.2010.html) - School Districts – Unified (Note that encoding is LATIN1, so import in transcript specifies this)
+* [Record Layout for 2010 School District Census Data](https://www.census.gov/programs-surveys/geography/technical-documentation/records-layout/gaz-record-layouts.html)
+8 [2010 Census Data Notes Regarding Encoding](https://www.census.gov/programs-surveys/geography/technical-documentation/user-note/special-characters.html)
+* [Transcript of SQL for import](sql/basics/import-transcript.sql) (sql file)
+
+Aggregation and Grouping
+
+* [Group By, Aggregation](slides/db/groupby.html)
+* [Students](sql/basics/students.sql) (sql file for import)
+* [Metal Content of Consumer Products data set](https://data.cityofnewyork.us/Health/Metal-Content-of-Consumer-Products-Tested-by-the-N/da9u-wz3r)
+* [CREATE table for Metal Content of Consumer Products](sql/basics/agg-metal.sql) (sql file)
+
+Review
+
+* see previous class for movies data set and transcript
+
+
+
+
+
+
+
+
+<!--
+* [sql HAVING and BETWEEN](slides/db/having-between.html)
+* [sql transcript for distinct, group by / having](sql/midterm-review/review.sql)
+-->
+
+
+
+
+","Practical SQL
+ 
+ * Ch 3: Understanding Data Types
+ * Ch 4: Importing and Exporting Data
+ * Ch 5: Basic Math and Stats With SQL
+ * Ch 8. Extracting Information by Grouping and Summarizing
+ 
+ Postgres Documentation
+ 
+ * [Data Types](https://www.postgresql.org/docs/10/static/datatype.html)
+ * [COPY, Import](https://www.postgresql.org/docs/10/static/sql-copy.html)
+ * [GROUP BY](https://www.postgresql.org/docs/current/static/sql-select.html#SQL-GROUPBY)
+ * [HAVING](https://www.postgresql.org/docs/current/static/sql-select.html#SQL-HAVING)
+ 
+ postgresqltutorial
+
+ * [COPY, Import](http://www.postgresqltutorial.com/import-csv-file-into-posgresql-table/)","<!-- __Homework #04__ – due Fri 10/18 at 11pm
+
+* [Homework #04](assignments/04.html)
+-->
+",,"Basic Postgres Administration
+
+Files
+
+* [Movies](sql/basics/movies.sql)
+* [Transcript of SQL written in class](sql/basics/basics-transcript.sql)
+
+Importing Data
+
+* [2010 Census Data](https://www.census.gov/geo/maps-data/data/gazetteer2010.html)
+* [Transcript of SQL written in class](sql/basics/import-transcript.sql)
+* TODO - copy, etc.
+
+Data Types
+
+* TODO - data types
+
+Basic Math and Stats
+
+* TODO - math and stats
+
+Queries Continued
+
+* TODO - queries continued","Practical SQL
+ 
+ * Ch 6: Joining Tables in a Relational Database
+ * Ch 7: Table Design That Works for You (Naming Tables, Columns, and Other Identifiers, Controlling Column Values with Constraints)"
+,,13,10-Mar ,Tue,"
+* __EXAM MOVED TO 3/31__
+* See previous week’s slides for SQL Basics
+
+Review First Part of the Semester
+
+* Some sample questions contain topics not on the exam (specifically group by/having)
+* [Likely Exam Reference (Different from Reference in Samples)](resources/handouts/midterm/dma-midterm-reference.pdf)
+* [Sample Questions and Solution](resources/handouts/midterm/midterm_sample_questions.pdf)
+* [Sample Questions Set 2](resources/handouts/midterm/midterm_practice_2.pdf)
+* [Sample Questions Set 2 Solutions](resources/handouts/midterm/midterm_practice_2_solutions.pdf) 
+* [Notes from class re: exam topics / format](slides/midterm.html)
+* [Midterm Review Notebook from 2018](notebooks/midterm-review/review.ipynb) (notebook)
+",,,,"Review First Part of the Semester
+
+* [midterm review notebook](notebooks/midterm-review/review.ipynb)
+",
+,,14,12-Mar ,Thu,"Constraints and Naming Conventions
+
+* [Constraints and Naming Conventions](slides/db/constraints-conventions.html)
+
+
+Multiple Tables (Joins)
+
+* [Joins](slides/db/joins.html)
+* [Movies Revisited](sql/joins/movies.sql)
+* Foreign Key (REFERENCES table (col))
+","Practical SQL
+ 
+ * Ch 6: Joining Tables in a Relational Database
+ * Ch 7: Table Design That Works for You (Naming Tables, Columns, and Other Identifiers, Controlling Column Values with Constraints)","__Homework #06__ – due Thursday 4/2 at 11pm
+
+* [Homework #06](assignments/06.html)
+* repositories will be created after break","ADD QUIZ FOR THESE TOPICS!
+
+MATERIAL:
+
+TODO - add constraints
+TODO - add naming conventions","Constraints
+
+* TODO - Constraints
+
+Naming Conventions
+
+* TODO - Naming conventions
+
+Multiple Tables (Joins)
+
+* TODO - Preview multiple tables - discuss fk
+
+Sample Questions for Midterm and About Exam
+
+* [Sample Questions and Solution](resources/handouts/midterm/midterm_sample_questions.pdf)
+* The reference is still a draft!
+* [Notes from class re: exam topics / format](slides/midterm.html)
+","Relational Database Design and Implementation
+ 
+ Ch 3: Why Good Design Matters
+ Ch 4: Entities and Relationships
+ Ch 5: The Relational Data Model
+ 
+ Online Resources
+ 
+ * [Normalization (from MariaDB docs)](https://mariadb.com/kb/en/library/database-normalization/)
+ * [Foreign key constraint](http://www.postgresqltutorial.com/postgresql-foreign-key/)
+ * [Inner join](http://www.postgresqltutorial.com/postgresql-inner-join/)
+ * [Left outer join](http://www.postgresqltutorial.com/postgresql-left-join/)
+ * [Full outer join](http://www.postgresqltutorial.com/postgresql-full-outer-join/)
+ * [Self join](http://www.postgresqltutorial.com/postgresql-self-join/)"
+y,holiday,,17-Mar ,Tue,No Class Scheduled (Spring Break),,,,,
+y,holiday,,19-Mar ,Thu,No Class Scheduled (Spring Break),,,,,
+,,15,24-Mar ,Tue,"Multiple Tables (Joins) Continued
+
+* See previous slides on Joins
+
+Database Design, Entities and Relationships, The Relational Data Model and Diagrams
+
+* [Design Motivation, Anomalies](slides/db/design-motivation.html) 
+* [Database Design](slides/db/design.html) 
+  *  ER Diagram Demo
+* [Sample Databases for Postgres](https://wiki.postgresql.org/wiki/Sample_Databases)
+
+
+
+
+
+
+","Relational Database Design and Implementation
+ 
+* Ch 3: Why Good Design Matters
+* Ch 4: Entities and Relationships
+* Ch 5: The Relational Data Model
+ 
+ Online Resources
+ 
+ * [Normalization (from MariaDB docs)](https://mariadb.com/kb/en/library/database-normalization/)
+ * [Foreign key constraint](http://www.postgresqltutorial.com/postgresql-foreign-key/)
+ * [Inner join](http://www.postgresqltutorial.com/postgresql-inner-join/)
+ * [Left outer join](http://www.postgresqltutorial.com/postgresql-left-join/)
+ * [Full outer join](http://www.postgresqltutorial.com/postgresql-full-outer-join/)
+ * [Self join](http://www.postgresqltutorial.com/postgresql-self-join/)",,,,
+,,16,26-Mar ,Thu,"Review Again
+
+* potentially review again to prep for exam…
+
+Normalization
+
+*  [Normalization](slides/db/normalization.html) 
+
+Relational Database Design Rules / Tips
+
+* Database Design Demo with ER Diagram (Online Food Ordering Site?)
+* [pgmodeler for Data Modeling and Reverse Engineering](https://pgmodeler.io/)
+","Relational Database Design and Implementation
+ 
+ * Ch 6. Normalization
+ * Ch 8. Codd's Rules for Relational Database Design
+ * Ch 9. Using SQL to Implement a Relational Design
+","<!--
+
+__Homework #05__ – due Thursday 4/2 at 11pm
+
+
+
+* [Homework #05](assignments/05.html)
+
+-->
+
+
+",,"Multiple Tables (Joins) Continued
+
+
+* [Movies Revisited](sql/joins/movies.sql)
+* Foreign Key (REFERENCES table (col))
+* [Joins](slides/db/joins.html)
+
+Database Design
+
+* [Database Design](slides/db/design.html) 
+* See previous slides on Joins
+
+Entities and Relationships
+
+* [Sample Databases for Postgres](https://wiki.postgresql.org/wiki/Sample_Databases)
+* [pgmodeler for Data Modeling and Reverse Engineering](https://pgmodeler.io/)
+* ER Diagrams
+
+The Relational Data Model
+
+* Relational Model / Relational Algebra
+* Normalization
+
+Diagrams","Practical SQL
+ 
+ * Ch 12. Advanced Query Techniques
+ * Ch 13: Mining Text to Find Meaningful Data"
+,exam,17,31-Mar ,Tue,"Exam: small timed project, online quiz",,,,"Subqueries
+
+* TODO - subqueries
+
+Common Table Expressions
+
+* TODO - cte
+
+Conditionals
+
+* TODO - conditionals
+
+Manipulating Text
+
+* TODO - text manipulation","Relational Database Design and Implementation
+ 
+ * Ch 6. Normalization
+ * Ch 8. Codd's Rules for Relational Database Design
+ * Ch 9. Using SQL to Implement a Relational Design"
+,,18,02-Apr ,Thu,"Manipulating Text
+
+* [Strings and Arrays](slides/db/strings.html)
+
+Subqueries
+
+* Demo (see below)
+
+Example: Normalization, Text Manipulation, Subqueries, Import
+
+* [IMDB Horror Movie Dataset on Kaggle](https://www.kaggle.com/PromptCloudHQ/imdb-horror-movie-dataset) (data)
+* [Movie Country and Filming Location](sql/design/country_and_location.sql) (sql)
+
+
+<!--
+* [Annotated / Complete](sql/design/movies.sql)
+* [IMDB Horror Movie Dataset](https://www.kaggle.com/PromptCloudHQ/imdb-horror-movie-dataset)
+* [In class](sql/design/class17-movies.sql)
+* (Again) [IMDB Horror Movie Dataset](https://www.kaggle.com/PromptCloudHQ/imdb-horror-movie-dataset)
+* [Database and Schema](sql/design/staging.sql)
+* [Tables](sql/design/movies-schema-draft-2.sql)
+Common Table Expressions
+
+* TODO - cte
+
+Conditionals
+
+* TODO - conditionals
+-->","Practical SQL
+ 
+ * Ch 12. Advanced Query Techniques
+ * Ch 13: Mining Text to Find Meaningful Data
+",,,"TODO - move subqueries and / or CTE's up
+
+Normalization
+
+* TODO - normalization slides
+
+Relational Database Design Rules / Tips
+
+* Database Design Review (News Site?)
+* [IMDB Horror Movie Dataset](https://www.kaggle.com/PromptCloudHQ/imdb-horror-movie-dataset)
+* [In class](sql/design/class17-movies.sql)
+
+Implementation
+
+* (Again) [IMDB Horror Movie Dataset](https://www.kaggle.com/PromptCloudHQ/imdb-horror-movie-dataset)
+* [Database and Schema](sql/design/staging.sql)
+* [Tables](sql/design/movies-schema-draft-2.sql)
+* [Annotated / Complete](sql/design/movies.sql)
+
+","Practical SQL
+ 
+ * Ch 8. Extracting Information by Grouping and Summarizing
+ * Ch 9: Inspecting and Modifying Data
+ * Ch 11: Working With Dates and Times
+ 
+ Postgres Documentation
+ 
+ * [GROUP BY](https://www.postgresql.org/docs/current/static/sql-select.html#SQL-GROUPBY)
+ * [HAVING](https://www.postgresql.org/docs/current/static/sql-select.html#SQL-HAVING)
+ * [UPDATE](https://www.postgresql.org/docs/current/static/sql-update.html) and [DELETE](https://www.postgresql.org/docs/current/static/sql-delete.html)
+ * [ALTER TABLE](https://www.postgresql.org/docs/10/static/sql-altertable.html)
+ 
+ postgrestutorial
+ 
+ * [GROUP BY](http://www.postgresqltutorial.com/postgresql-group-by/)
+ * [HAVING](http://www.postgresqltutorial.com/postgresql-having/)"
+,,19,07-Apr ,Tue,"Conditionals
+
+* [Conditional Expressions](slides/db/conditionals.html)
+
+Subqueries Continued
+
+* [Subqueries and Common Table Expressions](slides/db/subqueries.html)
+
+Dates and Times
+
+* [Working with Dates, Times](slides/db/datetime.html)
+
+
+
+
+
+
+","
+Practical SQL
+
+* See readings above for subqueries
+* Ch 11: Working With Dates and Times
+
+Postgres Documentation
+ 
+* [Conditionals](https://www.postgresql.org/docs/current/functions-conditional.html)
+* [WITH Queries (CTEs)](https://www.postgresql.org/docs/current/queries-with.html)","
+
+
+<!--
+
+Homework #6 to be Posted
+
+* More normalization practice
+* using only queries (moma data set)
+* Database Design - ER Diagram
+* Implement
+* normalization practice
+* CTE?
+
+-->",,"Aggregation and Grouping
+
+* [sql transcript for distinct, group by / having](sql/midterm-review/review.sql)
+* [sql HAVING and BETWEEN questions](slides/db/having-between.html)
+
+Modifying data
+
+Transactions
+
+Dates and Times","Practical SQL
+ 
+ * Ch 7: Table Design That Works for You (Speeding Up Queries with Indexes)
+ * Ch 15: Saving Time with Views, Functions and Triggers
+ 
+ Relational Database Design and Implementation
+ 
+ * Ch 7: Database Structure and Performance Tuning
+
+
+Functions, Variables Online Resources
+
+
+* [PostgreSQL Tutorial: CREATE FUNCTION](http://www.postgresqltutorial.com/postgresql-create-function/)
+* [PostgreSQL Tutorial: Function Parameters](http://www.postgresqltutorial.com/plpgsql-function-parameters/)
+* [PostgreSQL Tutorial: Variables](http://www.postgresqltutorial.com/plpgsql-variables/)
+
+
+Index Online Resources
+
+* [Planner/Optimizer from PostgreSQL Docs](https://www.postgresql.org/docs/current/planner-optimizer.html)
+* [Anatomy of an index](https://use-the-index-luke.com/sql/anatomy)
+* [CREATE INDEX from PostgreSQL Docs](https://www.postgresql.org/docs/current/sql-createindex.html)
+* [Index-Only Scans from PostgreSQL Docs](https://www.postgresql.org/docs/current/indexes-index-only-scans.html)
+* [Tour of PostgreSQL Index Types](https://www.citusdata.com/blog/2017/10/17/tour-of-postgres-index-types/)
+* [Principles and Applications of the Index Types Supported by PostgreSQL
+](https://medium.com/@Alibaba_Cloud/principles-and-applications-of-the-index-types-supported-by-postgresql-481f59bab67d)"
+,,20,09-Apr ,Thu,"Views, Functions, and Triggers
+
+
+* [In Class Demo](sql/design/functions-views.sql)
+
+
+Indexes, Query Planner
+
+* [EXPLAIN / ANALYZE](slides/db/indexes.html)
+* [Popular Names from Social Security Administration (First Names)](https://www.ssa.gov/cgi-bin/popularnames.cgi)
+* [Behind the Name (Surnames)](https://surnames.behindthename.com/)
+* [names.txt](sql/names.txt)
+* [domains.txt](sql/domains.txt)
+
+<!--
+
+Modifying data
+
+Transactions
+
+Performance Tuning
+
+-->
+","Practical SQL
+ 
+* Ch 15: Saving Time with Views, Functions and Triggers
+
+
+Functions, Variables Online Resources
+
+
+* [PostgreSQL Tutorial: CREATE FUNCTION](http://www.postgresqltutorial.com/postgresql-create-function/)
+* [PostgreSQL Tutorial: Function Parameters](http://www.postgresqltutorial.com/plpgsql-function-parameters/)
+* [PostgreSQL Tutorial: Variables](http://www.postgresqltutorial.com/plpgsql-variables/)
+
+
+Index Online Resources
+
+* [Planner/Optimizer from PostgreSQL Docs](https://www.postgresql.org/docs/current/planner-optimizer.html)
+* [Anatomy of an index](https://use-the-index-luke.com/sql/anatomy)
+* [CREATE INDEX from PostgreSQL Docs](https://www.postgresql.org/docs/current/sql-createindex.html)
+* [Index-Only Scans from PostgreSQL Docs](https://www.postgresql.org/docs/current/indexes-index-only-scans.html)
+* [Tour of PostgreSQL Index Types](https://www.citusdata.com/blog/2017/10/17/tour-of-postgres-index-types/)
+* [Principles and Applications of the Index Types Supported by PostgreSQL
+](https://medium.com/@Alibaba_Cloud/principles-and-applications-of-the-index-types-supported-by-postgresql-481f59bab67d)
+
+<!--
+
+Postgres Documentation
+ 
+* [UPDATE](https://www.postgresql.org/docs/current/static/sql-update.html) and [DELETE](https://www.postgresql.org/docs/current/static/sql-delete.html)
+* [ALTER TABLE](https://www.postgresql.org/docs/10/static/sql-altertable.html) 
+
+
+ Relational Database Design and Implementation
+ 
+ * Ch 7: Database Structure and Performance Tuning
+
+
+Practical SQL
+
+* Ch 7: Table Design That Works for You (Speeding Up Queries with Indexes)
+* Ch 9: Inspecting and Modifying Data
+-->","__Homework #07__ – due Thursday 4/16 at 11pm
+
+1. [Homework #07 Instructions](assignments/07.html)
+
+<!--
+* create view
+* cli inventory app maybe???
+* aggregates, time series, etc. on data set with multiple tables
+-->
+","
+
+MATERIAL:
+
+* TODO - SQL injection demo""","Indexes, Query Planner
+
+* [EXPLAIN / ANALYZE](slides/db/indexes.html)
+* [Popular Names from Social Security Administration (First Names)](https://www.ssa.gov/cgi-bin/popularnames.cgi)
+* [Behind the Name (Surnames)](https://surnames.behindthename.com/)
+* [names.txt](sql/names.txt)
+* [domains.txt](sql/domains.txt)
+
+Performance Tuning
+
+* TODO - performance
+
+Views
+
+* TODO - views
+
+Functions
+
+* TODO - functions
+
+Triggers
+
+* TODO - triggers","Relational Database Design and Implementation
+ 
+ * Ch 15: Security
+ 
+ Practical SQL
+ 
+ * Ch 17: Maintaining Your Database
+
+Documentation
+
+* [psycopg2 example usage from official documentation](http://initd.org/psycopg/docs/usage.html)"
+,,21,14-Apr ,Tue,"
+<!--
+Security
+
+* TODO - Security
+
+Maintenance
+
+* TODO - Maintenance
+* TODO - [Backups / Replication, Vacuum](backups.html)
+
+-->
+
+Postgres and Python
+
+* [psycopg2](slides/py-db/psycopg2.html)
+* [SQLAlchemy Demo](slides/py-db/sql-alchemy.html)
+* [SQLAlchemy Details](slides/py-db/sql-alchemy-relationships.html)
+* [pandas and Databases](slides/py-db/pandas.html)
+* psycopg2
+* psycopg2.connect(dbname, user)
+* conn.cursor()
+* cur.execute()
+* cur.fetchone()
+* cur.fetchall()
+
+<!--
+* [MOMA Collection GitHub Page](https://github.com/MuseumofModernArt/collection)
+  * [git lfs install](https://help.github.com/articles/installing-git-large-file-storage/) (can also be done through [homebrew](https://brew.sh/))
+  * use `git pull` or `git lfs pull` to download csvs
+* [moma-create.sql](sql/py/moma-create.sql)
+* [moma-import.sql](sql/py/moma-import.sql)
+* [moma-queries.sql](sql/py/moma-queries.sql)
+-->","Relational Database Design and Implementation
+ 
+ * Ch 15: Security
+ 
+ Practical SQL
+ 
+ * Ch 17: Maintaining Your Database
+
+Documentation
+
+* [psycopg2 example usage from official documentation](http://initd.org/psycopg/docs/usage.html)",,,"Security
+
+* TODO - Security
+
+Maintenance
+
+* TODO - Maintenance
+* TODO - [Backups / Replication, Vacuum](backups.html)
+
+
+Postgres and Python
+
+* [psycopg2](slides/py-db/psycopg2.html)
+* [SQLAlchemy Demo](slides/py-db/sql-alchemy.html)
+* [SQLAlchemy Details](slides/py-db/sql-alchemy-relationships.html)
+* [pandas and Databases](slides/py-db/pandas.html)
+* psycopg2
+* psycopg2.connect(dbname, user)
+* conn.cursor()
+* cur.execute()
+* cur.fetchone()
+* cur.fetchall()
+* [MOMA Collection GitHub Page](https://github.com/MuseumofModernArt/collection)
+  * [git lfs install](https://help.github.com/articles/installing-git-large-file-storage/) (can also be done through [homebrew](https://brew.sh/))
+  * use `git pull` or `git lfs pull` to download csvs
+* [moma-create.sql](sql/py/moma-create.sql)
+* [moma-import.sql](sql/py/moma-import.sql)
+* [moma-queries.sql](sql/py/moma-queries.sql)","* [MongoDB Data Model Design](https://docs.mongodb.com/manual/core/data-model-design/)
+ * [MongoDB Data Model Examples and Patterns](https://docs.mongodb.com/manual/applications/data-models/)
+ * (see all sections under Model Relationships Between Documents)"
+,,22,16-Apr ,Thu,"NoSQL (mongodb)
+
+* [MongoDB Intro](slides/mongo/intro.html)
+ * [books.csv](mongo/books.csv)
+ * [books_fields.txt](mongo/books_fields.txt)
+ * [wifi3.json](mongo/wifi3.json)
+
+
+","* [MongoDB Data Model Design](https://docs.mongodb.com/manual/core/data-model-design/)
+ * [MongoDB Data Model Examples and Patterns](https://docs.mongodb.com/manual/applications/data-models/)
+ * (see all sections under Model Relationships Between Documents)","<!--
+
+HW 09:
+ 
+* Python and postgres
+* MongoDB Assignment or Lab?
+-->",,"NoSQL (mongodb)
+
+* [MongoDB Intro](slides/mongo/intro.html)
+ * [books.csv](mongo/books.csv)
+ * [books_fields.txt](mongo/books_fields.txt)
+ * [wifi3.json](mongo/wifi3.json)
+* [MongoDB Database Design](slides/mongo/design.html)
+
+",Same as Previous
+,,23,21-Apr ,Tue,NoSQL (mongodb) Continued,Same as Previous,"__Quiz #07 and #08__ – due Thursday morning, 4/24, at 9:30am",,NoSQL (mongodb) Continued,"Practical SQL
+ 
+ Ch 14: Analyzing Spatial Data with PostGIS"
+,,24,23-Apr ,Thu,"* Review MongoDB Queries
+* [MongoDB Database Design](slides/mongo/design.html)
+* [Aggregation](slides/mongo/aggregation.html)
+
+<!--
+* Discuss Mini Project
+SQLAlchemy and MongoDB Lab
+–>
+<!--
+TODO: Geo-spatial Data (GIS with pandas, postgres, mongodb)
+-->","<!--
+Practical SQL
+ 
+ Ch 14: Analyzing Spatial Data with PostGIS
+-->","<!--
+
+__Lab #01 / Homework #07__  due in class 11/26
+
+* [Lab #01 / Homework #07 Instructions](assignments/lab-01-mongo.html)
+
+
+__Mini Project due Monday Dec 9th at 11pm__
+
+* [Instructions for Free-form Homework Assignment](assignments/mini-project.html)
+-->",,"Geo-spatial Data (GIS with pandas, postgres, mongodb)",https://firebase.google.com/docs/firestore/ (Introduction to Secure and Validate Data)
+,,25,28-Apr ,Tue,"Aggregations, Python and MongoDB
+
+* see aggregation slides
+* [Python and MongoDB with PyMongo](slides/mongo/pymongo.html)
+
+
+<!--
+Web Based Visualization and / or Cloud Databases
+
+* [Python and MongoDB with PyMongo](slides/mongo/pymongo.html)
+* [Web Based Visualization with Dash](slides/cloud/dash.html)
+-->
+
+<!-- 
+* [Deployment with MongoDB Atlas and Glitch](slides/cloud/deploy.html) Cloud Storage 
+* Cloud Document Store
+-->
+",,,,Thanksgiving Recess: No classes scheduled,"https://bost.ocks.org/mike/bar/
+ https://bost.ocks.org/mike/bar/2/
+ https://bost.ocks.org/mike/bar/3/"
+,,26,30-Apr ,Thu,"Web Based Visualization and / or Cloud Databases
+
+<!--
+* [svg + d3](d3/overview.html)
+
+ ...or Preview Processing Large Data Sets (Spark or Hadoop)
+-->
+",,"__Homework #08__  due 5/1 at 11pm
+
+* [Homework #08 / In-Class Group Workshop Instructions](assignments/08-mongo-py-dash.html)",,"Web Based Visualization (D3)
+
+* [svg + d3](d3/overview.html)
+",Reading TBD
+y,,27,05-May ,Tue,"Review Second Part of the Semester 
+
+ * [midterm review notebook](notebooks/midterm-review/review.ipynb) ","https://bost.ocks.org/mike/bar/
+ https://bost.ocks.org/mike/bar/2/
+ https://bost.ocks.org/mike/bar/3/
+
+[Firestore Docs](https://firebase.google.com/docs/firestore/) 
+
+<!--(Introduction to Secure and Validate Data) →
+
+Reading TBD",,,Processing Large Data Sets (Spark or Hadoop),
+y,exam,28,07-May ,Thu,Exam #2,,,,Exam #2,

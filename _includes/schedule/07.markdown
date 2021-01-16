@@ -1,0 +1,43 @@
+	<td markdown="block">
+* Quiz
+* [Turtle](slides/07/turtle.html) 
+* [Processing](slides/07/processing.html) 
+
+Class Notes
+
+* [redact, dna, join/split](resources/code/class07_redact_dna.py)
+* [turtle examples](resources/code/class07_squares.py)
+* [processing basics](resources/code/class07_processing_basics.zip)
+
+{% comment %}(resources/code/class07.py){% endcomment %}
+</td>
+{% comment %}
+	<td markdown="block">
+From {{ site.book1 }}
+
+* Start Ch 5 - Earthquakes ...
+</td>
+{% endcomment %}
+	<td markdown="block">
+
+Due Wednesday, 10/25, 11pm
+
+(You can turn in either turtle or processing programs for any of these; even if the instructions are turtle specific)
+
+* [in_the_style_of.py](assignments/hw07/in_the_style_of.py) 
+* [your_fancy_face.py](assignments/hw07/your_fancy_face.py) 
+* starry starry night
+    * [starry_starry_night.py](assignments/hw07/starry_starry_night.py) 
+    * [instructions](assignments/hw07.html) 
+
+
+{% comment %}
+Due Thursday, Feb 25th 
+
+* [Assignment #03 posted](assignments/hw03.html)
+
+Survey results csv (with names removed, of course!)
+
+* [survey-results.csv](resources/txt/survey-results.csv)
+{% endcomment %}
+</td>

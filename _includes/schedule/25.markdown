@@ -1,0 +1,13 @@
+	<td markdown="block">
+* k-means clustering!
+    * [earthquakes.txt](resources/txt/earthquakes.txt)
+    * [scores.py](resources/txt/scores.py)
+</td>
+	<td markdown="block">
+* __Chapter 7__ - Data Mining: Cluster Analysis
+</td>
+	<td markdown="block">
+__Optional__ Due Friday, May 6th
+
+* [Assignment #8, optional / replacement for low scoring assignment](assignments/hw08.html)
+</td>

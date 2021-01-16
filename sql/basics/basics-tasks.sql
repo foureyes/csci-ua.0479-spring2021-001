@@ -1,0 +1,69 @@
+-- 1. [LECTURE] review select basics (parts, order), types, ops and funcs (round, +, IS NULL, concat, etc.)
+-- 2. [SLIDES] import sql
+-- 3. [DEMO] movies - CREATE TABLE,  SELECT, UPDATE
+--    what should the types be... here's an example of data:
+--    Blue Velvet by Lynch released 1986, runs for 120 and it's considered a  Neo Noir Mystery Thriller
+--    it cost about $6,000,000.00, and it made around $8,600,000.00
+-- 4. [SLIDES] group by
+-- 5. [DEMO] movies - GROUP BY
+-- 6. [SLIDES] import csv, tsv
+-- 7. [DEMO] census data school district
+
+
+-- SELECT
+-- X import a file containing sql statements
+-- X list all tables
+-- X describe the movie table
+-- X show all movies
+-- X only show title, director and gross
+-- X order rows by gross ascending
+-- X order rows by gross descending
+-- X use both director and gross to order rows
+-- X query all movies again...
+-- X now only show unique genres
+-- X only show rows that have a genre of Science Fiction
+-- X only show rows that have a genre that's not Science Fiction
+-- X only show rows that have a genre has thriller in it (ignore case)
+-- X use and to put together two conditions: thriller not directed by katherine bigelow
+-- (gross - budget / budget) ... return on investment
+-- X query all movies again, this time show only budget and gross
+-- X calculate return on investment (include expression in list of columns)
+-- X calculate return on investment (include expression in list of columns), give it an actual name, tho (roi)
+-- X round w 2 args: round(numeric, number_of_places)
+-- X order by a calculated column (which we've named roi)
+-- X try to round roi to two places (round(val, places))
+-- X what types is this thing (pg_typeof())
+-- X an aside, let's try casting to numeric (we actually have a float
+-- X using round (two argument version of round only works on numeric values)
+-- X let's try to use our aliased column in where clause (y does this happen???)
+-- X so, reuse calculation in where clause (sad face)
+
+-- UPDATE, ALTER TABLE
+-- add an roi column to movie so we can permanently have that field (is this good idea or bad idea or 🤷)
+-- notice the new column by describing the table
+-- show that the new column has null values (notice how null shows up... also try to look for null)
+-- update all rows so that roi is set to a value based on other columns
+-- fix duplicate genre (science fiction sci-fi)
+-- see... now Sci-Fi is folded into Science Fiction
+
+-- GROUP BY
+-- find the amount of the largest grossing movie for each genre
+-- group all rows that have same genre and count them
+-- group all rows that have same director... and then same genre and count them
+-- use having to filter groups... so that we only see genres that appear more than once
+-- oh, btw, you can get file locations of your configs with this query
+
+-- IMPORT AGAIN?
+-- get unique lowest grade (prek, kinder, etc.)
+-- get unique highest grade (11, 12, etc.)
+-- get counts of low grade to find some outliers
+-- what's going on with that one school with a low grade of 01... just view that row only?
+-- only show 10 rows
+-- any population less than 0 or equal to 0... that'd be weird, no? ...let's count 'em first
+-- now take a closer look... just show actual rows where pop is 0 or less
+-- let's narrow down the columns... perhaps only the name
+-- maybe we shouldn't include these anymore,.. what can we do?
+-- 1. delete
+-- 2. delete with a transaction
+-- 3. add a new column
+-- let's try begin... and rollback!

@@ -1,0 +1,179 @@
+---
+layout: homework
+title: "Assignment #3"
+---
+<style>
+.hl {
+	background-color: yellow;
+}
+img {
+    border: 1px solid #000;
+}
+
+.warning {
+    background-color: yellow;
+    color: #aa1122;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.hintButton {
+    color: #7788ff;
+    cursor: pointer;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', hideHints);
+
+function hideHints(evt) {
+    document.querySelectorAll('.hint').forEach((ele, i) => {
+        const div = document.createElement('div');
+        div.id = 'hint' + i + 'Button';
+        ele.id = 'hint' + i;
+        ele.classList.add('hidden');
+        div.addEventListener('click', onClick);
+        div.textContent = 'Show Hint';
+        div.className = 'hintButton';
+        ele.parentNode.insertBefore(div, ele);
+    });
+
+}
+
+function onClick(evt) {
+    const hintId = this.id.replace('Button', '');
+    const hint = document.getElementById(hintId);
+    hint.classList.toggle('hidden');
+    this.textContent = this.textConent === 'Show Hint' ? 'Hide Hint' : 'Show Hint';
+}
+</script>
+
+# Assignment #3 - Summary Statistics and Basic Data Visualization - Due Thu, Feb 20th at 11pm
+
+Clone the homework #3 repository when it is created for you.
+
+## Goals
+
+* work with numpy to calculate summary statistics
+* use matplotlib for simple data visualizations
+
+## Requirements
+
+* 1 x notebooks:
+	* homework03.ipynb
+* 1 x data set:
+	* include in repository if possible
+	* otherwise, link to data set if file size &gt; 100MB
+
+
+## Overview
+
+In this assignment, you'll create a single notebook, (`ipynb`) that contains documentation and code. There are 6 parts to this assignment:
+
+1. select and document a data set
+	* ⚠️ the data should be comma / pipe / tab delimited... or fixed width
+	* ⚠️ the data set should have __two numeric columns__
+	* include documentation regarding the source of the data
+	* include the data set in your repository so that your notebooks can be run by the graders without having to perform any setup (if data set is &gt; 100MB, link to file instead)
+2. write some questions that _may_ be answered by using summary statistics on numeric columns in your data set, or by viewing visualizations
+3. calculate summary statistics on both columns using numpy
+4. validate calculations using a spreadsheet (such as LibreOffice, Google Sheets, Excel, etc.)
+5. create at least two visualizations with matplotlib
+6. write a conclusion answering your questions in part 2 based on the results in parts 3 and 4
+	* describe the results of your calculations and visualizations
+	* describe whether or not they were able to answer your questions from part 2
+
+
+## Part 1 - Selecting a Data Set, Adding Documentation
+
+
+#### Find a data set that you'd like to work with
+
+Find a data set that you're interested in... that's publicly available online as a text file (csv, for example). Download your data from a source that has some information regarding the provenance of the data (_where did it come from!?_). Check out some [sources here](../data-sets.html). Some guidelines:
+
+1. do not using the following data sets, because, uh... we probably already wrote (or will write) some code for it 🙃
+	* data sets used in class, like [Nutrition facts for Starbucks Menu](https://www.kaggle.com/starbucks/starbucks-menu)	
+	* [The Ultimate Halloween Candy Power Ranking](https://www.kaggle.com/fivethirtyeight/the-ultimate-halloween-candy-power-ranking)
+	* [Animal Bites](https://www.kaggle.com/rtatman/animal-bites)
+	* [IMDB Horror Movie Dataset 2012 Onwards](https://www.kaggle.com/PromptCloudHQ/imdb-horror-movie-dataset)
+2. <span class="hl">write code that's different from  - or build significantly on - the programs that we've done in class</span> (it's not adequate to simply use class sample code with a different data set 🙅)
+
+#### Write some documentation 
+
+1. Start a notebook called `homework03.ipynb`
+2. Use the markdown below as a template to describe your data
+3. Fill in the parts marked as "TODO"
+
+
+```
+# Homework 01
+
+## About the Data
+
+1. Name: (TODO: name of data set)
+2. Link to Data: (TODO: link to any documentation about the data that you've found )
+3. Source / Origin: (TODO:  discuss the origin of the data (what is it, who collected / generated it, how did they do it, etc.)
+4. Motivation: (TODO: describe why you are interested in it) 
+
+```
+
+
+#### Show Some Data and Document its Format
+
+1. with code, display the first few lines of the file (simply use `open` to do this)
+2. describe the format of the data in a markdown cell
+	* what are the fields / column headers?
+	* what is the _likely_ data type for each column (you can use regular python types or numpy types) of each field
+
+Again, if the data does not have at least two numeric columns, please work with a different data set
+
+
+## Part 2 - Questions
+
+Write some questions about your data. Focus on the following:
+
+* questions that _may_ be answered by using summary statistics on numeric columns in your data set
+* questions that _may_ be answered by viewing basic data visualizations, such as bar charts and scatter plots
+
+## Part 3 - Descriptive Statistics
+
+1. read the data from at least two columns of your file; try to read the numeric data into a numpy array 
+	* you can read the individual columns into separate arrays
+	* ...or you can read all of the data as a multidimensional numpy array
+	* you'll have to parse the data into a numeric type 
+	* you may have to clean up the data before it can be converted into a numeric type... for example: 
+		* removing leadin / trailing whitespace
+		* replacing commas 
+		* removing dollar signs
+		* deal with missing data
+		* etc.
+2. calculate the following descriptive statistics on these two columns
+	1. examine outliers with min and/or max
+	2. measure central tendency by calculating the following:
+		* mean
+		* median or percentile (quantile), 
+	3. measure dispersion with 
+		* variance
+		* standard deviation (likely of the sample rather than population)
+		* interquartile range
+
+## Part 4 - Confirm Calculations
+
+* try opening your original file with LibreOffice, Google Sheets, etc. 
+* using your spreadsheet's functions, confirm that your summary statistics match
+* in a markdown cell in your notebook:
+	* compare and contrast the results from you calculations with numpy... to the results from your spreadsheet
+	* investigate any discrepancies, and - if possible - describe (or hypothesize) why there are differences 
+
+## Part 5 - Visualizations
+
+Create at least two visualizations with matplotlib.
+
+## Part 6 - Conclusion
+
+Write a conclusion answering your questions in part 2 based on the results in parts 3 and 4.
+
+* describe the results of your calculations and visualizations
+* describe whether or not they were able to answer your questions from part 2

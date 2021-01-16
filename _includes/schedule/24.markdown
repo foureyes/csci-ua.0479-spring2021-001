@@ -1,0 +1,19 @@
+	<td markdown="block">
+* homework help
+* final project grading
+* more audio!
+</td>
+	<td markdown="block">
+* [Pure Data Audio Tutorial](http://pd-tutorial.com/english/ch03.html#chapt3.1)
+* [Think DSP](http://greenteapress.com/thinkdsp/html/thinkdsp002.html)
+</td>
+	<td markdown="block">
+[In-Class Activity on Iterators and Generators](https://docs.google.com/a/nyu.edu/forms/d/1K0laFNeIHHlaMQYre5VQSQvXg5xhIujFl2glQRlD3D0/viewform) (Again, for real this time)
+
+Need help?
+
+* [Iterators documentation](https://docs.python.org/3/tutorial/classes.html#iterators)
+* [Generators documentation](https://docs.python.org/3/tutorial/classes.html#generators)
+* [Repository for class 22 draft code](https://github.com/jversoza/p4a-spring-16-examples/blob/master/p4a-class22/scratch/iterators.py)
+
+</td>

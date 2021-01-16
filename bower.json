@@ -1,0 +1,7 @@
+{
+  "name": "csci-ua.0480-fall2014-002",
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "reveal.js": "~3.0.0"
+  }
+}

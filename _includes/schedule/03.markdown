@@ -1,0 +1,102 @@
+	<td markdown="block">
+
+* [While Loops](slides/03/while.html)
+* [For Loops](slides/03/for.html)
+* [While vs For](slides/03/vs.html)
+* [Loop Exercises](slides/03/loop-exercises.html)
+* [Nested Loops](slides/03/nested.html)
+
+Class Notes
+
+* [% for strings, boolean expressions, while and for](resources/code/class03_notes.py)
+
+{% comment %}
+* [About Class #03 / Homework Discussion](slides/03/meta.html)
+* [Style](slides/03/style.html)
+* [Approximating Pi, math module, Flow of control](slides/03/pi.html)
+* [Modules, matplotlib](slides/03/modules.html)
+{% endcomment %}
+
+
+{% comment %}
+* [Exceptions](slides/03/exceptions.html)
+
+## Causing Errors
+* what are some errors we can cause?
+* how? take note...
+
+## Syntax
+* <code>except Exception</code>
+* <code>except ExceptionType</code>
+* <code>except ExceptionType1, ExceptionType2</code>
+* <code>except ExceptionType1, ExceptionType2 as e</code>
+* chained exceptions
+* <code>finally</code>
+
+* [Strings](slides/03/meta.html)
+## All Operations
+* concat, repeat, %
+* indexing, slicing
+* in, not in
+
+## Methods
+* upper, lower, isupper, islower
+* index
+* replace
+* list?
+    * . (dot) in pycharm
+    * dir in shell
+
+## "Removing" a Character at an Index
+* slices, get new string
+* replace, get new string
+* (other) regular expression, make translation table
+
+## chr, ord
+## Transpose Rail
+
+## Substitution
+
+## 
+
+* [Lists](slides/03/lists.html)
+## All Operations
+## Methods
+## enumerate
+
+## working with lists in place
+* bubble sort or shuffle?
+
+## every element in a list
+## list comprehensions
+## map, reduce, filter
+## lambda
+## sorted
+{% endcomment %}
+
+
+</td>
+{% comment %}
+	<td markdown="block">
+From {{ site.book1 }}
+
+* Ch 2 - &pi;thon
+</td>
+{% endcomment %}
+	<td markdown="block">
+Homework #3 - Due __Wed, Sep 27th, 11pm__
+
+Submit via NYU Classes
+
+* download each file below
+* instructions are in each file!
+* upload individual files
+* ...to NYU classes
+* (don't rename or zip files)
+
+* [counting.py](assignments/hw03/counting.py) 
+* [many_words.py](assignments/hw03/many_words.py) 
+* [sticky.py](assignments/hw03/sticky.py) 
+* [average_word.py](assignments/hw03/average_word.py) 
+
+</td>

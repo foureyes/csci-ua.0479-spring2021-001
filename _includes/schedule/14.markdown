@@ -1,0 +1,16 @@
+	<td markdown="block">
+
+Slides
+
+* [Image Processing](slides/13/images.html)
+
+Class Notes / Demo Code
+
+* [Pillow/PIL Demo](resources/code/class14/pil_demo.py)
+
+</td>
+	<td markdown="block">
+
+* [Some image processing practice (making your own "Instagram" style filters)](assignments/hw12.html)
+
+</td>

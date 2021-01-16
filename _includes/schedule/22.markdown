@@ -1,0 +1,18 @@
+	<td markdown="block">
+
+* [Iterators documentation](https://docs.python.org/3/tutorial/classes.html#iterators)
+* [Generators documentation](https://docs.python.org/3/tutorial/classes.html#generators)
+* [Repository for in-class code (still a draft... everything is in scratch folder for now)](https://github.com/jversoza/p4a-spring-16-examples/tree/master/p4a-class22)
+
+
+</td>
+	<td markdown="block">
+
+* Ch 12 - Your Father was a Rectangle
+
+</td>
+	<td markdown="block">
+<!--
+* [](assignments/.html)
+-->
+</td>

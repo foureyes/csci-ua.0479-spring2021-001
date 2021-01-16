@@ -1,0 +1,25 @@
+	<td markdown="block">
+* [Decorators](slides/15/decorators.html)
+* [Classes Examples, Static Methods, Magic Methods](slides/15/classes-example.html)
+* [Examples in github repository](https://github.com/jversoza/p4a-spring-16-examples/tree/master/p4a-class15)
+</td>
+	<td markdown="block">
+
+
+From {{ site.book1 }}
+
+* Ch 10 - Astronomy (Classes and Objects)
+
+Online Articles
+
+* [decorators](http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/)
+* [classes](https://docs.python.org/3/tutorial/classes.html)
+* [magic methods](http://www.rafekettler.com/magicmethods.html) (geared towards python 2, but still relevant)
+
+
+</td>
+	<td markdown="block">
+Due Friday, April 1st
+
+* [Assignment #05 posted](assignments/hw05.html)
+</td>

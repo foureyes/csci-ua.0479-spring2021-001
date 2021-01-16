@@ -1,0 +1,16 @@
+.data-table {
+	border-collapse: collapse;
+	font-family: sans-serif;
+	font-size: 0.70em;
+	display: inline-block;
+	vertical-align:top;
+}
+
+.data-table td, .data-table th {
+	border: 1px solid;
+	padding: 0.2em;
+}
+
+.data-table .colspan {
+	text-align: center;
+}

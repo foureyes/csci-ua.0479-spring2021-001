@@ -1,0 +1,43 @@
+	<td markdown="block">
+
+Slides
+
+* Review tooling (see [help for installing packages](help.html))
+* [Matplotlib Basics](slides/12/matplotlib.html)
+* Demo: bar chart 
+	* [Pride and Prejudice](http://www.gutenberg.org/files/1342/1342-0.txt)
+* [A Detour on the Web](slides/12/web.html)
+* [File Formats and Sources, Extra File I/O](slides/10/data-files-advanced.html) (again)
+
+Class Notes / Demo Code:
+
+* [Demo Code to Count Which Character is Mentioned the Most!](resources/code/class12/pride.py)
+{% comment $}
+* Demo: 
+	* [Population by Country, 1980 to 2010](https://catalog.data.gov/dataset/population-by-country-1980-2010)
+* optional: functional programming
+    * args, kwargs
+    * decorators
+    * lambda
+    * map, reduce, filter
+{% endcomment $}
+
+{% comment %}
+* TODO: create csv, student grades???
+* discuss csvs
+    * csv module
+    * DEMO / TOGETHER: student grades?
+    * DEMO / TOGETHER: found csv data and line graph?
+{% endcomment %}
+</td>
+
+	<td markdown="block">
+
+Due __Wednesday, 12/6, at 11pm__
+
+A small research project...
+
+* [hw11.py](assignments/hw11/hw11.py) 
+* [requirements.txt](assignments/hw11/requirements.txt) 
+
+</td>

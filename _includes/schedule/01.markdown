@@ -1,0 +1,82 @@
+	<td markdown="block">
+* [Introductions](slides/01/intro.html)
+* [About Programming](slides/01/about-programming.html)
+* [Hardware](slides/01/computers-storage.html)
+* [Programming Languages](slides/01/programming-languages.html)
+* [Tools](slides/01/tools.html)
+* [Installing Tools](slides/01/installing-tools.html)
+* [Reading and Writing Programs with IDLE](slides/01/reading-writing-programs.html)
+* [Programming Work Flow](slides/01/programming-workflow.html)
+* [Hello](slides/01/hello.html) 
+* [Values and Types](slides/01/values-and-types.html)
+* [Operations and Variables](slides/01/operations-and-variables.html)
+* [User Input](slides/01/user-input.html)
+
+{% comment %}
+* [Review and Reading](slides/01/review-and-assignments.html)
+* [Review](slides/02/review.html)
+{% endcomment %}
+
+
+<!--
+* [First Java Program](slides/01/first-java.html)
+-->
+</td>
+{% comment %}
+	<td markdown="block">
+
+From {{ site.book1 }}
+
+* Ch 3 - Codes and Other Secrets
+* Ch 4 - A Nest of Snakes
+* (optionally Ch 1 and Ch 2 if you need a refresher on Python basics and turtle)
+
+From the Official Python Documentation
+
+* [3.1: Objects Values and Types](https://docs.python.org/3.5/reference/datamodel.html#objects-values-and-types)
+* [9.1: Names and Objects](https://docs.python.org/3/tutorial/classes.html#a-word-about-names-and-objects)
+* [9.2: Python Scopes and Namespaces](https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces)
+</td>
+{% endcomment %}
+	<td markdown="block">
+
+
+{% comment %}
+* [Assignment #1](assignments/hw01.html)
+{% endcomment %}
+
+<a name="homework1" id="homework1"></a>
+
+Homework #1 - Due __Wed, Sep 13th, 11pm__
+
+Submit via NYU Classes
+
+* download each file below
+* instructions are in each file!
+* upload individual files
+* ...to NYU classes
+* (don't rename or zip files)
+
+1. [mad_libs_lyrics.py](assignments/hw01/mad_libs_lyrics.py)
+2. [exercises.py](assignments/hw01/exercises.py)
+3. [tree.py](assignments/hw01/tree.py)
+4. [candy_bars.py](assignments/hw01/candy_bars.py)
+5. [numbers.py](assignments/hw01/numbers.py) 
+
+
+<pre>       /\
+      /  \
+      /  \
+     /____\
+       ||
+
+   /\
+   ""
+  /""\ 
+  """"
+ /""""\
+ """""" 
+   ||
+</pre>
+
+</td>

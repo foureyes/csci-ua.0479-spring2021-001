@@ -1,0 +1,27 @@
+	<td markdown="block">
+Code examples and notes are in the [class 17 folder of the github repository](https://github.com/jversoza/p4a-spring-16-examples/tree/master/p4a-class17)
+
+* [annotated echo_server.py](https://github.com/jversoza/p4a-spring-16-examples/blob/master/p4a-class17/echo_server.py)
+* [annotated web_server.py](https://github.com/jversoza/p4a-spring-16-examples/blob/master/p4a-class17/web_server.py)
+
+From the readings:
+
+* [Example HTTP Request and Response from Wikipedia](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Example_session)
+* [Details on HTTP from tutsplus](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
+
+{% comment %}
+* [Debugging](slides/17/debugging.html)
+* [Object Oriented Thinking](slides/17/oop-thinking.html)
+{% endcomment %}
+</td>
+	<td markdown="block">
+* [let's build a web server parts 1 - 3 from ruslan's blog](https://ruslanspivak.com/lsbaws-part1/)
+    * (pay close attention to part 1)
+* [Example HTTP Request and Response from Wikipedia](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Example_session)
+* [Details on HTTP from tutsplus](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
+</td>
+	<td markdown="block">
+<!--
+* [](assignments/.html)
+-->
+</td>

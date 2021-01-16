@@ -1,0 +1,19 @@
+	<td markdown="block">
+Code examples and notes are in the [p4a-class16 folder of the github repository for this course](https://github.com/jversoza/p4a-spring-16-examples/tree/master/p4a-class16):
+
+* advanced decorator usage for extra credit
+    * nonlocal
+    * keyword args
+    * functools wraps
+    * decorators with parameters
+* [bytes, isinstance, print](https://github.com/jversoza/p4a-spring-16-examples/blob/master/p4a-class16/bytes_isinstance_print.md)
+* [definitions for socket, client, server, etc.](https://github.com/jversoza/p4a-spring-16-examples/blob/master/p4a-class16/sockets.md)
+* [math server example](https://github.com/jversoza/p4a-spring-16-examples/blob/master/p4a-class16/math_server.py)
+</td>
+	<td markdown="block">
+* [howto in python docs](https://docs.python.org/3/howto/sockets.html)
+* [python sockets from byu](http://ilab.cs.byu.edu/python/socketmodule.html)
+* [let's build a web server parts 1 - 3 from ruslan's blog](https://ruslanspivak.com/lsbaws-part1/)
+</td>
+	<td markdown="block">
+</td>

@@ -1,0 +1,12 @@
+	<td markdown="block">
+*  [sample questions for final](resources/handouts/final/final_practice.pdf) 
+*  [...aaand their solutions!](resources/handouts/final/final_practice_solutions.pdf)
+
+</td>
+	<td markdown="block">
+</td>
+	<td markdown="block">
+<!--
+* [](assignments/.html)
+-->
+</td>

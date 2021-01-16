@@ -1,0 +1,24 @@
+	<td markdown="block">
+
+* [Small Flask Examples](https://github.com/jversoza/p4a-spring-16-examples/tree/master/p4a-class20/flask-small-examples)
+    * hello world
+    * templating and static files
+    * request object / post
+* [Flask In-Class Demo on Forms](https://github.com/jversoza/p4a-spring-16-examples/tree/master/p4a-class20/flask-in-class-demo-forms-templates)
+    * (this is _exactly_ what we did in class)
+    * (so it's a bit messy!)
+
+</td>
+	<td markdown="block">
+The Flask documentation is _really_ good! 
+
+* please read the [quickstart guide](http://flask.pocoo.org/docs/0.10/quickstart/)
+* which covers more than what we did in class
+* (with the exception of template inheritance)
+
+</td>
+	<td markdown="block">
+<!--
+* [](assignments/.html)
+-->
+</td>

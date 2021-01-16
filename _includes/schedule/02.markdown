@@ -1,0 +1,65 @@
+	<td markdown="block">
+
+<a name="class02-notes"></a>
+
+Slides
+
+* [Design, Input, Processing, and Output](slides/02/design-input-output.html) (Optional)
+* [Formatting Output (Print and Format)](slides/02/formatting.html)
+* [Idioms and Style](slides/02/idioms-style.html)
+* [Variables Continued](slides/02/variables.html)
+* [Errors and Degugging](slides/02/debugging.html)
+* Coding Exercise - itemized receipt!
+* [Conditionals](slides/02/review-conditionals.html)
+* [Boolean Logic](slides/02/boolean-logic.html)
+* [Types, Operators, Precedence](slides/02/types-operators-precedence.html)
+* [If Statements - Advanced](slides/02/if-statements-advanced.html)
+* [Built-In Modules](slides/02/modules.html)
+* [String Formatting with %](slides/02/string-formatting.html)
+* Maybe Turtle / Objects
+* Start Homework
+
+Class Notes
+
+* [format, variables, etc. notes](resources/code/class02_notes.py)
+* [if statements notes](resources/code/class02_if_notes.py)
+* [modules notes](resources/code/class02_modules_notes.py)
+
+{% comment %}
+* [Functions](slides/02/functions.html)
+* [format Method](slides/02/format-method.html)
+* [Modules](slides/02/modules.html)
+* [turtle](slides/02/turtle.html) (optional)
+    * [collision detection example](resources/code/intersects.py)
+    * [keyboard input example](resources/code/keys.py)
+
+{% endcomment %}
+</td>
+	<td markdown="block">
+
+<a name="homework2" id="homework2"></a>
+
+Homework #2 - Due __Wed, Sep 20th, 11pm__
+
+Submit via NYU Classes
+
+* download each file below
+* instructions are in each file!
+* upload individual files
+* ...to NYU classes
+* (don't rename or zip files)
+
+* [multiply.py](assignments/hw02/multiply.py) 
+* [grade.py](assignments/hw02/grade.py) 
+* [adventure.py](assignments/hw02/adventure.py) 
+
+{% comment %}
+* [your_fancy_face.py](assignments/hw02/your_fancy_face.py) 
+Additional Practice (Optional)
+* [change_puhleese.py](assignments/hw02/change_puhleese.py) 
+* [grade_bot_3000.py](assignments/hw01/grade_bot_3000.py)
+* [foods.py](assignments/hw01/foods.py)
+* [exercises.py](assignments/hw01/exercises.py)
+{% endcomment %}
+
+</td>

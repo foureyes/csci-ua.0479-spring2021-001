@@ -1,0 +1,415 @@
+---
+layout: homework
+title: "Assignment #5"
+---
+
+<style>
+img {
+    border: 1px solid #000;
+}
+
+.warning {
+    background-color: yellow;
+    color: #aa1122;
+    font-weight: bold;
+}
+</style>
+
+# Assignment #10 - Due Saturday, Nov 18th
+
+* __Part 0__ Readings
+* __Part 1__ A Class-ic Question
+* __Part 2__ Feeling Quizzy
+* __Part 3__ Comma Down, It's Only a File
+* __Part 4__ The Part Where I Answer Questions
+* __Part 5__ (optional challenge) An Egregious Error
+* __Part 6__ (optional challenge) Compose if You Dare!
+* __Part 7__ (optional challenge) More!? (Some Polish)
+
+
+## Part 0 - Readings
+
+#### From our Book
+
+* [Classes and Objects](http://greenteapress.com/thinkpython2/html/thinkpython2016.html)
+* [Classes and Functions](http://greenteapress.com/thinkpython2/html/thinkpython2017.html)
+* [Classes and Methods](http://greenteapress.com/thinkpython2/html/thinkpython2018.html)
+
+#### From the Class Slides and Notes
+
+* [See class 10](../index.html#class10)
+
+
+## Part 1 - A Class-ic Question
+
+Write a class called `MultipleChoiceQuestion`. It will represent a question with a group of potential answers. One of the answers will be the correct answer to the question.
+
+
+#### Setup
+
+All of the following files should be placed in the same directory.
+
+1. Download [quizzical.py](hw10/quizzical.py) - it will contain your <code>MultipleChoiceQuestion</code> class
+2. Download [python_quiz.py](hw10/python_quiz.py) - this file will use the class above to eventually run an interactive quiz 
+3. Download [questions.csv](hw10/questions.csv) - the source of questions for an interactive quiz
+
+
+#### Technical Requirements
+
+You'll create one class and you'll utilize this class in the following parts. 
+
+#### MultipleChoiceQuestion
+
+A <code>MultipleChoiceQuestion</code> object represents a question that has a group of potential answers, with only one answer being correct. You'll only need to implement the features specified below; handling any other _corner cases_, boundary conditions, etc. is not required, but feel free to implement features and error handling beyond what is specified below (there are many scenarios not outlined in these requirements).
+
+A <code>MultipleChoiceQuestion</code> contains the following data:
+
+1. the text of the question
+2. all of the choices that could be potential answer to the question
+    * this includes the text of the choice
+    * as well as its corresponding label: a lowercase letter
+3. the letter that represents the correct answer
+
+<code>MultipleChoiceQuestion</code> should support the following methods:
+
+1. `__init__(self, question_text)` - a __constructor__ that takes the question text as an argument
+    * the question text is only the question itself, not the group of choices
+    * a newly created question will have <code>None</code> initially set as its answer
+    * it will not have any choices to begin with
+    * example usage:
+        <pre><code data-trim contenteditable>q1 = MultipleChoiceQuestion('Which type is immutable?')
+# no choices, None as answer...
+    * hint: even though the answer and choices are not passed in to the constructor... 
+        * add the properties with their initial values within the constructor
+        * the answer can be initialized to the value, `None`
+        * the choices can be initialized with an empty container (such as dictionary or list)
+        * remember, to set the values of properties of instances created from this class:
+            `self.answer = None`
+2. <code>add_choice(self, letter, text)</code> - adds a choice to a question: letter is the label for the choice, text is the actual text representing the choice
+    * no return value
+    * example usage (adds 3 choices, a, b, and c, to the question created):
+        <pre><code data-trim contenteditable># adds three choices to question, q1...
+q1 = MultipleChoiceQuestion('Which type is immutable?')
+q1.add_choice('a', 'list') # no return value, but adds a choice
+q1.add_choice('b', 'tuple')
+q1.add_choice('c', 'dict')
+</code></pre>
+    * hint: to access your container of choices from within a method...
+        * use `self.container`
+        * for example, adding a new key value pair to property that's a dictionary called `choices` would look like:
+        * `self.choices[some_key] = some_value`
+3. (__optional__) <code>set_choices(self, all_choices)</code> - sets all of the questions to the text in a list of choices
+    * no return value
+    * the letter labels are automatically generated based on the position of the choice in the list (position 0 will be choice a, position 1 will be choice b, etc.)
+    * example usage (instead of adding 3 choices individually, adds 3 choices in a list):
+        <pre><code data-trim contenteditable>q1.set_choices(['list', 'tuple', 'dict'])
+</code></pre>
+4. <code>set_answer(self, letter)</code> - sets the letter of the answer to this question
+    * no return value
+    * example usage:
+        <pre><code data-trim contenteditable>q1 = MultipleChoiceQuestion('Which type is immutable?')
+q1.add_choice('a', 'list')
+q1.add_choice('b', 'tuple')
+q1.add_choice('c', 'dict')
+q1.set_answer('b')
+</code></pre>
+5. <code>is_correct_answer(self, letter)</code> - determines whether or not the given letter is the correct answer to this question
+    * returns `True` or `False`... depending on whether or not letter passed in is answer set as correct answer for question
+    * example usage:
+        <pre><code data-trim contenteditable>q1 = MultipleChoiceQuestion('Which type is immutable?')
+q1.add_choice('a', 'list')
+q1.add_choice('b', 'tuple')
+q1.add_choice('c', 'dict')
+q1.set_answer('b')
+# the following will print False
+print('is a correct? ', q1.is_correct_answer('a'))
+# the following will print True
+print('is b correct? ', q1.is_correct_answer('b'))
+</code></pre>
+6. `__str__(self)` - a __string representation__ of this question
+    * when a <code>MultipleChoiceQuestion</code> object is printed out...  its string representation should be in the following format:
+        * question, <code>Which type is immutable?</code>
+        * separator, 5 <code>=</code>'s: <code>=====</code>
+        * letters and choices, <code>a. list</code>
+    * example output:
+        <pre><code data-trim contenteditable>Which type is immutable?
+=====
+a. list
+b. tuple
+c. dict
+</code></pre>
+
+## Part 2 - Feeling Quizzy
+
+
+#### A Multiple Choice Question
+
+Try using the class you just implemented to create a short interactive program that asks the user a multiple choice question. 
+
+#### Setup
+
+* in `python_quiz.py`
+* `import` your file, `quizzical`
+* create a new question object by writing: 
+    * `q = quizzical.MultipleChoiceQuestion('question text goes here')`
+    * (note that we prefix with the module name to access our class)
+
+Your program should:
+
+1. create a multiple choice question using your class (you can create any question / choices you want; you'll be replacing this later)
+2. print out the question
+3. get input from the user
+4. print out a message that says whether or not the answer typed in is correct
+5. Example for an incorrect answer:
+    <pre><code data-trim contenteditable>Which one is real?
+=====
+a. griffin
+b. narwhale
+c. mermaid
+d. yeti
+> a
+Nope! That's not right... the correct answer is b. narwhale
+</code></pre>
+6. Example for a correct answer:
+    <pre><code data-trim contenteditable>Which one is real?
+Which one is real?
+=====
+a. griffin
+b. narwhale
+c. mermaid
+d. yeti
+> b
+You're right! The answer is b. narwhale
+</code></pre>
+
+## Part 3 - Comma Down, It's Only a File        
+
+#### Use a File to Generate Questions
+
+A single questions isn't much of a quiz!
+
+Using what you know about reading files and extracting data from a file... open `questions.csv` and create questions based on the content of the file. The file contains data separated by commas (a `csv`). A single line in the file represents a single question. Its format is:
+
+<pre><code data-trim contenteditable>
+question, correct answer, choice a, choice b, choice c, choice d
+</code></pre>
+
+For example:
+
+<pre><code data-trim contenteditable>
+Which one is real?, b, griffin, narwhale, pegasus, yeti
+</code></pre>
+
+You can make the following assumptions:
+
+* the commas in the file only separate the data (that is, there will be no commas in the text of the question or the choices)
+* the first line of the file is the header 
+
+#### Implementation
+
+In `python_quiz.py`, comment out your work from the previous part. Write the following in its place:
+
+1. Start with an empty list that will eventually hold all of your questions (an accumulator)
+2. Open the `questions.csv` file for reading
+3. Read every line and create a new question object using your class in `quizzical`
+4. Add your question object to your accumulator list from step 1
+5. Once you're done reading the file and creating question objects, print out all of your questions
+
+Example Output:
+
+<pre><code data-trim contenteditable>
+What method do you have to define so that you can specify what gets printed out when you pass an instance of your class to print?
+=====
+a. __print__
+b. __unicode__
+c. toString
+d. __str__
+
+What method do you have to define to create a constructor for a class?
+=====
+a. a method with the same name as the class
+b. __init__
+c. __constructor__
+d. __class__
+
+Which of the following is an immutable type?
+=====
+a. tuple
+b. list
+c. dictionary
+d. none of the above
+</code></pre>
+
+
+## Part 4 - The Part Where I Answer Questions
+
+In this part, modify `python_quiz.py` and `questions.csv` to create a full set of questions for the user to answer. When a user finishes going through the quiz, output the number of questions that the user answered correctly... and the total number of questions asked. Do this in two parts...
+
+1. modify `questions.csv` to create your own questions
+2. modify `python_quiz.py` so that it asks the user questions instead of just printing them out
+
+#### Making Your Own Questions
+
+1. Change `questions.csv` so that it has questions of your own creation!
+2. The quiz can be about any topic you want
+3. Remember that you should follow the `csv` format that was previously described:
+    * the first item is the question
+    * the second item in the line is the letter of the answer
+    * the remainder of the items are the choices
+4. Lastly, __make sure that the commas in your lines only serve as separators__ (make sure that they don't appear in your question or choices text)
+
+#### Asking and Keeping Track
+
+Change `python_quiz.py` so that:
+
+1. instead of just printing out questions, it also retrieves user input as the answer for each question
+2. it will keep track of the number of correct answers
+3. it'll print out the number of correct answers and the total number of questions...
+
+Example Output:
+
+
+<pre><code data-trim contenteditable>
+What method do you have to define so that you can specify what gets printed out when you pass an instance of your class to print?
+=====
+a. __print__
+b. __unicode__
+c. toString
+d. __str__
+
+> d
+Right!
+
+What method do you have to define to create a constructor for a class?
+=====
+a. a method with the same name as the class
+b. __init__
+c. __constructor__
+d. __class__
+
+> a
+Wrong! The answer is b.
+
+Which of the following is an immutable type?
+=====
+a. tuple
+b. list
+c. dictionary
+d. none of the above
+
+> a
+Right!
+
+You got 2 / 3 correct.
+</code></pre>
+
+
+## (optional) Part 5 - An Egregious Error
+
+Add some exceptions to your `MultipleChoiceQuestion` class. You can do this by adding the following classes above your definition for `MultipleChoiceQuestion`:
+
+<pre><code data-trim contenteditable>
+class InvalidCharacterError(Exception):
+    pass
+
+class ChoiceDoesNotExistError(Exception):
+    pass
+</code></pre>
+
+These will serve as _custom_ exceptions! So, for example, if a choice is added with a non-letter character, then an exception will occur. Additionally, you can throw an exception if the correct answer letter doesn't match an existing choice.
+
+#### Modifying `add_choice`
+
+* if the letter is not a lowercase letter from <code>a</code> through <code>z</code>, raise an <code>InvalidCharacterError</code> exception (this <code>Exception</code> class is defined by the code above; place it in <code>quizzical.py</code>)
+* see [the docs on raising an exception](https://docs.python.org/3/tutorial/errors.html#raising-exceptions) to implement this part
+* an example of causing this exception is:
+    <pre><code data-trim contenteditable>try:
+&nbsp;&nbsp;&nbsp;&nbsp;q1.add_choice('!', 'pizza')
+except InvalidCharacterError:
+&nbsp;&nbsp;&nbsp;&nbsp;print('uh oh, an error occurred: a choice should have a lowercase letter as its label')
+</code></pre>
+
+#### Modifying `set_answer`
+
+* if the character is not an answer that has already been set, raise a <code>ChoiceDoesNotExistError</code>:
+    <pre><code data-trim contenteditable>q2 = MultipleChoiceQuestion('What is your favorite color?')
+try:
+&nbsp;&nbsp;&nbsp;&nbsp;q2.set_answer('a')
+except ChoiceDoesNotExistError as e:
+&nbsp;&nbsp;&nbsp;&nbsp;print('error: none of your choices matches that answer')
+</code></pre>
+
+## (optional) Part 6 - Compose if You Dare
+
+Encapsulate all of your quiz logic in another class called `Quiz`. A <code>Quiz</code> object contains the following data:
+
+1. a list of questions
+2. (that's it, really!)
+
+<code>Quiz</code> should support the following methods:
+
+1. a __constructor__ - does not have any arguments (except for self, of course!)
+    * initializes its list of `MultipleChoiceQuestion` objects
+    * example usage:
+        <pre><code data-trim contenteditable>quiz = Quiz()
+</code></pre>
+2. <code>add_question(self, question)</code> - adds a single question to this quiz object; a question is an instance of <code>MultipleChoiceQuestion</code>
+    <pre><code data-trim contenteditable># assuming there's a quiz object created...
+quiz = Quiz()
+# create a question
+q1 = MultipleChoiceQuestion('Which type is immutable?')
+q1.add_choice('a', 'list')
+q1.add_choice('b', 'tuple')
+q1.add_choice('c', 'dict')
+q1.set_answer('b')
+# then... add that question to the quiz
+quiz.add_question(question)
+</code></pre>
+3. <code>load_questions_from_file(self, file_name)</code> - takes a single argument, a file name, and loads questions from that file
+    * a csv of questions will have the following fields (basically, the same kind of file from the previous steps):
+        1. the question text
+        2. the letter of the answer
+        3. the remaining fields are the text of the four answer choices, a, b, c, and d
+    * example usage:
+        <pre><code data-trim contenteditable>quiz.load_questions_from_file('../code/p4a-class15/questions.csv')
+</code></pre>
+4. <code>run_interactive_quiz(self)</code> - this method runs an interactive quiz 
+    * It should:
+        1. display each question, one at a time
+        2. for every question...
+        3. ask the user to choose an answer
+        4. output whether or not the answer is correct
+        5. ask the user to press return (just ask for input without saving the result of the input: <code>input('please press return/enter to continue')</code>)
+        6. go on to the next question
+        7. ... at the end, print out how many the user got right
+    * example usage:
+        <pre><code data-trim contenteditable>quiz.run_interactive_quiz()</code></pre>
+    * the output/interaction should be the same as the previous step, but now all of your logic is encapsulated by a class, `Quiz`, that is _composed_ of `MultipleChoiceQuestion` objects
+
+#### Running Your Quiz
+
+In <code>python_quiz.py</code>:
+
+1. remove your previous code for running a quiz 
+2. instead, use your <code>Quiz</code> class to create a <code>Quiz</code> object
+3. load the <code>questions.csv</code> file (which you should have downloaded and placed into your project directory)
+4. run the interactive quiz!
+5. (this should only be a few lines)
+
+
+## (optional) Part 7 - More!? (Some Polish)
+
+Let's tighten up our code a little bit. Try figuring out how to handle commas in your question text. Check out the follow module, `csv`, to read in a file as:
+
+1. a [dictionary using the csv module's dictionary reader](https://docs.python.org/3/library/csv.html#csv.DictReader)
+2. or as a [list using the csv module's default reader](https://docs.python.org/3/library/csv.html#csv.reader)
+
+Additionally, modify your code so that:
+
+1. the number of choices are not restricted to 4
+2. for example... your csv file could contain 3 answers (a through c), 5 answers (a through e), etc. ...
+
+
+
+
+

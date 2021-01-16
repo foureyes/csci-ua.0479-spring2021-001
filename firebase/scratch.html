@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+</head>
+<body>
+
+<!--<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+-->
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+<script src="https://d3js.org/d3.v5.js"></script>
+
+<ol style="margin: 50px 0px 0px 250px; font-size:250px; font-family: sans-serif; color: #358;">
+<li><svg class="scooterChart1"></svg></li>
+<li><svg class="scooterChart2"></svg></li>
+<li><svg class="scooterChart3"></svg></li>
+</ol>
+
+<script>
+firebase.initializeApp({
+  apiKey: 'AIzaSyAVwe64W51nDpcSje9RuEJy4bLks_FLr6Q',
+  authDomain: 'csci0480-007-scratch.firebaseapp.com',
+  projectId: 'csci0480-007-scratch'
+});
+
+// Initialize Cloud Firestore through Firebase
+const db = firebase.firestore();
+
+// Disable deprecated features
+db.settings({
+  timestampsInSnapshots: true
+});
+
+const counts = {};
+
+// Get date
+db.collection("scooters").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+		// TODO: fill in what to do when we receive data
+		const d = doc.data();
+		console.log(d.model, d.retired, d.acquired_date);
+        console.log(`${doc.id} => ${doc.data()}`);
+		if(counts[d.model]) {
+			counts[d.model] += 1;
+		} else {
+			counts[d.model] = 1;
+		}
+    });
+	console.log(counts);
+	createBarChartVertical(counts);
+	createBarChartHorizontal(counts);
+	createBarChartHorizontalWithLabels(counts);
+});
+
+
+function createBarChartHorizontalWithLabels(counts) {
+    const data = [];
+    for(const prop in counts) {
+        const obj = {};    
+        obj.name = prop;
+        obj.value = counts[prop];
+        data.push(obj);
+    }
+    const totalWidth = 600;
+
+    const scaleX = d3.scaleLinear()
+        .domain([0, d3.max(data.map(d => d.value))])
+        .range([0, totalWidth / 2]);
+
+    const barHeight = 40;
+    const chart = d3.select('.scooterChart2');
+    chart.attr('height', barHeight * data.length);
+    chart.attr('width', totalWidth);
+
+    const bars = chart.selectAll('g')
+        .data(data)
+        .enter()
+        .append('g')
+        .attr('transform', (d, i)  => `translate(300, ${i * barHeight})`);
+
+    bars.append('rect')
+        .attr('width', (d, i) => scaleX(d.value) + 'px')
+        .attr('height', barHeight - 1)
+        .attr('fill', '#358');
+
+    bars.append('text')
+        .attr('x', d => scaleX(d.value) - 25)
+        .attr('y', barHeight - 10)
+        .attr('fill', 'white')
+        .attr('font-size', '30px')
+        .attr('font-family', 'sans-serif')
+        .text(d => d.value);
+
+    bars.append('text')
+        .attr('x', -10)
+        .attr('y', barHeight - 10)
+        .attr('fill', '#358')
+        .attr('font-size', '30px')
+        .attr('font-family', 'sans-serif')
+        .attr('text-anchor', 'end')
+        .text(d => d.name);
+}
+
+function createBarChartHorizontal(counts) {
+    const nums = Object.values(counts);
+	const totalWidth = 300;
+
+	console.log(nums);
+    const scaleX = d3.scaleLinear()
+        .domain([0, d3.max(nums)])
+        .range([0, totalWidth]);
+
+    const barHeight = 40;
+    const chart = d3.select('.scooterChart1');
+    chart.attr('height', barHeight * nums.length);
+    chart.attr('width', totalWidth);
+    const bars = chart.selectAll('g')
+        .data(nums)
+        .enter()
+        .append('g')
+        .attr('transform', (d, i)  => `translate(0, ${i * barHeight})`);
+
+    bars.append('rect')
+        .attr('width', (d, i) => scaleX(d) + 'px')
+        .attr('height', barHeight - 1)
+		.attr('fill', '#358');
+
+    bars.append('text')
+        .attr('x', d => scaleX(d) - 25)
+        .attr('y', barHeight - 10)
+		.attr('fill', 'white')
+		.attr('font-size', '30px')
+		.attr('font-family', 'sans-serif')
+        .text(d => d);
+}
+
+function createBarChartVertical(counts) {
+    const maxHeight = 300;
+	const nums = Object.values(counts);
+
+    const scaleY = d3.scaleLinear()
+        .domain([0, d3.max(nums)])
+        .range([maxHeight, 0]);
+
+	console.log(nums);
+
+	const barChart = d3.select('.scooterChart3');
+	const rightPadding = 2;
+	barChart.attr('height', maxHeight);
+	const myBarWidth = 40;
+	const vBars = barChart.selectAll('g')
+		.data(nums)
+			.enter()
+		.append('g')
+			.attr('transform', (d, i) => `translate(${myBarWidth * i}, 0)`)
+
+	vBars.append('rect')
+		.attr('y', d => scaleY(d))
+		.attr('width', myBarWidth - rightPadding)
+		.attr('height', d => maxHeight - scaleY(d))
+		.attr('fill', '#358');
+
+	vBars.append('text')
+		.attr('x', 14)
+		.attr('y', d => (scaleY(d) + 25))
+		.attr('fill', 'white')
+		.attr('font-family', 'sans-serif')
+		.attr('font-size', '20px')
+		.text(d => d);
+}
+</script>
+</body>
+</html>

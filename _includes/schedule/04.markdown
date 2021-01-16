@@ -1,0 +1,50 @@
+	<td markdown="block">
+* Modules
+* [Functions](slides/04/functions-return.html)
+* [Functions and Scope](slides/04/scope.html)
+* [Testing Functions / Assertions](slides/04/functions-testing.html)
+* [Lists](slides/04/lists.html)
+* [Lists Methods](slides/04/list-methods.html)
+
+Class Notes
+
+* [list methods](resources/code/class04_list_methods.py)
+* [experiment with the return statement](resources/code/class04_return.py)
+* [an example of using a module](resources/code/class04_modules.py)
+* [a module with an in_list implementation](resources/code/class04_myfunctions.py)
+* [miscellaneous (alternate module import, scope, strings)](resources/code/class04_module_scope_string.py)
+
+{% comment %}
+* [Exception Handling](slides/04/exceptions.html)
+* [Strings](slides/04/strings.html)
+* (see section 3.4) [Transposition / Rail Cipher](slides/04/rail-cipher.html)
+{% endcomment %}
+
+</td>
+{% comment %}
+	<td markdown="block">
+From {{ site.book1 }}
+
+* Ch 3 - Codes and Other Secrets
+</td>
+{% endcomment %}
+	<td markdown="block">
+
+Homework #4 - Due Monday, Oct 9th at 11pm
+
+* [Homework #04 description](assignments/hw04.html)
+	{% comment %}
+Today, in-class...
+
+* [Transposition cipher in-class programming assignment!](https://docs.google.com/a/nyu.edu/forms/d/12gwd_MzazDz3Cx6KPNOQEEhftmXNpZb32y23cjOMnYw/viewform)
+
+Due Friday, Feb 12th
+
+* [Assignment #02 is posted](assignments/hw02.html)
+* (This assignment was posted later than last, so I can extend the open date upon request)
+{% endcomment %}
+
+{% comment %}
+* Submit [Assignment #03](assignments/hw03.html)
+{% endcomment %}
+</td>

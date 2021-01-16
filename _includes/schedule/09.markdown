@@ -1,0 +1,67 @@
+	<td markdown="block">
+
+* Review Dictionaries
+* [Paths](slides/09/paths.html)
+* [File I/O](slides/09/files.html)
+* [File I/O Review](slides/09/files-review.html)
+
+Demos / In-Class Exercises
+
+* `sorted`?
+    * `reverse`
+    * `key`
+* [Practice Dictionaries](resources/code/class09/roommate.py)
+* (converted to homework) [Practice File I/O](resources/code/class09/nba.py)
+    * [data file (stats-clean.txt)](resources/code/class09/stats-clean.txt)
+
+Class Notes
+
+* [About Dictionaries](resources/code/class09.py)
+* [More Dictionary Review (Interactive Shell)](resources/code/class09_dictionary_review.py)
+* [Terminal Commands](resources/code/class09_terminal_commands.md)
+* [Reading / Writing Files](resources/code/class09_files.py)
+
+{% comment %}
+* [Image Processing](slides/09/image-processing.html)
+{% endcomment %}
+
+<a name="midterm1"></a>
+</td>
+
+
+{% comment %}
+	<td markdown="block">
+From {{ site.book1 }}
+
+* Ch 6 - Pycture Perfect... 
+* Ignore the cImage parts
+* PIL / Pillow documentation
+    * [Overview](https://pillow.readthedocs.org/en/3.1.x/handbook/overview.html)
+    * [Concepts](http://pillow.readthedocs.org/en/3.1.x/handbook/concepts.html)
+    * [Tutorial](http://pillow.readthedocs.org/en/3.1.x/handbook/tutorial.html)
+    * [Image Module](https://pillow.readthedocs.org/en/3.1.x/reference/Image.html#PIL.Image.Image)
+    * [Image Object](https://pillow.readthedocs.org/en/3.1.x/reference/Image.html#PIL.Image.Image)
+    * [PixelAccess Object](https://pillow.readthedocs.org/en/3.1.x/reference/PixelAccess.html)
+
+</td>
+
+
+{% endcomment %}
+	<td markdown="block">
+
+Due Friday, 11/10 at 11pm:
+
+(since we didn't get a chance to do this in class)
+
+* [Calculating Shooting %, NBA Data](resources/code/class09/nba.py)
+    * [data file (stats-clean.txt)](resources/code/class09/stats-clean.txt)
+* [Using Report Generated Above](resources/code/class09/nba_interactive.py)
+
+    {% comment %}
+Links / Downloads
+
+* Download [this image of a wallaby](resources/img/wallaby.jpg) to your project folder.
+* <strike><a href="https://docs.google.com/a/nyu.edu/forms/d/1zkCnVU_26wtBy6ZCMynyX0u2xwHT8fySuG8OzutAZZM/viewform">In-class programming activity</a></strike>
+
+    {% endcomment %}
+</td>

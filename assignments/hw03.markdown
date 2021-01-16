@@ -1,0 +1,459 @@
+---
+layout: homework
+title: "Assignment #3"
+---
+
+<style>
+img {
+    border: 1px solid #000;
+}
+
+.warning {
+    background-color: yellow;
+    color: #aa1122;
+    font-weight: bold;
+}
+</style>
+
+# Assignment #3 - Due Thursday, February 25th
+
+There are 5 parts in this assignment. The first part includes readings and background information. Parts 2 and 3 motivate using lists and file i/o through building a list utilities module... and using parts of that module to analyze anonymized survey data. Lastly, parts 4 and 5 go through using file i/o and the requests module to guess the username and password to a password protected web page: 
+
+* __Part 1__ readings
+* __Part 2__ list utilities module
+* __Part 3__ use parts of your list utilities module to analyze survey data
+* __Part 4__ file i/o for reading a word list and generating a file of username and password combinations
+* __Part 5__ use username and password combinations to try to access a password protected web page
+
+I've set up a server specifically for part 5; <span class="warning">don't try to do this on any other site</span>.
+
+## Part 1 - Readings
+
+#### From our Book
+
+Check out __Chapters 4 (A Nest of Snakes) and 5 (Earthquakes, Floods and...)__ in {{ site.book1 }}.  These chapters provide background information for Parts 2, 3, 4 and 5.
+
+
+#### Online Resources
+
+For part 5, you'll use the <code>requests</code> module to ask a website for data! Check out the following documentation:
+
+* [installing external python modules with pycharm](../help.html)(it covers matplot lib, __but install requests__ instead)
+* using the request module [to ask a web site for data](http://docs.python-requests.org/en/master/user/quickstart/#make-a-request) and... how to do it [with a username and password](http://docs.python-requests.org/en/master/user/authentication/#basic-authentication)
+    <pre><code data-trim contenteditable>import requests
+r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
+</code></pre>
+* [check out the response / data you receive from the website](>>> >>> r = requests.get('https://api.github.com/events')
+    <pre><code data-trim contenteditable>print(r.text)
+print(r.status_code)
+# 200 means your username and password worked!
+</code></pre>
+     
+As a fallback, if you're unable to get the above to work, our book covers <code>urllib</code> in chapter 5:
+
+<pre><code data-trim contenteditable>import urllib
+page = urllib.urlopen('http://some.url/index.html') 
+pageText = page.read()
+</code></pre>
+
+
+## Part 2 - List Utilities
+
+#### Setup
+
+* [download list_utils.py](../assignments/hw03/list_utils.py)
+
+#### Complete Missing Function Definitions
+
+You're trying to convince me that our class is going soooo slow, and
+that all this stuff about using list comprehensions and passing in
+functions as arguments to other functions is a snooze fest. So...
+you decide to do some simple analysis on the data from our survey to
+prove that _everyone_ thinks we're going at a snail's pace.
+
+To do that, you decide to create a python module that'll calculate
+things like mean, standard deviation and median... along with some
+other list related utilities (you'll use _some_ of these functions
+for the next part of the assignment).
+
+All of the functions in <code>list_utils.py</code> have headers, but
+none of them have a body. __Some of the functions don't return a value,
+but instead change the original list__...
+
+1. Implement the functions listed below
+2. The docstrings in <code>list_utils.py</code> contain additional details for how the functions should work
+3. Copy and paste the example usage in your <code>if __name__ == '__main__'</code> part of <code>list_utils.py</code> to test your completed functions
+4. Run your code and make sure that your program's output matches the expected values displayed below  (do not remove your tests / keep them in the file that you submit)
+
+#### shift\_left
+
+<code>shift_left(lst, n, fill_value=0)</code>
+
+<code># Shifts the elements in list, lst, by n places to the left. This is done in place (the original list passed in is changed)</code>
+
+Example Usage
+
+<pre><code data-trim contenteditable>print("\nshift_left\n=====")
+numbers = [1, 2, 3, 4]
+shift_left(numbers, 2)
+print(numbers)
+numbers = [1, 2, 3, 4]
+shift_left(numbers, 5)
+print(numbers)
+numbers = [1, 2, 3, 4]
+shift_left(numbers, -5)
+print(numbers)
+numbers = [1, 2, 3, 4]
+shift_left(numbers, 1, None)
+print(numbers)
+</code></pre>
+
+Expected Output
+
+<pre><code data-trim contenteditable>shift_left
+=====
+[3, 4, 0, 0]
+[0, 0, 0, 0]
+[1, 2, 3, 4]
+[2, 3, 4, None]
+</code></pre>
+
+<br>
+
+#### shifted_left
+
+<code>shifted_left(lst, n, fill_value=0)</code>
+
+<code> # Creates a new list with elements shifted left by n places.</code>
+
+Example Usage
+
+<pre><code data-trim contenteditable>print("\nshifted_left\n=====")
+numbers = [1, 2, 3, 4]
+print(shifted_left(numbers, 2))
+print(shifted_left(numbers, 5))
+print(shifted_left(numbers, -5))
+print(shifted_left(numbers, 1, None))
+</code></pre>
+
+Expected Output
+
+<pre><code data-trim contenteditable>shifted_left
+=====
+[3, 4, 0, 0]
+[0, 0, 0, 0]
+[1, 2, 3, 4]
+[2, 3, 4, None]
+</code></pre>
+
+<br>
+
+#### shift\_right
+
+<code>shift_right(lst, n, fill_value=0)</code>
+
+<code># Shifts the elements in list, lst, by n places to the right.</code>
+
+Example Usage
+
+<pre><code data-trim contenteditable>print("\nshift_right\n=====")
+numbers = [1, 2, 3, 4]
+shift_right(numbers, 2)
+print(numbers)
+numbers = [1, 2, 3, 4]
+shift_right(numbers, 5)
+print(numbers)
+numbers = [1, 2, 3, 4]
+shift_right(numbers, -5)
+print(numbers)
+numbers = [1, 2, 3, 4]
+shift_right(numbers, 1, None)
+print(numbers)
+</code></pre>
+
+Expected Output
+
+<pre><code data-trim contenteditable>shift_right
+=====
+[0, 0, 1, 2]
+[0, 0, 0, 0]
+[1, 2, 3, 4]
+[None, 1, 2, 3]
+
+</code></pre>
+
+<br>
+
+#### shifted\_right
+
+<code>shifted_right(lst, n, fill_value=0)</code>
+
+<code># Creates a new list with elements shifted right by n places.</code>
+
+Example Usage
+
+<pre><code data-trim contenteditable>print("\nshifted_right\n=====")
+numbers = [1, 2, 3, 4]
+print(shifted_right(numbers, 2))
+print(shifted_right(numbers, 5))
+print(shifted_right(numbers, -5))
+print(shifted_right(numbers, 1, None))
+</code></pre>
+
+Expected Output
+
+<pre><code data-trim contenteditable>shifted_right
+=====
+[0, 0, 1, 2]
+[0, 0, 0, 0]
+[1, 2, 3, 4]
+[None, 1, 2, 3]
+</code></pre>
+
+<br>
+
+#### fill
+
+<code>fill(lst, fill_value=0)</code>
+
+<code># Fills an existing list, lst, with the value, fill_value.</code>
+
+Example Usage
+
+<pre><code data-trim contenteditable>print("\nfill\n=====")
+numbers = [1, 2, 3, 4]
+fill(numbers)
+print(numbers)
+numbers = [1, 2, 3, 4]
+fill(numbers, fill_value=None)
+print(numbers)
+</code></pre>
+
+Expected Output
+
+<pre><code data-trim contenteditable>fill
+=====
+[0, 0, 0, 0]
+[None, None, None, None]
+</code></pre>
+
+<br>
+
+#### filled
+
+<code>filled(lst, fill_value=0)</code>
+
+<code># Creates a new list with the same length as the list passed in, lst, and fills it with the value, fill_value.</code>
+
+Example Usage
+
+<pre><code data-trim contenteditable>print("\nfilled\n=====")
+numbers = [1, 2, 3, 4]
+print(filled(numbers))
+print(filled(numbers, fill_value=None))
+</code></pre>
+
+Expected Output
+
+<pre><code data-trim contenteditable>filled
+=====
+[0, 0, 0, 0]
+[None, None, None, None]
+</code></pre>
+
+<br>
+
+#### mean
+
+<code>mean(lst)</code> 
+<code># Calculates and returns the average of all numbers in incoming list, lst.</code>
+
+Example Usage
+
+<pre><code data-trim contenteditable>print(mean([1, 2, 3, 4, 5]))
+</code></pre>
+
+Expected Output
+
+<pre><code data-trim contenteditable> 3
+</code></pre>
+
+<br>
+
+#### median
+
+<code>median(lst)</code>
+<code># Calculates the median of incoming list, lst.</code>
+
+Example Usage
+
+<pre><code data-trim contenteditable>print("\nmedian\n=====")
+print(mean([7, 11, 9, 18, 15, 12]))
+print(median([1, 2, 3, 4]))
+print(median([1, 2, 3]))
+print(median([1, 2]))
+</code></pre>
+
+Expected Output
+
+<pre><code data-trim contenteditable>median
+=====
+12.0
+2.5
+2
+1.5
+</code></pre>
+
+<br>
+
+#### std\_dev
+
+<code>std_dev(lst)</code>
+<code># Calculates the standard deviation of the sample for the incoming list, lst.</code>
+
+Example Usage
+
+<pre><code data-trim contenteditable>print("\nstd_dev\n=====")
+print(std_dev([7, 11, 9, 18, 15, 12]))
+</code></pre>
+
+Expected Output
+
+<pre><code data-trim contenteditable>std_dev
+4.0
+</code></pre>
+
+
+## Part 3 - survey_says.py
+
+#### Setup
+
+* [download survey_says.py](../assignments/hw03/survey_says.py)
+* [download the anonymized survey results](../resources/txt/survey-results.csv)
+
+#### Analyze Survey Data
+
+Using the file, <code>survey-results.csv</code>, display the following for the results for the survey questions on skill and pace:
+
+1. show the counts for each choice that has at least 1 answer, in ascending order of the choice
+2. display the average, standard deviation and median
+3. some of the functions in the previous part, <code>list_utils.py</code>, may be helpful __so require <code>list_utils.py</code>__ in your project by using <code>import list_utils</code>
+3. use the format below to print out results (.'s signify that the values for your calculations should be placed there)
+
+__Example Output__
+
+<pre><code data-trim contenteditable>SURVEY RESULTS
+Skills
+-----
+1: 2
+.
+.
+.
+4: 7
+Average: ...
+Standard Deviation: ...
+Median: ...
+
+Paces
+-----
+1: 1
+.
+.
+.
+5: 3
+Average: ...
+Standard Deviation: ...
+Median: ...
+</code></pre>
+
+## Part 4 - Generate a List of Usernames and Passwords
+
+#### Setup
+
+* [download pwgen.py](../assignments/hw03/pwgen.py)
+* [download the word list, wordsEn.txt](../resources/txt/wordsEn.txt)
+
+#### Generate Username/Password List
+
+Parts 4 and 5 will guide through:
+
+1. Creating a file, <code>passwords.txt</code>, of username and password combinations... 
+2. Using that file to guess the correct combination of words that grants access to a password protected web page
+
+In this part, you'll be focusing on creating <code>passwords.txt</code>, your file of potential username and password combinations. To do this:
+
+1. read a downloaded word list that contains a word on every line: [wordsEn.txt](../resources/txt/wordsEn.txt) (right click and save-as to your project folder or the same folder where you're running your python programs)
+2. it turns out that you have some clues about what the username and password may be, __so only keep the words that meet the following criteria:__
+    * start with either the letter <code>h</code> or <code>v</code>
+    * have two <code>s</code>'s
+    * have at least one <code>o</code>
+    * are at least 14 characters long
+3. make every possible combination of the words to form pairs of usernames and passwords; you can ignore pairs where the username and password are the same
+    * for example, if the filtered words you have are:
+        <pre><code data-trim contenteditable>cactus
+pizza        
+giraffe
+</code></pre>
+    * then the possible username and password combinations, separated by a colon, are:
+        <pre><code data-trim contenteditable>cactus:pizza
+cactus:giraffe
+pizza:cactus
+pizza:giraffe
+giraffe:cactus
+giraffe:pizza
+</code></pre>
+4. write the combinations to a file using the format above (each combination on a line, with usernames and passwords separated by a colon)
+5. in the end, __you should have a file of username and password combinations called <code>passwords.txt</code>__ 
+6. __before moving on, check that you have a passwords.txt created, with usernames and passwords within it__ (there should be around 1100 ~ 1200 combinations)
+
+To write your program, __implement the following functions__ (the function headers are already present in the <code>pwgen.py</code>):
+
+* <code>filter_words_from_file(fn, rules=lambda word:True):</code>
+    * reads in file of words, strips leading and trailing whitespace, and filters by rules 
+    * ...and gives back list of processes words
+* <code>combinations(words)</code>
+    * creates a list of 2-element tuples by going through every combination of words in list, words 
+    * ignores combinations where both words are the same (see example in description #3 above)
+    * __don't use the itertools module to do this__
+* <code>generate_password_file(source_fn, dest_fn, rules=lambda word:true)</code>
+    * uses the functions above to read in a file and create a list of username/password combinations
+    * writes each combination to the file specified, with usernames and passwords separated by a colon
+* <code>load_password_file(pw_fn, delimiter=':')</code>
+    * reads in a password file in the format of username:password per line...
+    * and gives back a list of tuples of username and password combinations
+* in the <code>if __name__ == "__main__"</code> part of your code:
+    * create a rules function that you'll pass to <code>generate_password_file</code> 
+        * that will eventually be passed to <code>filter_words_from_file</code> as the function that enforces the filtering rules (only words that are >= 14 characters, etc.)
+        * this rules function will have a single parameter, a word, and it will return either True or False depending on whether or not the word should be included in the results
+    * use <code>generate_password_file</code> to create your <code>passwords.txt</code>
+
+__See the docstring comments for more details on the requirements__.
+
+__Again, check that you have a proper passwords.txt file created before going on to the next part__ &rarr;
+
+## Part 5 - Accessing the Password Protected Site
+
+#### Setup
+
+* [download hacky_hackerson.py](../assignments/hw03/hacky_hackerson.py)
+
+#### Write a Program That Guesses a Web Page's Username and Password
+
+<span class="warning">Again, don't run any _brute force dictionary attacks_ on any other site</span> besides the one that I've specifically set up for this assignment.
+
+1. open the file, <code>passwords.txt</code> (that you generated from the previous part)
+2. go through every combination present in the file, and use that to request data from the URL (I'll send the URL to the password protected page in an email)
+    * use the syntax that allows passing in a username and password
+    * (you'll have to extract the username and password from each line in the file)
+        <pre><code data-trim contenteditable># assuming that url = "http://the.url.you/received/via/email"
+response = requests.get(url, auth=("someusername", "somepassword"))
+# where "someusername" and "somepassword" are sourced from your passwords.txt file
+</code></pre>
+    * you'll know if you got in if you get a status code of 200... so check for it, and print out the result of the response data you get back:
+        <pre><code data-trim contenteditable>if response.status_code == 200:
+    print(response.text)
+</code></pre>
+3. <code>break</code> (stop) once you've found a combination that works!
+
+
+

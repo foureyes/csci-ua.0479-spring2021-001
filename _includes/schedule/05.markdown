@@ -1,0 +1,56 @@
+	<td markdown="block">
+
+* Review Functions / Extras
+    * assertions (see previous slides)
+    * scope practice (see previous slides)
+    * main function
+    * keyword arguments
+    * \*\* and \*
+* Review Modules / Extras
+    * using `as`
+    * `from` ... `import`
+* [List Review / Extras](slides/05/lists-methods-constructor-comprehension.html)
+    * methods
+    * list operators, etc.
+    * list comprehensions
+    * enumerate
+    * iterating with indexes
+* [More List Review and Extras](slides/05/lists-references-map.html)
+    * warning, [everything beyond built-in functions is intermediate level](slides/05/lists-references-map.html#32)
+
+Class Notes
+
+* [Scope, main function, testing with assertions](resources/code/class05.py) (slides are in previous class)
+* [List Methods, Looping](resources/code/class05_list_methods.py)
+* [More Lists and Looping, Iterating with Indexes](resources/code/class05_index.py)
+
+{% comment %}
+* nested loops
+* nested loops and nested lists
+* [About Class #05 / Homework Discussion](slides/05/meta.html)
+* [Strings and Mutability](slides/05/strings-mutability.html)
+* [Substitution Cipher, Vigenère Cipher](slides/05/simple-cipher.html)
+* [Lists - Methods, Constructor, Comprehensions](slides/05/lists-methods-constructor-comprehension.html)
+* Stack Frames
+* Simple Count Based Repetition
+* [Turtle](slides/04/turtle.html)
+    * Ignore Lists
+* [Recursion](slides/04/recursion.html) (Maybe!)
+* Nested Loops (previous slides)
+{% endcomment %}
+
+
+</td>
+	<td markdown="block">
+
+Homework #5 - Due Friday, October 13th at 11pm
+
+* [wordsy.py](assignments/hw05/wordsy.py)
+* [scramble.py](assignments/hw05/scramble.py)
+* the instructions are in the comments of the file
+* both of these have an extra optional part
+
+{% comment %}
+{% endcomment %}
+
+</td>

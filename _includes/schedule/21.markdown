@@ -1,0 +1,13 @@
+	<td markdown="block">
+* [Repository for in-class code](https://github.com/jversoza/p4a-spring-16-examples/tree/master/p4a-class21)
+</td>
+	<td markdown="block">
+</td>
+	<td markdown="block">
+
+Due Monday, April 25th
+
+* [Milestone #1](assignments/final-project.html)
+* [Assignment #7](assignments/hw07.html)
+
+</td>

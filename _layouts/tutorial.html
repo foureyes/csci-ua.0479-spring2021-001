@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+  {% include homework_head.html %}
+
+  
+  <body>
+
+  <style>
+.container script {
+	/* display: block; */
+	/* font-family: monospace; */
+}
+
+
+.container pre.code {
+	display: block;
+	padding: 10.5px;
+	margin: 0 0 11px;
+	font-size: 15px;
+	line-height: 1.42857143;
+	word-break: break-all;
+	word-wrap: break-word;
+	color: #333;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-family: monospace;
+}
+
+style.show {
+	display: none !important;
+}
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+  <script src="../../resources/js/trim.js"></script>
+
+  <script defer="true">
+function highlightCode() {
+	hljs.configure({languages:['javascript']});
+	const scripts = document.querySelectorAll('.container script');
+	for(const script of scripts) {
+		if(!script.src) {
+			const pre = document.createElement('pre');
+			pre.textContent = script.textContent.trim();
+			pre.classList.add('code');
+			hljs.highlightBlock(pre);
+			script.parentNode.insertBefore(pre, script.nextSibling);
+		}
+	}
+}
+
+function show() {
+	const eles = document.querySelectorAll('.container .show');
+	for(const ele of eles) {
+
+		const container = document.createElement('div');
+		const tmp = ele.cloneNode(true);
+		tmp.classList.remove('show');
+		container.appendChild(tmp);
+
+		const pre = document.createElement('pre');
+		pre.textContent = container.innerHTML;
+		ele.parentNode.insertBefore(pre, ele);
+	}
+
+}
+
+function init() {
+	highlightCode(); 
+	show();
+}
+
+document.addEventListener('DOMContentLoaded', init);
+
+  </script>
+
+
+  <div class="content">
+  <div class="container" style="width: 60em; line-height:1.5;">
+
+  {{ content }}
+
+  </div><!-- container -->
+  </div><!-- content -->
+
+
+  </body>
+</html>
+
+
