@@ -1,5 +1,5 @@
 draft,type,num,date,day,slides,readings,assignments,,old schedule,
-y,,1,02/01/21,Mon,"Introductions
+y,,1,01-Feb,Mon,"Introductions
 
 * [Course Overview](slides/intro/overview.html) 
 * [Github Usage Form]({{ site.survey_github }}) (survey)
@@ -62,7 +62,7 @@ __Homework #00__ – due Thur, 1/30, at 9:30am (before class)
 3. [Homework #00 Instructions](assignments/00.html)
 -->
 ",,,
-y,,2,02/03/21,Wed,"Sequence Types, Mapping Types, Sets
+y,,2,03-Feb,Wed,"Sequence Types, Mapping Types, Sets
 
 <!--
 * [Sequence Types](slides/python/sequence-types.html)
@@ -115,7 +115,7 @@ __Homework #01__ – due Thursday 2/6 at 11pm
 * [Homework #01 Instructions](assignments/01.html)
 
 ",,,
-y,,3,02/08/21,Mon,"Classes Continued (protocols / double underscore)
+y,,3,08-Feb,Mon,"Classes Continued (protocols / double underscore)
 
 * [Double Underscore Methods](notebooks/py/classes.ipynb) (notebook)
 * [Another Look at iter and getitem](notebooks/py/iter_getitem.ipynb)  (notebook)
