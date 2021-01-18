@@ -1,5 +1,5 @@
 draft,type,num,date,day,slides,readings,assignments,,old schedule,
-,,1,28-Jan ,Tue,"Introductions
+y,,1,02/01/21,Mon,"Introductions
 
 * [Course Overview](slides/intro/overview.html) 
 * [Github Usage Form]({{ site.survey_github }}) (survey)
@@ -62,7 +62,7 @@ __Homework #00__ – due Thur, 1/30, at 9:30am (before class)
 3. [Homework #00 Instructions](assignments/00.html)
 -->
 ",,,
-,,2,30-Jan ,Thu,"Sequence Types, Mapping Types, Sets
+y,,2,02/03/21,Wed,"Sequence Types, Mapping Types, Sets
 
 <!--
 * [Sequence Types](slides/python/sequence-types.html)
@@ -115,7 +115,7 @@ __Homework #01__ – due Thursday 2/6 at 11pm
 * [Homework #01 Instructions](assignments/01.html)
 
 ",,,
-,,3,04-Feb ,Tue,"Classes Continued (protocols / double underscore)
+y,,3,02/08/21,Mon,"Classes Continued (protocols / double underscore)
 
 * [Double Underscore Methods](notebooks/py/classes.ipynb) (notebook)
 * [Another Look at iter and getitem](notebooks/py/iter_getitem.ipynb)  (notebook)
@@ -185,7 +185,7 @@ __Quiz #03__ – due Wed, 9/26, at 11pm
  * create csv class, allow delimiter change, watch out for commas in data
  * write tests?
  * text analysis",
-,,4,06-Feb ,Thu,"Iterators and Generators
+y,,4,10-Feb,Wed,"Iterators and Generators
 
 * [Iterators, Generators](notebooks/py/generators.ipynb) (notebook)
 
@@ -234,7 +234,8 @@ Vectors and Matrices (numpy)
  MATERIAL
  * TODO - add linear algebra
  * motivation for linear algebra… some example? Maybe https://www.youtube.com/watch?v=Qz58vTa8-SY",,
-,,5,11-Feb ,Tue,"Vectors and Matrices (numpy) continued
+y,,,15-Feb,Mon,President’s Day,,,,,
+y,,5,17-Feb,Wed,"Vectors and Matrices (numpy) continued
 
 * See slides from previous class
 
@@ -269,7 +270,7 @@ Plotting and Visualization
  * Create data frame like library - no loops, only generator expressions 
  * Manual Cleaning
  * music generator (numpy) no loops only vector operations",,
-,,6,13-Feb ,Thu,"See Previous Slides on Matplotlib
+y,,6,18-Feb,Thu,"See Previous Slides on Matplotlib
 
 * [matplotlib – charts and graphs](notebooks/viz/charts-graphs-decode.ipynb) (notebook)
 * [What is this .txt file?](notebooks/viz/files/enc.txt)
@@ -310,7 +311,7 @@ HW 02:
  * Manual Cleaning
  * music generator (numpy) no loops only vector operations
 -->",,
-,,7,18-Feb ,Tue,"Tabular Data (pandas)
+y,,7,22-Feb,Mon,"Tabular Data (pandas)
 
 * See slides from previous class
 * [pandas basics](notebooks/pandas/fa19-class07-pandas-basics.ipynb) (notebook)",,"__Quiz #05__ – due Tue morning, 2/25, at 9:30am",,,"Data Science from Scratch
@@ -323,7 +324,7 @@ HW 02:
  * Focus on Scraping
  * Focus on APIs
  * Ch 7: Data Cleaning and Preparation"
-,,8,20-Feb ,Thu,"Cleaning / Preparing Data, Loading Data With Pandas
+y,,8,24-Feb,Wed,"Cleaning / Preparing Data, Loading Data With Pandas
 
 * [Missing Data, Basic Transformations](slides/python/pandas-clean.html)
 * [Cleaning Data with Pandas](notebooks/pandas/cleaning-data-pandas.ipynb) (notebook)
@@ -386,7 +387,7 @@ Using APIs
  Python for Data Analysis
  
  * Ch 8: Data Wrangling: Join, Combine and Reshape"
-,,9,25-Feb ,Tue,"Regular Expressions
+y,,9,01-Mar,Mon,"Regular Expressions
 
 * [Basic Regular Expression Syntax](slides/python/regex.html)
 
@@ -449,7 +450,7 @@ Join Combine and Reshape
  
  * Ch 10: Data Aggregation and Group Operations
  * Ch 11: Time Series"
-,,10,27-Feb ,Thu,"Revisit Data from the Web
+y,,10,03-Mar,Wed,"Revisit Data from the Web
 
 * (see previous class note / slides)
 
@@ -509,7 +510,7 @@ Time Series
  * [creating tables](https://www.postgresql.org/docs/current/static/sql-createtable.html)
  * [INSERT](https://www.postgresql.org/docs/current/static/sql-insert.html)
  * [SELECT](https://www.postgresql.org/docs/current/static/sql-select.html)"
-,,11,03-Mar ,Tue,"Relational Database Overview
+y,,11,08-Mar,Mon,"Relational Database Overview
 
 * [Databases Intro](slides/db/intro.html)
 
@@ -610,7 +611,7 @@ Commandline Client, SQL, and Simple Queries
  * [WHERE](http://www.postgresqltutorial.com/postgresql-where/)
  * [LIMIT](http://www.postgresqltutorial.com/postgresql-limit/)
  * [COPY, Import](http://www.postgresqltutorial.com/import-csv-file-into-posgresql-table/)"
-,,12,05-Mar ,Thu,"Basic Postgres Administration
+y,,12,10-Mar,Wed,"Basic Postgres Administration
 
 Data Types
 
@@ -699,7 +700,7 @@ Queries Continued
  
  * Ch 6: Joining Tables in a Relational Database
  * Ch 7: Table Design That Works for You (Naming Tables, Columns, and Other Identifiers, Controlling Column Values with Constraints)"
-,,13,10-Mar ,Tue,"
+y,,13,15-Mar,Mon,"
 * __EXAM MOVED TO 3/31__
 * See previous week’s slides for SQL Basics
 
@@ -716,7 +717,7 @@ Review First Part of the Semester
 
 * [midterm review notebook](notebooks/midterm-review/review.ipynb)
 ",
-,,14,12-Mar ,Thu,"Constraints and Naming Conventions
+y,,14,17-Mar,Wed,"Constraints and Naming Conventions
 
 * [Constraints and Naming Conventions](slides/db/constraints-conventions.html)
 
@@ -768,9 +769,7 @@ Sample Questions for Midterm and About Exam
  * [Left outer join](http://www.postgresqltutorial.com/postgresql-left-join/)
  * [Full outer join](http://www.postgresqltutorial.com/postgresql-full-outer-join/)
  * [Self join](http://www.postgresqltutorial.com/postgresql-self-join/)"
-y,holiday,,17-Mar ,Tue,No Class Scheduled (Spring Break),,,,,
-y,holiday,,19-Mar ,Thu,No Class Scheduled (Spring Break),,,,,
-,,15,24-Mar ,Tue,"Multiple Tables (Joins) Continued
+y,,15,22-Mar,Mon,"Multiple Tables (Joins) Continued
 
 * See previous slides on Joins
 
@@ -800,7 +799,7 @@ Database Design, Entities and Relationships, The Relational Data Model and Diagr
  * [Left outer join](http://www.postgresqltutorial.com/postgresql-left-join/)
  * [Full outer join](http://www.postgresqltutorial.com/postgresql-full-outer-join/)
  * [Self join](http://www.postgresqltutorial.com/postgresql-self-join/)",,,,
-,,16,26-Mar ,Thu,"Review Again
+y,,16,24-Mar ,24-Mar ,"Review Again
 
 * potentially review again to prep for exam…
 
@@ -855,7 +854,7 @@ Diagrams","Practical SQL
  
  * Ch 12. Advanced Query Techniques
  * Ch 13: Mining Text to Find Meaningful Data"
-,exam,17,31-Mar ,Tue,"Exam: small timed project, online quiz",,,,"Subqueries
+y,exam,17,29-Mar,Mon,"Exam: small timed project, online quiz",,,,"Subqueries
 
 * TODO - subqueries
 
@@ -874,7 +873,7 @@ Manipulating Text
  * Ch 6. Normalization
  * Ch 8. Codd's Rules for Relational Database Design
  * Ch 9. Using SQL to Implement a Relational Design"
-,,18,02-Apr ,Thu,"Manipulating Text
+y,,18,31-Mar,Wed,"Manipulating Text
 
 * [Strings and Arrays](slides/db/strings.html)
 
@@ -942,7 +941,7 @@ Implementation
  
  * [GROUP BY](http://www.postgresqltutorial.com/postgresql-group-by/)
  * [HAVING](http://www.postgresqltutorial.com/postgresql-having/)"
-,,19,07-Apr ,Tue,"Conditionals
+y,,19,05-Apr,Mon,"Conditionals
 
 * [Conditional Expressions](slides/db/conditionals.html)
 
@@ -1018,7 +1017,7 @@ Index Online Resources
 * [Tour of PostgreSQL Index Types](https://www.citusdata.com/blog/2017/10/17/tour-of-postgres-index-types/)
 * [Principles and Applications of the Index Types Supported by PostgreSQL
 ](https://medium.com/@Alibaba_Cloud/principles-and-applications-of-the-index-types-supported-by-postgresql-481f59bab67d)"
-,,20,09-Apr ,Thu,"Views, Functions, and Triggers
+y,,20,07-Apr,Wed,"Views, Functions, and Triggers
 
 
 * [In Class Demo](sql/design/functions-views.sql)
@@ -1127,7 +1126,7 @@ Triggers
 Documentation
 
 * [psycopg2 example usage from official documentation](http://initd.org/psycopg/docs/usage.html)"
-,,21,14-Apr ,Tue,"
+y,,21,12-Apr,Mon,"
 <!--
 Security
 
@@ -1200,7 +1199,8 @@ Postgres and Python
 * [moma-queries.sql](sql/py/moma-queries.sql)","* [MongoDB Data Model Design](https://docs.mongodb.com/manual/core/data-model-design/)
  * [MongoDB Data Model Examples and Patterns](https://docs.mongodb.com/manual/applications/data-models/)
  * (see all sections under Model Relationships Between Documents)"
-,,22,16-Apr ,Thu,"NoSQL (mongodb)
+y,,,14-Apr,Wed,Spring Break,,,,,
+y,,22,19-Apr,Mon,"NoSQL (mongodb)
 
 * [MongoDB Intro](slides/mongo/intro.html)
  * [books.csv](mongo/books.csv)
@@ -1225,10 +1225,10 @@ HW 09:
 * [MongoDB Database Design](slides/mongo/design.html)
 
 ",Same as Previous
-,,23,21-Apr ,Tue,NoSQL (mongodb) Continued,Same as Previous,"__Quiz #07 and #08__ – due Thursday morning, 4/24, at 9:30am",,NoSQL (mongodb) Continued,"Practical SQL
+y,,23,21-Apr,Wed,NoSQL (mongodb) Continued,Same as Previous,"__Quiz #07 and #08__ – due Thursday morning, 4/24, at 9:30am",,NoSQL (mongodb) Continued,"Practical SQL
  
  Ch 14: Analyzing Spatial Data with PostGIS"
-,,24,23-Apr ,Thu,"* Review MongoDB Queries
+y,,24,26-Apr,Mon,"* Review MongoDB Queries
 * [MongoDB Database Design](slides/mongo/design.html)
 * [Aggregation](slides/mongo/aggregation.html)
 
@@ -1253,7 +1253,7 @@ __Mini Project due Monday Dec 9th at 11pm__
 
 * [Instructions for Free-form Homework Assignment](assignments/mini-project.html)
 -->",,"Geo-spatial Data (GIS with pandas, postgres, mongodb)",https://firebase.google.com/docs/firestore/ (Introduction to Secure and Validate Data)
-,,25,28-Apr ,Tue,"Aggregations, Python and MongoDB
+y,,25,28-Apr,Wed,"Aggregations, Python and MongoDB
 
 * see aggregation slides
 * [Python and MongoDB with PyMongo](slides/mongo/pymongo.html)
@@ -1273,7 +1273,7 @@ Web Based Visualization and / or Cloud Databases
 ",,,,Thanksgiving Recess: No classes scheduled,"https://bost.ocks.org/mike/bar/
  https://bost.ocks.org/mike/bar/2/
  https://bost.ocks.org/mike/bar/3/"
-,,26,30-Apr ,Thu,"Web Based Visualization and / or Cloud Databases
+y,,26,03-May,Mon,"Web Based Visualization and / or Cloud Databases
 
 <!--
 * [svg + d3](d3/overview.html)
@@ -1286,7 +1286,7 @@ Web Based Visualization and / or Cloud Databases
 
 * [svg + d3](d3/overview.html)
 ",Reading TBD
-y,,27,05-May ,Tue,"Review Second Part of the Semester 
+y,,27,05-May,Wed,"Review Second Part of the Semester 
 
  * [midterm review notebook](notebooks/midterm-review/review.ipynb) ","https://bost.ocks.org/mike/bar/
  https://bost.ocks.org/mike/bar/2/
@@ -1297,4 +1297,4 @@ y,,27,05-May ,Tue,"Review Second Part of the Semester
 <!--(Introduction to Secure and Validate Data) →
 
 Reading TBD",,,Processing Large Data Sets (Spark or Hadoop),
-y,exam,28,07-May ,Thu,Exam #2,,,,Exam #2,
+y,exam,28,10-May,Mon,Exam #2,,,,Exam #2,

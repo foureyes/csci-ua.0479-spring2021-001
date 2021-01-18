@@ -16,7 +16,7 @@ exclude: [bower_components, README.md, bower.json, gruntfile.js, node_modules]
 
 vars:
   survey_github: "https://docs.google.com/forms/d/e/1FAIpQLSdsV7B-M4ayL1CMoc3MDvY6wAsjee8eFMB-8okYYkfrObYMLw/viewform"
-  piazza: "https://piazza.com/class/k5r0rdmk6jcov"
+  forums_link: "https://edstem.org/us/courses/3750/discussion/"
   email: "jversoza at cs dot nyu dot edu"
   slides_img_prefix: "../../resources/img"
   
