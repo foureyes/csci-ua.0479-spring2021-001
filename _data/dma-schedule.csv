@@ -234,7 +234,7 @@ Vectors and Matrices (numpy)
  MATERIAL
  * TODO - add linear algebra
  * motivation for linear algebra… some example? Maybe https://www.youtube.com/watch?v=Qz58vTa8-SY",,
-y,,,15-Feb,Mon,President’s Day,,,,,
+y,holiday,,15-Feb,Mon,President’s Day,,,,,
 y,,5,17-Feb,Wed,"Vectors and Matrices (numpy) continued
 
 * See slides from previous class
@@ -700,11 +700,7 @@ Queries Continued
  
  * Ch 6: Joining Tables in a Relational Database
  * Ch 7: Table Design That Works for You (Naming Tables, Columns, and Other Identifiers, Controlling Column Values with Constraints)"
-y,,13,15-Mar,Mon,"
-* __EXAM MOVED TO 3/31__
-* See previous week’s slides for SQL Basics
-
-Review First Part of the Semester
+y,,13,15-Mar,Mon,"Review First Part of the Semester
 
 * Some sample questions contain topics not on the exam (specifically group by/having)
 * [Likely Exam Reference (Different from Reference in Samples)](resources/handouts/midterm/dma-midterm-reference.pdf)
@@ -717,28 +713,7 @@ Review First Part of the Semester
 
 * [midterm review notebook](notebooks/midterm-review/review.ipynb)
 ",
-y,,14,17-Mar,Wed,"Constraints and Naming Conventions
-
-* [Constraints and Naming Conventions](slides/db/constraints-conventions.html)
-
-
-Multiple Tables (Joins)
-
-* [Joins](slides/db/joins.html)
-* [Movies Revisited](sql/joins/movies.sql)
-* Foreign Key (REFERENCES table (col))
-","Practical SQL
- 
- * Ch 6: Joining Tables in a Relational Database
- * Ch 7: Table Design That Works for You (Naming Tables, Columns, and Other Identifiers, Controlling Column Values with Constraints)","__Homework #06__ – due Thursday 4/2 at 11pm
-
-* [Homework #06](assignments/06.html)
-* repositories will be created after break","ADD QUIZ FOR THESE TOPICS!
-
-MATERIAL:
-
-TODO - add constraints
-TODO - add naming conventions","Constraints
+y,exam,14,17-Mar,Wed,Exam #1,,,,"Constraints
 
 * TODO - Constraints
 
@@ -769,7 +744,29 @@ Sample Questions for Midterm and About Exam
  * [Left outer join](http://www.postgresqltutorial.com/postgresql-left-join/)
  * [Full outer join](http://www.postgresqltutorial.com/postgresql-full-outer-join/)
  * [Self join](http://www.postgresqltutorial.com/postgresql-self-join/)"
-y,,15,22-Mar,Mon,"Multiple Tables (Joins) Continued
+y,,15,22-Mar,Mon,"Constraints and Naming Conventions
+
+* [Constraints and Naming Conventions](slides/db/constraints-conventions.html)
+
+
+Multiple Tables (Joins)
+
+* [Joins](slides/db/joins.html)
+* [Movies Revisited](sql/joins/movies.sql)
+* Foreign Key (REFERENCES table (col))
+","Practical SQL
+ 
+ * Ch 6: Joining Tables in a Relational Database
+ * Ch 7: Table Design That Works for You (Naming Tables, Columns, and Other Identifiers, Controlling Column Values with Constraints)","__Homework #06__ – due Thursday 4/2 at 11pm
+
+* [Homework #06](assignments/06.html)
+* repositories will be created after break","ADD QUIZ FOR THESE TOPICS!
+
+MATERIAL:
+
+TODO - add constraints
+TODO - add naming conventions",,
+y,,16,24-Mar ,24-Mar ,"Multiple Tables (Joins) Continued
 
 * See previous slides on Joins
 
@@ -798,36 +795,7 @@ Database Design, Entities and Relationships, The Relational Data Model and Diagr
  * [Inner join](http://www.postgresqltutorial.com/postgresql-inner-join/)
  * [Left outer join](http://www.postgresqltutorial.com/postgresql-left-join/)
  * [Full outer join](http://www.postgresqltutorial.com/postgresql-full-outer-join/)
- * [Self join](http://www.postgresqltutorial.com/postgresql-self-join/)",,,,
-y,,16,24-Mar ,24-Mar ,"Review Again
-
-* potentially review again to prep for exam…
-
-Normalization
-
-*  [Normalization](slides/db/normalization.html) 
-
-Relational Database Design Rules / Tips
-
-* Database Design Demo with ER Diagram (Online Food Ordering Site?)
-* [pgmodeler for Data Modeling and Reverse Engineering](https://pgmodeler.io/)
-","Relational Database Design and Implementation
- 
- * Ch 6. Normalization
- * Ch 8. Codd's Rules for Relational Database Design
- * Ch 9. Using SQL to Implement a Relational Design
-","<!--
-
-__Homework #05__ – due Thursday 4/2 at 11pm
-
-
-
-* [Homework #05](assignments/05.html)
-
--->
-
-
-",,"Multiple Tables (Joins) Continued
+ * [Self join](http://www.postgresqltutorial.com/postgresql-self-join/)",,,"Multiple Tables (Joins) Continued
 
 
 * [Movies Revisited](sql/joins/movies.sql)
@@ -854,7 +822,31 @@ Diagrams","Practical SQL
  
  * Ch 12. Advanced Query Techniques
  * Ch 13: Mining Text to Find Meaningful Data"
-y,exam,17,29-Mar,Mon,"Exam: small timed project, online quiz",,,,"Subqueries
+y,,17,29-Mar,Mon,"Normalization
+
+*  [Normalization](slides/db/normalization.html) 
+
+Relational Database Design Rules / Tips
+
+* Database Design Demo with ER Diagram (Online Food Ordering Site?)
+* [pgmodeler for Data Modeling and Reverse Engineering](https://pgmodeler.io/)
+","Relational Database Design and Implementation
+ 
+ * Ch 6. Normalization
+ * Ch 8. Codd's Rules for Relational Database Design
+ * Ch 9. Using SQL to Implement a Relational Design
+","<!--
+
+__Homework #05__ – due Thursday 4/2 at 11pm
+
+
+
+* [Homework #05](assignments/05.html)
+
+-->
+
+
+",,"Subqueries
 
 * TODO - subqueries
 
@@ -1199,13 +1191,12 @@ Postgres and Python
 * [moma-queries.sql](sql/py/moma-queries.sql)","* [MongoDB Data Model Design](https://docs.mongodb.com/manual/core/data-model-design/)
  * [MongoDB Data Model Examples and Patterns](https://docs.mongodb.com/manual/applications/data-models/)
  * (see all sections under Model Relationships Between Documents)"
-y,,,14-Apr,Wed,Spring Break,,,,,
-y,,22,19-Apr,Mon,"
+y,,22,14-Apr,Wed,"NoSQL (mongodb)
 
 * [MongoDB Intro](slides/mongo/intro.html)
- * [books.csv](mongo/books.csv)
- * [books_fields.txt](mongo/books_fields.txt)
- * [wifi3.json](mongo/wifi3.json)
+* [books.csv](mongo/books.csv)
+* [books_fields.txt](mongo/books_fields.txt)
+* [wifi3.json](mongo/wifi3.json)
 
 
 ","* [MongoDB Data Model Design](https://docs.mongodb.com/manual/core/data-model-design/)
@@ -1225,10 +1216,11 @@ HW 09:
 * [MongoDB Database Design](slides/mongo/design.html)
 
 ",Same as Previous
+y,holiday,22,19-Apr,Mon,Spring Break,,,,,
 y,,23,21-Apr,Wed,NoSQL (mongodb) Continued,Same as Previous,"__Quiz #07 and #08__ – due Thursday morning, 4/24, at 9:30am",,NoSQL (mongodb) Continued,"Practical SQL
  
  Ch 14: Analyzing Spatial Data with PostGIS"
-y,,24,26-Apr,Mon,"NoSQL (mongodb)
+y,,24,26-Apr,Mon,"NoSQL (mongodb) Continued
 
 * Review MongoDB Queries
 * [MongoDB Database Design](slides/mongo/design.html)

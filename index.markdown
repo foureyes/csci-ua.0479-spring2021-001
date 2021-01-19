@@ -23,6 +23,9 @@ function init() {
 </script>
 -->
 
+
+
+
 <div id="quick-links">
 <h3 style="text-align: center;"><a href="syllabus.html">Homework and Quiz Policy</a> | <a href="{{site.vars.forums_link}}">Forums and Tutoring</a> | <a href="data-sets.html">Data Sets</a></h3>
 </div>
