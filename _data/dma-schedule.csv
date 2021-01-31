@@ -44,7 +44,7 @@ Unicode and Strings
  * [Unicode HOWTO](https://docs.python.org/3/howto/unicode.html)","__Homework #00__ - due Tuesday (tomorrow!), 2/2, at 11:00am 
 0. [Fill out this survey!]({{ site.survey_github }})
 1. Install a Python 3 Environment
-  * use [Anaconda](https://conda.io/docs/user-guide/install/index.html)
+  * use [Anaconda](https://docs.anaconda.com/anaconda/install/)
   * if you’re already familiar with Python, you can manually install:
     * Python 3 (using `apt`, `homebrew`, etc.)
     * `matplotlib`, `jupyterlab` (or notebook), `pandas`, `numpy` (using `easy-install`, `pip`, etc.)
