@@ -67,14 +67,22 @@ A platform will be provided for asking questions online as well as moderating di
 <div class="panel-body" markdown="block">
 
 
-* 8 quizzes (maybe 1 or 2 more)
-* approximately one quiz per week
-* late submissions not accepted, with the following exceptions
-	* illness, with documentation
-	* religious observance
-	* technical issues (NYU Classes down, quiz or assignment not appearing, etc.), with documentation
+To review and preview material, we'll have 8 - 12 total (almost weekly) of some combination of:
+
+1. online quizzes taken from home 
+	* late submissions not accepted, with the following exceptions
+		* illness, with documentation
+		* religious observance
+		* technical issues (NYU Classes down, quiz or assignment not appearing, etc.), with documentation
 	* this policy may be revised to accommodate special circumstances
-* quizzes will contain randomized questions
+	* quizzes will contain randomized questions
+2. in class quizzes 
+	* to be taken during class time with appropriate substitute for those with timezone conflicts
+	* quizzes will contain randomized questions
+3. in class workshops 
+	* hands-on group work to be done during class time with appropriate substitute for those with timezone conflicts
+	* make require minor prep work prior to class
+
 * the material in the quizzes come from readings
 * quizzes may be due before the corresponding lecture for the readings have taken place
 </div>
@@ -119,12 +127,10 @@ Topics
 * NoSQL:
 	* MongoDB
 	* basic create/read/update/delete
-	* GeoJSON
-* cloud databases / data processing (some combination of the following topics)
+* cloud databases / data processing (at least one or more of the following topics )
 	* Firebase
 	* PostgreSQL on Amazon RDS
 	* S3
-	* hadoop on AWS or Apache Spark
 	* AWS Lambda 
 </div>
     </div>
@@ -133,13 +139,12 @@ Topics
 <div class="panel-heading">Grading</div>
 <div class="panel-body" markdown="block">
 
-* 10% - Class Participation / Quizzes / Activities \*
-* 20% - Homework
-* 30% - Midterm Exam
-* 5% - Small Project \*
-* 35% - Final Exam
+* 15% - Quizzes / In-Class Workshops \*
+* 30% - Homework
+* 25% - First Exam
+* 30% - Second Exam
 
-\* these weights may be adjusted
+\* these weights may be adjusted 
 
 </div>
     </div>

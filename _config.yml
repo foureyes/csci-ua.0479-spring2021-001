@@ -15,7 +15,9 @@ permalink: none
 exclude: [bower_components, README.md, bower.json, gruntfile.js, node_modules]
 
 vars:
-  survey_github: "https://docs.google.com/forms/d/e/1FAIpQLSdsV7B-M4ayL1CMoc3MDvY6wAsjee8eFMB-8okYYkfrObYMLw/viewform"
+  lms_link: "https://brightspace.nyu.edu/d2l/home/27597"
+  lms_name: "NYU Brightspace"
+  survey_github: "https://forms.gle/LSDQREX8m5jfYQJG6"
   forums_link: "https://edstem.org/us/courses/3750/discussion/"
   email: "jversoza at cs dot nyu dot edu"
   slides_img_prefix: "../../resources/img"

@@ -1,5 +1,5 @@
 draft,type,num,date,day,slides,readings,assignments,,old schedule,
-y,,1,01-Feb,Mon,"Introductions
+,,1,01-Feb,Mon,"Introductions
 
 * [Course Overview](slides/intro/overview.html) 
 * [Github Usage Form]({{ site.survey_github }}) (survey)
@@ -42,27 +42,27 @@ Unicode and Strings
  
  * [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
  * [What Every Programmer Absolutely, Positively Needs To Know About Encodings And Character Sets To Work With Text](http://kunststube.net/encoding/)
- * [Unicode HOWTO](https://docs.python.org/3/howto/unicode.html)","__Quiz #01__ – due Thur, 1/30, at 9:30am (before class)
-
-* find it on NYU Classes
-* check the Tests and Quizzes section 
-
-__Homework #00__ – due Thur, 1/30, at 9:30am (before class)
-
+ * [Unicode HOWTO](https://docs.python.org/3/howto/unicode.html)","__Homework #00__ - due Tuesday (tomorrow!), 2/2, at 11:00am 
 0. [Fill out this survey!]({{ site.survey_github }})
 1. Install a Python 3 Environment
   * use [Anaconda](https://conda.io/docs/user-guide/install/index.html)
   * if you’re already familiar with Python, you can manually install:
-  * Python 3 (using `apt`, `homebrew`, etc.)
-  * `matplotlib`, `jupyterlab` (or notebook), `pandas`, `numpy` (using `easy-install`, `pip`, etc.)
+    * Python 3 (using `apt`, `homebrew`, etc.)
+    * `matplotlib`, `jupyterlab` (or notebook), `pandas`, `numpy` (using `easy-install`, `pip`, etc.)
 2. Try to view class note by downloading notebooks and using `jupyter-lab`
 3. Go over readings for class 1 and 2
+
+__Quiz #01__ - due Wed, 2/3, at 11:00am (before class)
+
+* posted on NYU Brightspace
+
+
 
 <!--
 3. [Homework #00 Instructions](assignments/00.html)
 -->
 ",,,
-y,,2,03-Feb,Wed,"Sequence Types, Mapping Types, Sets
+,,2,03-Feb,Wed,"Sequence Types, Mapping Types, Sets
 
 <!--
 * [Sequence Types](slides/python/sequence-types.html)
@@ -105,17 +105,19 @@ Type Annotations (optional)
  Online Resources
  
  * [Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/)","
-__Quiz #02__ – due Tue __morning__, 2/4, at 9:30am (just before class)
+__Quiz #02__ – due Mon __morning__, 2/8, at 11:00am (just before class)
 
-* find it on NYU Classes
-* check the Tests and Quizzes section
+* posted on NYU Brightspace
 
-__Homework #01__ – due Thursday 2/6 at 11pm
+__Homework #01__ – due Wednesday 2/10 at 11pm
 
-* [Homework #01 Instructions](assignments/01.html)
+* To be posted
 
+<!--
+[Homework #01 Instructions](assignments/01.html)
+-->
 ",,,
-y,,3,08-Feb,Mon,"Classes Continued (protocols / double underscore)
+,,3,08-Feb,Mon,"Classes Continued (protocols / double underscore)
 
 * [Double Underscore Methods](notebooks/py/classes.ipynb) (notebook)
 * [Another Look at iter and getitem](notebooks/py/iter_getitem.ipynb)  (notebook)
@@ -145,9 +147,13 @@ Data Science from Scratch
  Think Stats
  
  * Ch 1: Exploratory Data Analysis
- * Ch 2: Distributions","__Quiz #03-A and #03-B__ – due Tue, 2/11, at 9:30am
+ * Ch 2: Distributions","
 
-* (see NYU Classes)","LECTURE:
+__Quiz #03-A and #03-B__ – due Wed, 2/10, at 11:00am
+
+* posted on NYU Brightspace
+
+","LECTURE:
 =======
 <!--
   * vector class
@@ -208,7 +214,7 @@ Vectors and Matrices (numpy)
  Python for Data Analysis
  
  * Ch 4: Numpy Basics: Arrays and Vectors
- * Ch 6. Data Loading, Storage, and File Formats (Skip Web Requests and Database)","__Homework #02__ – due Thu 2/13 at 11pm
+ * Ch 6. Data Loading, Storage, and File Formats (Skip Web Requests and Database)","__Homework #02__ – due Thu 2/17 at 11pm
 
 
 * [Homework #02 Instructions](assignments/02.html)
