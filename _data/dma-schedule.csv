@@ -23,12 +23,11 @@ Python Basics
 
 File I/O
 
-* [Working with Files](notebooks/py/file-io.ipynb) (notebook)
+* [Working with Files](notebooks/py/file-io.ipynb) 
 
 Unicode and Strings
 
-* [Encodings, Bytes and Strings](notebooks/py/unicode-bytes-strings.ipynb) (notebook)
-
+* [Encodings, Bytes and Strings](notebooks/py/unicode-bytes-strings-slides.ipynb)
 ","Python for Data Analysis
  
  * Ch 1: Preliminaries
@@ -70,14 +69,14 @@ __Quiz #01__ - due Wed, 2/3, at 11:00am (before class)
 * [Sets](slides/python/sets.html)
 -->
 
-* [Sequences, Dictionaries and Sets](notebooks/py/sequences.ipynb) (notebook)
+* [Sequences, Dictionaries and Sets](notebooks/py/sequences-mapping-slides.ipynb)
 * Additional Resources from Prof. Bloomberg
   * [Slides](https://nyu-computer-science.github.io/data-management-and-analysis/useful-types/)
   * [Notebook](https://raw.githubusercontent.com/nyu-computer-science/data-management-and-analysis/master/notebooks/sequences.ipynb)
 
 Functions and Functions as Objects
 
-* [\* and \*\*, Keyword Arguments](notebooks/py/functions.ipynb) (notebook)
+* [\* and \*\*, Keyword Arguments](notebooks/py/functions-slides.ipynb)
 * Functions as Objects,  sorted, max, etc.
 * Lambdas
 * [Decorators](slides/python/decorators.html)
@@ -119,21 +118,22 @@ __Homework #01__ – due Wednesday 2/10 at 11pm
 ",,,
 ,,3,08-Feb,Mon,"Classes Continued (protocols / double underscore)
 
-* [Double Underscore Methods](notebooks/py/classes.ipynb) (notebook)
-* [Another Look at iter and getitem](notebooks/py/iter_getitem.ipynb)  (notebook)
+* [Double Underscore Methods](notebooks/py/classes.ipynb) 
+* [Another Look at iter and getitem](notebooks/py/iter_getitem.ipynb)  
 
 List/Dictionary/Set Comprehension, Looping, Iterables
 
-* [Tuples, Enumerate, and Items](notebooks/py/tuples-enumerate-items.ipynb)  (notebook)
-* [Iterables and List, Set, Dict Comprehensions](notebooks/py/iter-comprehensions.ipynb)  (notebook)
+* [Tuples, Enumerate, and Items](notebooks/py/tuples-enumerate-items.ipynb)  
+* [Iterables and List, Set, Dict Comprehensions](notebooks/py/iter-comprehensions.ipynb)  
+* [Comprehensions Summary](notebooks/py/comprehensions-slides.ipynb)
 
 Functions Revisited (Variadic, As Arguments/Return Values)
 
-* [Using \*, Functions as Objects](notebooks/py/functions-args.ipynb)  (notebook)
+* [Using \*, Functions as Objects](notebooks/py/functions-args.ipynb) 
 
 Manual Data Extraction and Transformation
 
-* [Quick CSV Parse Example](notebooks/etl/parse-csv.ipynb)  (notebook)
+* [Quick CSV Parse Example](notebooks/etl/parse-csv.ipynb) 
 
 ","Online Articles
 
@@ -193,11 +193,11 @@ __Quiz #03__ – due Wed, 9/26, at 11pm
  * text analysis",
 y,,4,10-Feb,Wed,"Iterators and Generators
 
-* [Iterators, Generators](notebooks/py/generators.ipynb) (notebook)
+* [Iterators, Generators](notebooks/py/generators.ipynb)
 
 Descriptive Statistics Preview
 
-* [Max, Min, Length, Mean, Median](notebooks/stats/descriptive-statistics-central.ipynb) (notebook)
+* [Max, Min, Length, Mean, Median](notebooks/stats/descriptive-statistics-central.ipynb)
 
 File Formats
 
@@ -206,7 +206,7 @@ File Formats
 Vectors and Matrices (numpy)
 
 * [Numpy Array Basics](slides/python/numpy-basics.html) (slides)
-* [quick numpy demo](notebooks/numpy/numpy-basics.ipynb) (notebook)","Data Science from Scratch
+* [quick numpy demo](notebooks/numpy/numpy-basics.ipynb)","Data Science from Scratch
  
  * Ch 2: A Crash Course in Python (Iterators and Generators)
  * Ch 4: Linear Algebra

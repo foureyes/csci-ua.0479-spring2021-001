@@ -59,17 +59,28 @@ function init() {
 </tbody>
 </table>
 
+<script src='resources/js/schedule.js'> </script>
+
 <script>
 // handle jekyll site variables in data file
 // (liquid variables in data files like csvs and yml are not processed)
+function init() {
+	const config = {};
+	/* config contains site variables from config.yml
+	...only variables under site.vars are included */
+	{% for obj in site.vars %}
+	config["{{ obj[0] }}"] = `{{ obj[1] }}`;
+	{% endfor %}
+	processSiteVars(config);
+	createNotebookLinks();
+}
+
+document.addEventListener('DOMContentLoaded', init);
+/*
 function processSiteVars() {
 
 	const config = {};
 	
-	/*
-	config contains site variables from config.yml
-	...only variables under site.vars are included
-	*/
 	{% for obj in site.vars %}
 	config["{{ obj[0] }}"] = `{{ obj[1] }}`;
 	{% endfor %}
@@ -91,6 +102,7 @@ function processSiteVars() {
 }
 
 document.addEventListener('DOMContentLoaded', processSiteVars);
+*/
 </script>
 
 <style>
