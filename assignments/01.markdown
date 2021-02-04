@@ -425,10 +425,12 @@ Using at least two books from [project Gutenberg](https://www.gutenberg.org/) us
 		3. any license information
 		4. encoding if provided
 	* write a question you'd like answered about the books that might require some programming... for example:
-	1. who was the most frequently mentioned character in Pride and Prejudice... and in Sense and Sensibility?
-	2. are the pronouns in Mary Shelley's books predominantly male or female?
-	3. etc. .... (feel free to use either of the above questions, or come up with your own!)
+		1. who was the most frequently mentioned character in Pride and Prejudice... and in Sense and Sensibility?
+		2. are the pronouns in Mary Shelley's books predominantly male or female?
+		3. etc. .... (feel free to use either of the above questions, or come up with your own!)
 4. open the `txt` versions of the books that you downloaded by writing Python in your notebook
+	* use a relative path to `data/name_of_your_file` (this should work on both MacOS and Windows despite the path separator differences)
+	* alternatively, you can use [os.path.join](https://docs.python.org/3/library/os.path.html#os.path.join) to construct paths with the right path separator
 5. use jupyter notebook code cells to analyze the text in your file...and come up with an answer
 	*  __a dictionary__ (or counter object if you're familiar with counters) must be part of your analysis
 	* note that dictionaries can be used as counters by having the key be the item being counted... and the value being the count
