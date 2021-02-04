@@ -185,7 +185,7 @@ __It's ok!__ 🙌
 ### Joe Versoza
 
 * {:.fragment} I also teach __AIT__ (_perhaps u no of this 🤔?_), an __Intro to Programming__ course (in Python, of course), and sometimes (er, _never_?)  __101__
-* {:.fragment} I'm a __Clinical Assistant Professor__ (you can find me at: {{ site.vars.office_hours_room }})
+* {:.fragment} I'm a __Clinical Associate Professor__ 
 * {:.fragment} In former a life, I worked with PostgreSQL and Python _a lot_
   * {:.fragment} (not-so-much now...)
   * {:.fragment} for things like... <span class="fragment">data driven web sites</span><span class="fragment">, data in a regulated environment</span><span class="fragment">, and simple analytics</span>
@@ -200,8 +200,7 @@ __It's ok!__ 🙌
 * {:.fragment} <span class="hl">8 x [homeworks](../../syllabus.html#homework)</span> (maybe 1 or 2 more)
   * {:.fragment} __Write your own code!__
   * {:.fragment} submit via git (fill out the survey!)
-* {:.fragment} <span class="hl">8 x [online quizzes](../../syllabus#quizzes)</span>, completed from home (maybe 1 or 2 more)
-* {:.fragment} <span class="hl">1 x small project</span> (this be a small research project of your choosing, approximately 2 weeks long)
+* {:.fragment} <span class="hl">8 - 12 x [online quizzes, in-class quizzes / workshops](../../syllabus#quizzes)</span>
 </section>
 
 
@@ -249,7 +248,7 @@ The Director of Undergraduate Studies will handle any instances of cheating or s
 ## Additional Course Info
 
 * {:.fragment} __Office Hours:__ {{ site.vars.office_hours }}
-* {:.fragment} __Office Hours Room:__  {{ site.vars.office_hours_room }}
+* {:.fragment} __Office Hours Location:__  {{ site.vars.office_hours_room }}
 * {:.fragment} __Readings:__ [See book info on syllabus](/syllabus.html#books)
   * {:.fragment} {{ site.vars.book2 }} (first 6 weeks of class)
   * {:.fragment} {{ site.vars.book1 }} (next 6 weeks of class)

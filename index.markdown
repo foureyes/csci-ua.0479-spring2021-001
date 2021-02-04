@@ -2,7 +2,6 @@
 layout: default
 nav-state: schedule
 ---
-<!-- hello -->
 
 
 <!--

@@ -110,11 +110,7 @@ __Quiz #02__ – due Mon __morning__, 2/8, at 11:00am (just before class)
 
 __Homework #01__ – due Wednesday 2/10 at 11pm
 
-* To be posted
-
-<!--
-[Homework #01 Instructions](assignments/01.html)
--->
+* [Homework #01 Instructions](assignments/01.html)
 ",,,
 ,,3,08-Feb,Mon,"Classes Continued (protocols / double underscore)
 
@@ -172,7 +168,6 @@ __Quiz #03__ – due Wed, 9/26, at 11pm
 
 * (see NYU Classes)
 -->","LECTURE:
->>>>>>> 81afb09fc6c9b1c9c99b2bca32ce59081d959269
  * central tendency (mean, average)
  * dispersion (spread, min, max, standard * deviation std dev pop)
  * other (mode, frequency, skewedness)
@@ -191,7 +186,7 @@ __Quiz #03__ – due Wed, 9/26, at 11pm
  * create csv class, allow delimiter change, watch out for commas in data
  * write tests?
  * text analysis",
-y,,4,10-Feb,Wed,"Iterators and Generators
+,,4,10-Feb,Wed,"Iterators and Generators
 
 * [Iterators, Generators](notebooks/py/generators.ipynb)
 
@@ -216,8 +211,11 @@ Vectors and Matrices (numpy)
  * Ch 4: Numpy Basics: Arrays and Vectors
  * Ch 6. Data Loading, Storage, and File Formats (Skip Web Requests and Database)","__Homework #02__ – due Thu 2/17 at 11pm
 
+* to be posted
 
+<!--
 * [Homework #02 Instructions](assignments/02.html)
+-->
 
 <!--
   * vector class

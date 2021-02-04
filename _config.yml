@@ -15,6 +15,7 @@ permalink: none
 exclude: [bower_components, README.md, bower.json, gruntfile.js, node_modules]
 
 vars:
+  github_org: "https://github.com/nyu-csci-ua-0479-001-spring-2021"
   lms_link: "https://brightspace.nyu.edu/d2l/home/27597"
   lms_name: "NYU Brightspace"
   survey_github: "https://forms.gle/LSDQREX8m5jfYQJG6"
