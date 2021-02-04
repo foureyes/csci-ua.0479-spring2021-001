@@ -35,8 +35,8 @@ vars:
   course_site_alt: http://cs.nyu.edu/~jversoza
   
   # office hours
-office_hours: After class (12:15PM - 1:15PM) in the class zoom meeting on Mon, 8:30AM - 9:30AM on Tues and Thur in dedicated zoom meeting url.
-  office_hours_room: https://nyu.zoom.us/j/93325443896?pwd=MjBiblRwcWhJRG1WaGRkWHVYNEM4Zz09
+  office_hours: After class (12:15PM - 1:15PM) in the class zoom meeting on Mon, 8:30AM - 9:30AM on Tues and Thur in dedicated zoom meeting url.
+  office_hours_room: "https://nyu.zoom.us/j/93325443896?pwd=MjBiblRwcWhJRG1WaGRkWHVYNEM4Zz09"
   
   # midterm
   midterm1_date: "N/A"
