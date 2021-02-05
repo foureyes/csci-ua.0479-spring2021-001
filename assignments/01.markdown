@@ -186,6 +186,28 @@ except ValueError:
     print('Format is invalid; does not consist of only 0 and 1')
 # Format is invalid; does not consist of only 0 and 1
 ```
+
+<hr>
+
+#### `==`
+
+If both `BitList` instances contain the same series of bits, then they're equal:
+
+```
+b1 = BitList('11000001')
+b2 = BitList.from_ints(1, 1, 0, 0, 0, 0, 0, 1)
+print(b1 == b2) # True!
+```
+
+To use this operator, define a method:
+
+```
+def __eq__(self, other):
+    return some_boolean
+```
+
+If `__eq__` is implemented, then the `==` operator can be used to test for equality on instances of this class. Treat other as the other operand of `==` (so, it would be the _other_  `BitList` being compared to _this_ instance, almost as if: `my_instance == other`.
+
 <hr>
 
 #### `BitList.from_ints(b1, b2, ...bN)`
@@ -258,26 +280,6 @@ print(b) # 11000001
 
 
 
-#### `==`
-
-If both `BitList` instances contain the same series of bits, then they're equal:
-
-```
-b1 = BitList('11000001')
-b2 = BitList.from_ints(1, 1, 0, 0, 0, 0, 0, 1)
-print(b1 == b2) # True!
-```
-
-To use this operator, define a method:
-
-```
-def __eq__(self, other):
-    return some_boolean
-```
-
-If `__eq__` is implemented, then the `==` operator can be used to test for equality on instances of this class. Treat other as the other operand of `==` (so, it would be the _other_  `BitList` being compared to _this_ instance, almost as if: `my_instance == other`.
-
-<hr>
 
 #### `.bitwise_and(otherBitList)`
 
