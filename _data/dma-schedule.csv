@@ -145,10 +145,14 @@ Data Science from Scratch
  * Ch 1: Exploratory Data Analysis
  * Ch 2: Distributions","
 
-__Quiz #03-A and #03-B__ – due Wed, 2/10, at 11:00am
+__Quiz #03-A__ – due Wed, 2/10, at 11:00am
 
 * posted on NYU Brightspace
 
+__Quiz #03-B__ – given in class on Thur, 2/18, at 11:00am
+
+* taken in class (or during make-up session) on NYU Brightspace
+* Thursday meets on a Monday schedule (legislative day)
 ","LECTURE:
 =======
 <!--
@@ -239,7 +243,7 @@ Vectors and Matrices (numpy)
  * TODO - add linear algebra
  * motivation for linear algebra… some example? Maybe https://www.youtube.com/watch?v=Qz58vTa8-SY",,
 y,holiday,,15-Feb,Mon,President’s Day,,,,,
-y,,5,17-Feb,Wed,"Vectors and Matrices (numpy) continued
+,,5,17-Feb,Wed,"Vectors and Matrices (numpy) continued
 
 * See slides from previous class
 
@@ -266,7 +270,9 @@ Plotting and Visualization
  
  Python for Data Analysis
  
- * Ch 9: Plotting and Visualization","__Quiz #04__ – due Tue morning, 2/18, at 9:30am","
+ * Ch 9: Plotting and Visualization","__Quiz #04__ and __Quiz #05__ – due Mon morning, 2/22, at 11am
+
+* posted on NYU Brightpsace","
 * Use data from previous homework, and focus on a column
 * Get some descriptive statistics
   * Implement stddev
@@ -305,9 +311,12 @@ Correlation and Covariance
  
  * Ch 5. Getting Started with pandas","__Homework #03__ – due Thu 2/20 at 11pm
 
+* to be posted
+<!--
 
 * [Homework #03 Instructions](assignments/03.html)
 
+-->
 ","<!-- 
 HW 02:
  * Choose data set and visualize… motivate usage of numpy maybe?
@@ -318,7 +327,11 @@ HW 02:
 y,,7,22-Feb,Mon,"Tabular Data (pandas)
 
 * See slides from previous class
-* [pandas basics](notebooks/pandas/fa19-class07-pandas-basics.ipynb) (notebook)",,"__Quiz #05__ – due Tue morning, 2/25, at 9:30am",,,"Data Science from Scratch
+* [pandas basics](notebooks/pandas/fa19-class07-pandas-basics.ipynb) (notebook)",,"<!--
+
+__Quiz #05__ – due Tue morning, 2/25, at 9:30am
+
+-->",,,"Data Science from Scratch
  
  * Ch 9: Getting Data (Using APIs, Example: Using the Twitter APIs)
  
