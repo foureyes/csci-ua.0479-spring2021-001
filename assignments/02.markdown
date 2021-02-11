@@ -47,7 +47,7 @@ function onClick(evt) {
 }
 </script>
 
-# Assignment #2 - List Comprehensions, Classes, CSV, Tabular Data - Due Thu, Feb 13th at 11pm
+# Assignment #2 - List Comprehensions, Classes, CSV, Tabular Data - Due Wed, Feb 17th at 11pm
 
 
 This assignment consists of two parts:
@@ -67,7 +67,10 @@ Clone the homework #2 repository when it is created for you.
 * use a lambda function
 * preview working with tabular data in Python
 
-## Part 2 - `tabletools.py`
+## Part 1 - `tabletools.py`
+
+
+### Background Information
 
 Working with tabular data as a two-dimensional `Array` is pretty common, but as soon as you try to do some simple operations like filtering based on column name, things get complicated quickly unless you throw in some additional libraries or tools. 
 
@@ -145,6 +148,7 @@ first_name_three[first_name_three['weekly_fruits_eaten'] < 10]
 """
 ```
 
+### Instructions
 
 1. You'll be writing two classes:
 	* `LabeledList` - kind of like a `dict`, but ordered, allows _vectorized_ operations, and iterates over values instead of keys
@@ -175,6 +179,8 @@ ll['BB'] # gives back new LabeledList composed of labels 'BB' and their values
 ll[['A', 'D', 'BB', 'BB']] # gives back new LabeledList composed of the labels specified in list... along with their values
 ll > 2 # gives back a new LabeledList composed of labels in original, along with boolean results of comparison
 ```
+
+👀 __see the specs for properties and methods below!__
 
 <hr>
 
@@ -664,8 +670,6 @@ To test your code, you can try to open a csv from your `tabletools.py` module. O
 	
 
 ## Annotations
-
-⚠️  __This was edited to handle internal links within a notebook__
 
 
 Add a `README.md` that [links to the lines of code (see this link for instructions how)](https://help.github.com/articles/creating-a-permanent-link-to-a-code-snippet/) where you have:
