@@ -649,6 +649,8 @@ Finally, in `tabletools.py`, write a function that reads in a `csv` file and giv
 3. beware of leading and trailing whitespace (`strip` may be helpful)
 4. __convert numeric values to `floats`__ (use `try`/`except`... and look for `ValueError` specifically)
 
+⚠️ __when creating a `Table` object, use a generated auto-incrementing index (do not use the first column as the index... as in the example of the `fruitarians.csv` file where "row" is not actually included in the file)
+
 To test your code, you can try to open a csv from your `tabletools.py` module. Once you're finished testing, you can comment out the code (or alternatively, you can wrap your test code in `if __name__ == '__main__':
 ` to only run it when the module isn't being imported) 
 
@@ -659,7 +661,9 @@ To test your code, you can try to open a csv from your `tabletools.py` module. O
 [Using the `candy-power-ranking` data set](https://data.fivethirtyeight.com/) (click on the download button next to the data set named "The Ultimate Halloween Candy Power Ranking"), explore the data using a notebook and your `LabeledList` and `Table` classes.
 
 * ⚠️ download the file into your repository as described above (commit it with the rest of your code)
-* ⚠️ when you open your data file, make sure to use a relative path (simply `open('name_of_file.ext')` should be sufficient)
+* ⚠️ when you open your data file
+	* make sure to use a relative path (simply `open('name_of_file.ext')` should be sufficient)
+	* it _should_ be a csv file
 * display the last 4 rows of the data set
 * show the candy name, if it's chocolate, if it's peanuty/almondy, and its win percentage for all candy that is chocolate
 * using the results above, add another criteria: only candies that are peanuty/almondy (that is... at the end, you'll only have a listing of chocolate and peanut candies!)
