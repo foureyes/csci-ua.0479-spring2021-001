@@ -277,7 +277,7 @@ label = s # imagine that this is a label whose length is shorter than the longes
 # we want to pad this thing ^^^^
 
 # create a format specifier that right justifies and pads
-format_spec = '>{vals_max_len}' 
+format_spec = f'>{vals_max_len}' 
 
 # now add that format specifier to another formatted string by nesting curly braces!?
 f'{label:{format_spec}}'
