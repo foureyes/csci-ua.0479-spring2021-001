@@ -57,7 +57,7 @@ Clone the homework #3 repository when it is created for you.
 ## Goals
 
 1. source and document a dataset
-2. use generators and "regular" to extract and transform data
+2. use generators and "regular" Python to extract and transform data
 3. work with numpy to calculate summary statistics
 4. use matplotlib for simple data visualizations
 
@@ -78,11 +78,11 @@ In this assignment, you'll create a single notebook, (`ipynb`) that contains doc
 1. write some questions that _may_ be answered by using summary statistics and / or creating visualizations
 2. select and document a data set
 	* ⚠️ the data should be comma / pipe / tab delimited... or fixed width
-	* ⚠️ the data set should have at least __two numeric columns__
+	* ⚠️ the data set should have at least __one numeric column__ and one column that contains __[categorical data](https://en.wikipedia.org/wiki/Categorical_variable)__
 	* include documentation regarding the source of the data
 	* include the data set in your repository so that your notebooks can be run by the graders without having to perform any setup (if data set is &gt; 100MB, link to file instead)
 3. use generators and "regular" python to create a data pipeline to extract or transform data
-4. work with numpy to calculate summary statistics
+4. work with numpy or regular Python to calculate summary statistics
 5. create at least two visualizations with matplotlib
 6. write a conclusion answering your initial questions based on the summary statistics you calculated or visualizations you created
 	* describe the results of your calculations and visualizations
@@ -90,9 +90,9 @@ In this assignment, you'll create a single notebook, (`ipynb`) that contains doc
 
 ## Part 1 - Questions
 
-Write some questions (minimally 2) that you think can be answered by finding the _right_ dataset. 👀 See Vicky Steeves' -- Librarian for Research Data Management and Reproducibility at NYU -- [slide titled "Steps to finding the \*right\* data"](https://tinyurl.com/find-data) to help construct your questions.
+Write some questions (minimally 2) that you think can be answered by finding the _right_ dataset. 👀 See Vicky Steeves' (Librarian for Research Data Management and Reproducibility at NYU) [slide titled "Steps to finding the \*right\* data"](https://tinyurl.com/find-data) to help construct your questions.
 
-Focus on questions that _may_ be answered by using summary statistics on numeric columns in a data set. Alternatively, you can use rudimentary analysis on text-based columns that have a predefined set of possible values, such as counts / frequency.
+Focus on questions that _may_ be answered by using summary statistics on numeric columns in a data set. You can also consider questions that can be answered by using rudimentary analysis on text-based columns that have a predefined set of possible values (categorical data), such as counts / frequency.
 
 ⚠️ __If you have trouble thinking of research topics / questions, you can do parts 1 and 2 in reverse order__ ... by finding an interesting data set first, and then formulating questions afterwards.
 
@@ -100,8 +100,10 @@ Write your questions ... along with _where_ you think you'll find answers within
 
 ```
 # Homework 03
+```
 
-## Questions
+```
+## Part 1 - Questions
 
 ### Question 1: 
 
@@ -134,15 +136,23 @@ TODO (answer question here)
 
 #### Find a data set that you'd like to work with
 
-Find a data set that you're interested in... that's publicly available online as a text file (csv, for example). Download your data from a source that has some information regarding the provenance of the data (_where did it come from!?_). 
+Find a data set that you're interested in and that may answer your questions. It should be publicly available online as a text file (csv, for example). Download your data from a source that has some information regarding the provenance of the data (_where did it come from!?_). 
 
 
-Again, 👀 See Vicky Steeves' -- Librarian for Research Data Management and Reproducibility at NYU -- on finding data.  Specifically, start with the [Some good general data sources to start] slide (https://tinyurl.com/find-data) to help in your search for a dataset.
+Again, 👀 See Vicky Steeves' (Librarian for Research Data Management and Reproducibility at NYU) slides on finding data.  Specifically, start with the [Some good general data sources to start](https://tinyurl.com/find-data) slide to help in your search for a dataset.
 
 Some guidelines:
 
 1. do not use data sets that we've worked on or discussed in class, such as the Starbucks Drink Menu or Candy dataset because, uh... we probably already wrote (or will write) some code for it 🙃
 2. <span class="hl">try to write code that's different from  - or builds significantly on - the programs that we've done in class</span> (it's not adequate to simply use class sample code with a different data set 🙅)
+
+#### Download the Data
+
+If the dataset is less than 100MB:
+
+1. download the data into the project repository (typically, you would not save your data as part of your repository, but this will streamline the grading process)
+2. place your data in `data/raw/name-of-your-file`
+3. you can ignore the `example-data.csv` that's already present in the folder 
 
 #### Write some documentation 
 
@@ -154,15 +164,15 @@ Some guidelines:
 ```
 ## About the Data
 
-1. Name / Title: (TODO: name of data set)
-2. Link to Data: (TODO: link to any documentation about the data that you've found )
+1. Name / Title: (TODO name of data set)
+2. Link to Data: (TODO link to any documentation about the data that you've found )
 3. Source / Origin: 
 	* Author or Creator: TODO
 	* Publication Date: TODO
 	* Publisher: TODO
 	* Version or Data Accessed: TODO
-4. License: (TODO: name of license)
-5. Can You Use this Data Set for Your Intended Use Case? (TODO: answer this question)
+4. License: (TODO name of license)
+5. Can You Use this Data Set for Your Intended Use Case? (TODO answer this question)
 ```
 
 
@@ -171,25 +181,18 @@ Some guidelines:
 Document the format of the dataset in your `homework03.ipynb` notebook using the template below:
 
 ```
-## Format
+## Part 2 - Selecting a Data Set, Adding Documentation
 
 ### Overview
 
-Format: (TODO: add what file format the data is in)
-Size: (TODO: how large is the file in KB, MB, GB, etc. ... use finder, windows explorer for this)
-Number of Records: (TODO: how many rows)
+Format: (TODO add what file format the data is in)
+Size: (TODO how large is the file in KB, MB, GB, etc. ... use finder, windows explorer for this)
+Number of Records: (TODO how many rows)
 
-```
-
-```
 ### Sample of Data
-```
 
-```
-(TODO: show a few lines of data from the actual file by simple copy and paste in a code cell) 
-````
+TODO show a few lines of data from the actual file.  ⚠️ Use "regular" Python to do this in this code block.  Assume that jupyter-lab was started in your root directory: with open('./data/raw/example-data.csv', 'r')
 
-```
 ### Fields or Column Headers
 
 * Field/Column 1: (TODO add field name and potential type using Python types)
@@ -199,45 +202,119 @@ Number of Records: (TODO: how many rows)
 
 ## Part 3 - Extract / Transform 
 
-Using at least one generator and "regular" Python to:
+Create a markdown cell containing a description of:
 
-1. write and then execute a function of your own creation that
-2. the function reads in your data file (you can assume that you
-2. extract or isolate at least three columns
-3. transform the data into appropriate 
+* what columns you'll be using from your dataset
+* how you're planning to convert the data into analogous python types for those columns)
+* any kind of cleaning that you'll have to perform:
+	* _normalizing_ data, such as multiple spellings for the same categorical value (Yes, Y, YES)
+	* filling in missing values or using a special indicator for special values
+	*  etc.
+* where you use a generator in your code (you can use more than one) and what that generator does
 
+Use the following as a template
 
+```
+## Part 3 - Extract / Transform 
+
+(TODO describe your process for extracting, transforming, cleaning your incoming data)
+```
+
+Underneath your markdown cell, create a new code cell and use "regular" Python to: 
+
+1. once again, read the file (make sure you're reading the file relative to the root of your project: `data/raw/example-data.csv`
+2. "extract" at least 3 columns that you want to work with: 
+	* one with numeric data
+	* another with categorical data
+	* and any _kind_ of data for the third column
+3. transform at least 1 of those columns to a Python numeric type
+4. store this data in a data type of your choosing; __you'll use this data later__
+	* for example, you can read everything into a 2-dimensional `list`, multiple `numpy` arrays, a dictionary, etc. 
+	* you must avoid using the following types: `Table` and / or `LabeledList` from a previous homework ... and  `pandas` `Dataframe`
+5. clean your data if necessary:
+	* identify missing values and replace with an appropriate marker (for example, you might decide to use `None` as the value that represents a missing value)
+	* alternatively, find some strategy to fill in missing values (for example, default to 0, or No)
+	* normalize casing for categorical data
+	* etc.
+6. use at least one generator 
+
+You can create as many variables, helper functions, or even classes as needed.
 
 ## Part 4 - Descriptive Statistics
 
-1. read the data from at least two columns of your file; try to read the numeric data into a numpy array 
-	* you can read the individual columns into separate arrays
-	* ...or you can read all of the data as a multidimensional numpy array
-	* you'll have to parse the data into a numeric type 
-	* you may have to clean up the data before it can be converted into a numeric type... for example: 
-		* removing leadin / trailing whitespace
-		* replacing commas 
-		* removing dollar signs
-		* deal with missing data
-		* etc.
-2. calculate the following descriptive statistics on these two columns
-	1. examine outliers with min and/or max
-	2. measure central tendency by calculating the following:
-		* mean
-		* median or percentile (quantile), 
-	3. measure dispersion with 
-		* variance
-		* standard deviation (likely of the sample rather than population)
-		* interquartile range
+Using Python (and optionally `numpy` or the `statistics` module), calculate the following descriptive statistics on at least one of the numeric columns that you saved from the previous part. 
 
+1. examine range / outliers with min and max
+2. measure central tendency by calculating at least one of the following:
+	* mean
+	* median 
+	* mode
+3. measure dispersion with at least one of the following
+	* variance
+	* standard deviation 
+	* range
+
+
+For your categorical data, calculate:
+
+1. frequency
+2. unique values
+
+You can implement your own solutions to do this with regular Python, or you can use `numpy`'s functions / methods. You can also try out Python's `statistics` module, which is built in.
+
+
+Once you're done __print out our results__, and describe them using a markdown cell:
+
+```
+## Analysis on Numeric Data
+
+### Central Tendency
+
+TODO: copy and paste your results here
+
+### Dispersion
+
+TODO: copy and paste your results here
+
+### Outliers
+
+TODO: are there any potential outliers?
+
+### Other
+
+TODO: copy and paste your results here
+
+## Analysis on Categorical Data
+
+### Frequency
+
+### Unique Values
+```
 
 ## Part 5 - Visualizations
 
-Create at least two visualizations with matplotlib.
+Using your dataset, create at least two visualizations with matplotlib.  Do this in a code cell using regular Python with `matplotlib` so that your charts and graphs appear in the notebook
+
+Describe what you're trying to show with the visualizations in a markdown cell above your code:
+
+```
+## Part 5 - Visualizations
+
+TODO Describe the visualizations in the previous cell
+```
 
 ## Part 6 - Conclusion
 
-Write a conclusion answering your questions in part 2 based on the results in parts 3 and 4.
+Write a conclusion answering your questions based on the results in any of the previous parts.
 
-* describe the results of your calculations and visualizations
-* describe whether or not they were able to answer your questions from part 2
+* describe the results of your calculations / analysis
+* describe whether or not they were able to answer your questions
+* if you were unable to reach any conclusions, discuss why this was the case
+
+Do this in markdown cell:
+
+```
+## Part 6 - Conclusion
+
+TODO: write your conclusion here (interpret results of calculations; does it help answer your original questions?)
+```
