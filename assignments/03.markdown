@@ -50,21 +50,24 @@ function onClick(evt) {
 }
 </script>
 
-# Assignment #3 - Summary Statistics and Basic Data Visualization - Due Thu, Feb 20th at 11pm
+# Assignment #3 - Sourcing Data, Summary Statistics, and Basic Data Visualization - Due Wed, Feb 24th at 11pm
 
 Clone the homework #3 repository when it is created for you.
 
 ## Goals
 
-* work with numpy to calculate summary statistics
-* use matplotlib for simple data visualizations
+1. source and document a dataset
+2. use generators and "regular" to extract and transform data
+3. work with numpy to calculate summary statistics
+4. use matplotlib for simple data visualizations
 
 ## Requirements
 
 * 1 x notebooks:
-	* homework03.ipynb
-* 1 x data set:
-	* include in repository if possible
+	* `src/homework03.ipynb`
+* 1 x original data set:
+	* `data/raw/*`
+	* ⚠️ include in repository if possible
 	* otherwise, link to data set if file size &gt; 100MB
 
 
@@ -72,72 +75,140 @@ Clone the homework #3 repository when it is created for you.
 
 In this assignment, you'll create a single notebook, (`ipynb`) that contains documentation and code. There are 6 parts to this assignment:
 
-1. select and document a data set
+1. write some questions that _may_ be answered by using summary statistics and / or creating visualizations
+2. select and document a data set
 	* ⚠️ the data should be comma / pipe / tab delimited... or fixed width
-	* ⚠️ the data set should have __two numeric columns__
+	* ⚠️ the data set should have at least __two numeric columns__
 	* include documentation regarding the source of the data
 	* include the data set in your repository so that your notebooks can be run by the graders without having to perform any setup (if data set is &gt; 100MB, link to file instead)
-2. write some questions that _may_ be answered by using summary statistics on numeric columns in your data set, or by viewing visualizations
-3. calculate summary statistics on both columns using numpy
-4. validate calculations using a spreadsheet (such as LibreOffice, Google Sheets, Excel, etc.)
+3. use generators and "regular" python to create a data pipeline to extract or transform data
+4. work with numpy to calculate summary statistics
 5. create at least two visualizations with matplotlib
-6. write a conclusion answering your questions in part 2 based on the results in parts 3 and 4
+6. write a conclusion answering your initial questions based on the summary statistics you calculated or visualizations you created
 	* describe the results of your calculations and visualizations
-	* describe whether or not they were able to answer your questions from part 2
+	* describe whether or not they were able to answer your initial questions 
+
+## Part 1 - Questions
+
+Write some questions (minimally 2) that you think can be answered by finding the _right_ dataset. 👀 See Vicky Steeves' -- Librarian for Research Data Management and Reproducibility at NYU -- [slide titled "Steps to finding the \*right\* data"](https://tinyurl.com/find-data) to help construct your questions.
+
+Focus on questions that _may_ be answered by using summary statistics on numeric columns in a data set. Alternatively, you can use rudimentary analysis on text-based columns that have a predefined set of possible values, such as counts / frequency.
+
+⚠️ __If you have trouble thinking of research topics / questions, you can do parts 1 and 2 in reverse order__ ... by finding an interesting data set first, and then formulating questions afterwards.
+
+Write your questions ... along with _where_ you think you'll find answers within a markdown cell in your notebook `homework03.ipynb`. Use the following template to do this (fill in the parts marked with TODO):
+
+```
+# Homework 03
+
+## Questions
+
+### Question 1: 
+
+TODO (write the question)
+
+* Who (population): TODO
+* What (subject, discipline): TODO
+* Where (location): TODO
+* When (snapshot, longitudinal): TODO
+* How much data do you need to do the analysis/work: TODO
+
+### Question N: 
+
+TODO (write the question)
+
+* Who (population): TODO
+* What (subject, discipline): TODO
+* Where (location): TODO
+* When (snapshot, longitudinal): TODO
+* How much data do you need to do the analysis/work: TODO
+
+### Who Might Collect Relevant Data / What Articles or Publications Cite a Relevant Data Set?
+
+TODO (answer question here)
+```
 
 
-## Part 1 - Selecting a Data Set, Adding Documentation
+## Part 2 - Selecting a Data Set, Adding Documentation
 
 
 #### Find a data set that you'd like to work with
 
-Find a data set that you're interested in... that's publicly available online as a text file (csv, for example). Download your data from a source that has some information regarding the provenance of the data (_where did it come from!?_). Check out some [sources here](../data-sets.html). Some guidelines:
+Find a data set that you're interested in... that's publicly available online as a text file (csv, for example). Download your data from a source that has some information regarding the provenance of the data (_where did it come from!?_). 
 
-1. do not using the following data sets, because, uh... we probably already wrote (or will write) some code for it 🙃
-	* data sets used in class, like [Nutrition facts for Starbucks Menu](https://www.kaggle.com/starbucks/starbucks-menu)	
-	* [The Ultimate Halloween Candy Power Ranking](https://www.kaggle.com/fivethirtyeight/the-ultimate-halloween-candy-power-ranking)
-	* [Animal Bites](https://www.kaggle.com/rtatman/animal-bites)
-	* [IMDB Horror Movie Dataset 2012 Onwards](https://www.kaggle.com/PromptCloudHQ/imdb-horror-movie-dataset)
-2. <span class="hl">write code that's different from  - or build significantly on - the programs that we've done in class</span> (it's not adequate to simply use class sample code with a different data set 🙅)
+
+Again, 👀 See Vicky Steeves' -- Librarian for Research Data Management and Reproducibility at NYU -- on finding data.  Specifically, start with the [Some good general data sources to start] slide (https://tinyurl.com/find-data) to help in your search for a dataset.
+
+Some guidelines:
+
+1. do not use data sets that we've worked on or discussed in class, such as the Starbucks Drink Menu or Candy dataset because, uh... we probably already wrote (or will write) some code for it 🙃
+2. <span class="hl">try to write code that's different from  - or builds significantly on - the programs that we've done in class</span> (it's not adequate to simply use class sample code with a different data set 🙅)
 
 #### Write some documentation 
 
-1. Start a notebook called `homework03.ipynb`
-2. Use the markdown below as a template to describe your data
+1. In the notebook `homework03.ipynb` ...
+2. Use the markdown below as a template to cite the data source and describe the data set
 3. Fill in the parts marked as "TODO"
 
 
 ```
-# Homework 01
-
 ## About the Data
 
-1. Name: (TODO: name of data set)
+1. Name / Title: (TODO: name of data set)
 2. Link to Data: (TODO: link to any documentation about the data that you've found )
-3. Source / Origin: (TODO:  discuss the origin of the data (what is it, who collected / generated it, how did they do it, etc.)
-4. Motivation: (TODO: describe why you are interested in it) 
-
+3. Source / Origin: 
+	* Author or Creator: TODO
+	* Publication Date: TODO
+	* Publisher: TODO
+	* Version or Data Accessed: TODO
+4. License: (TODO: name of license)
+5. Can You Use this Data Set for Your Intended Use Case? (TODO: answer this question)
 ```
 
 
 #### Show Some Data and Document its Format
 
-1. with code, display the first few lines of the file (simply use `open` to do this)
-2. describe the format of the data in a markdown cell
-	* what are the fields / column headers?
-	* what is the _likely_ data type for each column (you can use regular python types or numpy types) of each field
+Document the format of the dataset in your `homework03.ipynb` notebook using the template below:
 
-Again, if the data does not have at least two numeric columns, please work with a different data set
+```
+## Format
+
+### Overview
+
+Format: (TODO: add what file format the data is in)
+Size: (TODO: how large is the file in KB, MB, GB, etc. ... use finder, windows explorer for this)
+Number of Records: (TODO: how many rows)
+
+```
+
+```
+### Sample of Data
+```
+
+```
+(TODO: show a few lines of data from the actual file by simple copy and paste in a code cell) 
+````
+
+```
+### Fields or Column Headers
+
+* Field/Column 1: (TODO add field name and potential type using Python types)
+* Field/Column 2: (TODO same as above)
+* Field/Column N: (TODO same as above)
+```
+
+## Part 3 - Extract / Transform 
+
+Using at least one generator and "regular" Python to:
+
+1. write and then execute a function of your own creation that
+2. the function reads in your data file (you can assume that you
+2. extract or isolate at least three columns
+3. transform the data into appropriate 
 
 
-## Part 2 - Questions
 
-Write some questions about your data. Focus on the following:
-
-* questions that _may_ be answered by using summary statistics on numeric columns in your data set
-* questions that _may_ be answered by viewing basic data visualizations, such as bar charts and scatter plots
-
-## Part 3 - Descriptive Statistics
+## Part 4 - Descriptive Statistics
 
 1. read the data from at least two columns of your file; try to read the numeric data into a numpy array 
 	* you can read the individual columns into separate arrays
@@ -159,13 +230,6 @@ Write some questions about your data. Focus on the following:
 		* standard deviation (likely of the sample rather than population)
 		* interquartile range
 
-## Part 4 - Confirm Calculations
-
-* try opening your original file with LibreOffice, Google Sheets, etc. 
-* using your spreadsheet's functions, confirm that your summary statistics match
-* in a markdown cell in your notebook:
-	* compare and contrast the results from you calculations with numpy... to the results from your spreadsheet
-	* investigate any discrepancies, and - if possible - describe (or hypothesize) why there are differences 
 
 ## Part 5 - Visualizations
 

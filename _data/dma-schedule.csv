@@ -149,7 +149,7 @@ __Quiz #03-A__ – due Wed, 2/10, at 11:00am
 
 * posted on NYU Brightspace
 
-__Quiz #03-B__ – given in class on Thur, 2/18, at 11:00am
+__In-Class Quiz #01__ - given in class on Thur, 2/18, at 11:00am
 
 * taken in class (or during make-up session) on NYU Brightspace
 * Thursday (2/18) meets on a Monday schedule (legislative day)
@@ -267,9 +267,21 @@ Plotting and Visualization
  
  Python for Data Analysis
  
- * Ch 9: Plotting and Visualization","__Quiz #04__ and __Quiz #05__ – due Mon morning, 2/22, at 11am
+ * Ch 9: Plotting and Visualization","Reminder: __In-Class Quiz #01__ - given in class tomorrow Thur, 2/18, at 11:00am
 
-* posted on NYU Brightpsace","
+* taken in class (or during make-up session) on NYU Brightspace
+* Thursday (2/18) meets on a Monday schedule (legislative day)
+
+__Homework #03__ – due Thu 2/24 at 11pm
+
+* to be posted
+
+<!--
+
+* [Homework #03 Instructions](assignments/03.html)
+
+-->
+","
 * Use data from previous homework, and focus on a column
 * Get some descriptive statistics
   * Implement stddev
@@ -277,7 +289,7 @@ Plotting and Visualization
  * Create data frame like library - no loops, only generator expressions 
  * Manual Cleaning
  * music generator (numpy) no loops only vector operations",,
-y,,6,18-Feb,Thu,"See Previous Slides on Matplotlib
+,,6,18-Feb,Thu,"See Previous Slides on Matplotlib
 
 * [matplotlib – charts and graphs](notebooks/viz/charts-graphs-decode.ipynb) (notebook)
 * [What is this .txt file?](notebooks/viz/files/enc.txt)
@@ -306,14 +318,10 @@ Correlation and Covariance
  
  Python for Data Analysis
  
- * Ch 5. Getting Started with pandas","__Homework #03__ – due Thu 2/20 at 11pm
+ * Ch 5. Getting Started with pandas","__Quiz #04__ and __Quiz #05__ – due Mon morning, 2/22, at 11am
 
-* to be posted
-<!--
+* posted on NYU Brightpsace
 
-* [Homework #03 Instructions](assignments/03.html)
-
--->
 ","<!-- 
 HW 02:
  * Choose data set and visualize… motivate usage of numpy maybe?
