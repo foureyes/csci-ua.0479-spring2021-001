@@ -220,7 +220,13 @@ Use the following as a template
 (TODO describe your process for extracting, transforming, cleaning your incoming data)
 ```
 
-Underneath your markdown cell, create a new code cell and use "regular" Python to: 
+Underneath your markdown cell, create a new code cell. Use: 
+
+* "regular" Python 🐍
+* optionally, [the `csv` module](https://docs.python.org/3/library/csv.html)
+* but do not use `pandas` 🙅 🐼
+
+To do the following:
 
 1. once again, read the file (make sure you're reading the file relative to the root of your project: `data/raw/example-data.csv`
 2. "extract" at least 3 columns that you want to work with: 
@@ -263,32 +269,38 @@ For your categorical data, calculate:
 You can implement your own solutions to do this with regular Python, or you can use `numpy`'s functions / methods. You can also try out Python's `statistics` module, which is built in.
 
 
-Once you're done __print out our results__, and describe them using a markdown cell:
+You can intersperse markdown blocks and Python code to display your calculations:
 
 ```
-## Analysis on Numeric Data
+## Part 4 - Descriptive Statistics
 
-### Central Tendency
+### Analysis on Numeric Data
 
-TODO: copy and paste your results here
+#### Central Tendency
 
-### Dispersion
+TODO: add a code block to display results
 
-TODO: copy and paste your results here
+#### Dispersion
 
-### Outliers
+TODO: add a code block to display results
 
-TODO: are there any potential outliers?
+#### Outliers
 
-### Other
+TODO: add a code block to display results
 
-TODO: copy and paste your results here
+#### Other
 
-## Analysis on Categorical Data
+TODO: add a code block to display results
 
-### Frequency
+###  Analysis on Categorical Data
 
-### Unique Values
+#### Frequency
+
+TODO: add a code block to display results
+
+#### Unique Values
+
+TODO: add a code block to display results
 ```
 
 ## Part 5 - Visualizations
