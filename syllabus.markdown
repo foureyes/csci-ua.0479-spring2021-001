@@ -152,6 +152,11 @@ Topics
 <a name="homework"></a>
 <div class="panel-heading">Homework</div>
 <div class="panel-body" markdown="block">
+
+For __homework support__ (late submissions based on policies below, grading challenges, etc.): [submit this form]({{ site.vars.homework_support_url }})
+
+Homework details:
+
 * 8 assignments (maybe 1 or 2 more)
 * approximately one assignment per week
 * late submissions not accepted, with the following exceptions
