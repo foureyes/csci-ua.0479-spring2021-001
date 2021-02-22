@@ -96,7 +96,9 @@ Focus on questions that _may_ be answered by using summary statistics on numeric
 
 ⚠️ __If you have trouble thinking of research topics / questions, you can do parts 1 and 2 in reverse order__ ... by finding an interesting data set first, and then formulating questions afterwards.
 
-Write your questions ... along with _where_ you think you'll find answers within a markdown cell in your notebook `homework03.ipynb`. Use the following template to do this (fill in the parts marked with TODO):
+Write your questions ... along with _where_ you think you'll find answers within a markdown cell in your notebook `homework03.ipynb`. Use the following template to do this (fill in the parts marked with TODO).
+
+Note that the markdown has some guidance for forming your question. For example, you might want to specify the population (who) that your question pertains to (for example, all students at NYU). However, if Who, What, Where, When or How aren't relevant for your question, you can put in not applicable.
 
 ```
 # Homework 03
@@ -191,7 +193,7 @@ Number of Records: (TODO how many rows)
 
 ### Sample of Data
 
-TODO show a few lines of data from the actual file.  ⚠️ Use "regular" Python to do this in this code block.  Assume that jupyter-lab was started in your root directory: with open('./data/raw/example-data.csv', 'r')
+TODO show a few lines of data from the actual file.  ⚠️ Use "regular" Python to do this in this code block.  Assuming that jupyter-lab was started in your root directory: with open('../data/raw/example-data.csv', 'r')
 
 ### Fields or Column Headers
 
@@ -228,7 +230,8 @@ Underneath your markdown cell, create a new code cell. Use:
 
 To do the following:
 
-1. once again, read the file (make sure you're reading the file relative to the root of your project: `data/raw/example-data.csv`
+1. once again, read the file (make sure you're reading the file relative to the root of your project: 
+	* assuming that you start jupyter from the root, and your notebook is in `src`, use `../data/raw/example-data.csv`
 2. "extract" at least 3 columns that you want to work with: 
 	* one with numeric data
 	* another with categorical data

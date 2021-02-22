@@ -327,7 +327,7 @@ HW 02:
  * Manual Cleaning
  * music generator (numpy) no loops only vector operations
 -->",,
-y,,7,22-Feb,Mon,"Tabular Data (pandas)
+,,7,22-Feb,Mon,"Tabular Data (pandas)
 
 * See slides from previous class
 * [pandas basics](notebooks/pandas/fa19-class07-pandas-basics.ipynb) (notebook)",,"<!--
@@ -344,7 +344,7 @@ __Quiz #05__ – due Tue morning, 2/25, at 9:30am
  * Focus on Scraping
  * Focus on APIs
  * Ch 7: Data Cleaning and Preparation"
-y,,8,24-Feb,Wed,"Cleaning / Preparing Data, Loading Data With Pandas
+,,8,24-Feb,Wed,"Cleaning / Preparing Data, Loading Data With Pandas
 
 * [Missing Data, Basic Transformations](slides/python/pandas-clean.html)
 * [Cleaning Data with Pandas](notebooks/pandas/cleaning-data-pandas.ipynb) (notebook)
@@ -366,10 +366,10 @@ Using APIs
  * Ch 6: Data Loading, Storage, and File Formats
  * Focus on Scraping
  * Focus on APIs
- * Ch 7: Data Cleaning and Preparation","__Homework #04__ – due Thu 2/27 at 11pm
+ * Ch 7: Data Cleaning and Preparation","<!--__Homework #04__ – due Thu 2/27 at 11pm
 
 * [Homework #04 Instructions](assignments/04.html)
-","HW 03 
+-->","HW 03 
 * use an API
 * clean data
 * standalone analysis
