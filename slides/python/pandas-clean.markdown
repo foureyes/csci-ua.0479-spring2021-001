@@ -19,7 +19,7 @@ __The special value, `np.nan`, means missing data.__ &rarr;
 * {:.fragment} is seen through pandas to represent
 	* {:.fragment} missing data
 	* {:.fragment} also referred to as NA
-	* {:.fragment} __sentinal__ value - easily distinguished from valid values
+	* {:.fragment} __sentinel__ value - easily distinguished from valid values
 * {:.fragment} (btw, the reason for missing data should be investigated before determining _what to do with missing data_)
 
 </section>
@@ -393,7 +393,7 @@ df[1][df[1] >  10] = 10
 
 __Data frame columns have types (they're Series after all!)__
 
-Use `df.dtype`, `df.count()`, and `df.info()` to see type info!
+Use `df.dtypes` (note the s), `df.count()`, and `df.info()` to see type info!
 {:.fragment}
 
 To convert from one type to another:
@@ -479,7 +479,7 @@ Note that conversion will autodetect format, but you can specify your own with a
 {:.fragment} 
 
 ```
-pd.to_datetime('2017-02-03', format='%Y %m %d')
+pd.to_datetime('2017-02-03', format='%Y-%m-%d')
 # Timestamp('2017-02-03 00:00:00')
 ```
 {:.fragment}

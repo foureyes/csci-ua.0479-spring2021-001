@@ -169,6 +169,14 @@ Show all the companies that have a _missing/NA/NaN_ value
 {:.fragment} 
 
 <pre class="fragment"><code data-trim contenteditable>
+c[c['state'].notnull()]	
+</code></pre>
+{:.fragment}
+
+(or companies that don't have a state)
+{:.fragment}
+
+<pre class="fragment"><code data-trim contenteditable>
 c[c['state'].isnull()]	
 </code></pre>
 {:.fragment}

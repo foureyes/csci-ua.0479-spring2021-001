@@ -97,7 +97,7 @@ d.apply(fn, axis=a)
 __Let's see__  &rarr;
 
 <pre><code data-trim contenteditable>
-rain.apply(lambda arg: type(arg))
+rain.apply(lambda arg: str(type(arg)))
 </code></pre>
 {:.fragment}
 
@@ -279,7 +279,9 @@ __To help get an overview of the values and labels you have, use `unique` and `v
 {:.fragment}
 
 * {:.fragment} the `unique` method will give back an array of the unique values in a `Series`
-* {:.fragment} `value_counts` is a top-level function that will count the values
+* {:.fragment} `value_counts` is a top-level function that will give back the counts of the distinct values in a `Series`
 
+(btw, for a `DataFrame`, `value_counts` is the count of unique rows, ignoring rows with NA)
+{:.fragment}
 </section>
 
