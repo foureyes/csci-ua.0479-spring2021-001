@@ -89,14 +89,14 @@ This homework consists of two parts:
 ### Prep
 
 * Download [a csv of rolling sales data from Manhattan from Sep 2018 - Aug 2019](./hw03/rollingsales_manhattan.csv)
-from September 2018 to August 2019.
+from September 2018 to August 2019".
 	* this data was sourced from [NYC Department of Finance’s Rolling Sales data for Manhattan](https://www1.nyc.gov/site/finance/taxes/property-rolling-sales-data.page) 
-	* save the `csv` file into your `data/raw` directory in your repository
+	* save the `csv` file into your repository
 	* read the [companion "Data Dictionary"](https://www1.nyc.gov/assets/finance/downloads/pdf/07pdf/glossary_rsf071607.pdf) for information on the data stored in the columns
 
 ### Starting a Notebook and General Requirements
 
-* open up the empty notebook, `src/rollingsales.ipynb`, in jupyterlab / jupyter notebook
+* open up the empty notebook, `rollingsales.ipynb`, in jupyterlab / jupyter notebook
 * go through the instructions below... and make sure that...
 * ⚠️ for each numbered instruction, insert a markdown cell before your code that has the first line of the instruction ⚠️
 	* (the number and the accompanying line of text) 
@@ -106,8 +106,7 @@ from September 2018 to August 2019.
 
 1. import `rollingsales_manhattan.csv` as a `DataFrame`
 	* bring in the csv file by using read_csv from pandas; don't use any keyword arguments initially
-	* use a relative path as if your notebook were opened from the root of the repository if possible (`../data/raw/rollingsales_manhattan.csv`)
-	* compare the resulting `DataFrame` against opening the spreadsheet in LibreOffice, Google Sheets, Excel, Numbers, etc.
+	* compare the resulting `DataFrame` against opening the spreadsheet in Excel, LibreOffice or Google Sheets
 	* you _should_ immediately see an issue with the import
 	* use a keyword argument [from the docs](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html) to fix the issue
 	* __in a markdown cell after the import, describe what fix had to be made to make the initial import usable__
@@ -143,7 +142,7 @@ from September 2018 to August 2019.
 		* condominiums
 		* everything else can fall under "other" (including missing values)
 	* ⚠️ document every step that you use to do this, including how the data was cleaned and/or transformed
-	* __hint, read the accompanying data dictionary / glossary__
+	* hint, read the accompanying data dictionary / glossary
 7. calculate summary statistics for the prices of properties sold for all of Manhattan and for a couple of select neighborhoods
 	* use any method to calculate mean, median, percentiles (25 and 75), max, and min
 	* pick two neighborhoods 
@@ -219,56 +218,26 @@ Y88888b         `888888888b,      `""""^                `Y8888888P'       d888I
 
 
 
-Using your data set from the previous homework, practice using 🐼. 
+Find a data set that has missing values or values that need to be transformed.  
 
-1. <span class="hl">don't use the dog bites data set</span> referenced in the course materials
-2. try to write <span class="hl">code that's different from the programs that we've done in class</span> (it's not adequate to simply use class sample code with a different data set 🙅)
+1. <span class="hl">don't use the dog bites data set</span> (or _really_, any other data set that we've used in class, because, uh... we already cleaned it 🙁)
+2. (for the next part) write <span class="hl">code that's different from the programs that we've done in class</span> (it's not adequate to simply use class sample code with a different data set 🙅)
 
-### 1. Reference previous assignment or write some documentation 
+### 1. Write some documentation 
 
 1. Open up the empty notebook, `project.ipynb`, in jupyterlab / jupyter notebook
-2. In a markdown cell, either:
-	1. write a note mentioning that your data set was documented in the previous assignment
-	2. if you decide to use a different data set, describe the data that you've selected using the template markdown below:
-	
-```
-## About the Data
-
-1. Name / Title: (TODO name of data set)
-2. Link to Data: (TODO link to any documentation about the data that you've found )
-3. Source / Origin: 
-	* Author or Creator: TODO
-	* Publication Date: TODO
-	* Publisher: TODO
-	* Version or Data Accessed: TODO
-4. License: (TODO name of license)
-5. Can You Use this Data Set for Your Intended Use Case? (TODO answer this question)
-
-## Format and Samples
-
-### Overview
-
-Format: (TODO add what file format the data is in)
-Size: (TODO how large is the file in KB, MB, GB, etc. ... use finder, windows explorer for this)
-Number of Records: (TODO how many rows)
-
-### Sample of Data
-
-TODO show a few lines of data from the actual file.  ⚠️ Use "regular" Python to do this in this code block.  Assuming that jupyter-lab was started in your root directory: with open('../data/raw/example-data.csv', 'r')
-
-### Fields or Column Headers
-
-* Field/Column 1: (TODO add field name and potential type using Python types)
-* Field/Column 2: (TODO same as above)
-* Field/Column N: (TODO same as above)
-```
-
+2. In a markdown cell, describe the data that you've selected
+	* link to any documentation about the data that you've found 
+	* discuss the origin of the data (what is it, who collected / generated it, how did they do it, etc.)
+3. Document the format of the data in a markdown cell
+	* the data can be in any format (`csv`, `json`, etc.)
+	* determine the _likely_ data type (you can use regular python types or numpy types) of each field
 
 ### 2. Retrieve the data, create a DataFrame
 
 Include the data for the graders by either:
 
-1. downloading it and placing it into your `data/raw` directory
+1. downloading it and placing it into your repository
 2. linking to it in a markdown cell
 
 Create a data frame from the data; use any method to do this (for example `read_csv`)
@@ -277,8 +246,8 @@ Create a data frame from the data; use any method to do this (for example `read_
 
 In a markdown cell, describe what you'd like to use the data for:
 
-* repeat the same analysis that you did previously in plain python, but with `pandas` instead
 * perhaps you would simply like to clean it up for further analysis later
+* maybe you have a hypothesis that can be backed by some basic data analysis
 
 Write code to achieve what you've written out above. The code should contain at least 4 (repetition is allowed) of the following:
 
