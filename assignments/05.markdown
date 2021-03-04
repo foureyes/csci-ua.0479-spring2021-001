@@ -240,23 +240,32 @@ The expected output is shown below:
 
 #### 1. Retrieve the data, and examine it.
 
-* Retrieve one page of json from this URL: (http://linserv1.cims.nyu.edu:10000/films?_page=1)
-* Examine the keys
+* Retrieve one page of json from this URL: [http://linserv1.cims.nyu.edu:10000/films?_page=1](http://linserv1.cims.nyu.edu:10000/films?_page=1)
+* You can use `requests` to do this
+	* you can use the `json` module to manually parse the response content
+	* __Or__ .... use a feature of the `requests` module that allows immediate parsing of a json response by calling the `json()` method 
+	* r = requests.get('some.url')
+	* d = r.json() # parses json into dictionary!
+* Examine the keys and values of the dictionary
+* In a markdown cell, write out what keys you may be interested in to create the report specified above
+* Try incrementing the last number in the url where page is 1 ... do you get different results?
+* In a markdown cell, describe what happens when you modify the url 
+
+
 {% comment %}
 comment_
 {% endcomment %}
 
-1. Make at least two requests to the API "endpoint(s)" and load the data into a DataFrame
-	* For example if there's pagination, get at least 2 pages and combine into a single DataFrame
-	* Or if there are two endpoints that can be joined using `merge`, requests data from both
-2. In a markdown cell, describe what you'd like to use the data for:
-	* perhaps you would simply like to clean it up for further analysis later
-	* maybe you have a hypothesis that can be backed by some basic data analysis
-3. Write code to achieve what you've written out above using the DataFrame you've constructed. The code should contain at least 2 of the following:
-	* 1 groupby
-	* 1 multi index / hierarchical indexing
-	* 1 merge
-	* 1 concat or append
+#### 2. Load the data into a `DataFrame`
 
-In a markdown cell above your code, write out which of the above requirements you're implementing. As you write your code, document your process in an accompanying markdown cell.
+1. Make a request to [http://linserv1.cims.nyu.edu:10000/films?_page=1](http://linserv1.cims.nyu.edu:10000/films?_page=1) again, but this time, load the result into a `DataFrame`
+2. Continue collecting additional data and adding to the `DataFrame` until there is no more data to retrieve
 
+#### 3. Report
+
+Create a report that shows:
+
+* the directors' names as the index
+	(Note that the `index.name` can be set to get what appears to be a [title for the index](https://cs.nyu.edu/courses/spring21/CSCI-UA.0479-001/_site/slides/python/pandas-basics.html#62))
+* the average rotten tomatoes score (review aggregator website)
+* the number of films directed
