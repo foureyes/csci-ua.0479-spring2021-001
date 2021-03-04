@@ -1453,6 +1453,30 @@ TypeError: Index does not support mutable operations
 </section>
 
 <section markdown="block">
+## Is it an Index or a Column
+
+The `Index` cannot be selected as a column.
+
+__However, you can give it a name, which displays like a column name:__ &rarr;
+
+```
+example = pd.DataFrame(np.arange(9).reshape(3, 3), list('abc'), list('xyz'))
+example.index.name = 'wut!?'
+```
+{:.fragment}
+
+```
+	x	y	z
+wut!?
+a	0	1	2
+b	3	4	5
+c	6	7	8
+```
+{:.fragment}
+
+</section>
+
+<section markdown="block">
 ## Speaking of Indexes...
 
 __Remember that we can get a new `DataFrame` with rearranged or repeated indexes?__ &rarr;

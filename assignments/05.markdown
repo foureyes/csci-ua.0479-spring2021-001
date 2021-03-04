@@ -50,17 +50,17 @@ function onClick(evt) {
 }
 </script>
 
-# Assignment #5 - Database Design, Joins - Due Thursday, March 5th  at 11pm
+# Assignment #5 - Database Design, Joins - Due Wednesday, March 10th at 11pm
 
 In this homework, you'll:
 
 1. "Screen scrape" data from a web site
 	* Using `requests` and `BeautifulSoup` to download and parse html
 	* Use `merge` to join DataFrames by a key
-2. Use an API
-3. Install postgres
+2. Work with JSON / Use an API
+	* Use the `json` module with `requests`
 
-## Part 1 - Combine Fa20 Course Info with Requirements
+## Part 1 - Combine Sp21 Course Info with Requirements
 
 ```
            ///////|
@@ -85,47 +85,58 @@ In this homework, you'll:
 
 In this part of the assignment, you'll work on parsing html with a library and regular expressions to extract course information data. Additionally, you'll use the `merge` function to put together data from two different DataFrames based on key. 
 
-1. Download the [Spring 2020 CS course schedule](https://cs.nyu.edu/dynamic/courses/schedule/?semester=spring_2020) by right-clicking and choosing "Save As". Save this in the root of your project repository; give it a short, but descriptive file name.
+1. Download the [Spring 2021 CS course schedule](https://cs.nyu.edu/dynamic/courses/schedule/?semester=spring_2021) by right-clicking and choosing "Save As". Save this in the root of your project repository; give it a short, but descriptive file name.
 2. Download the [course catalog](https://cs.nyu.edu/dynamic/courses/catalog/) by right-clicking and choosing "Save As". Save this in the root of your project repository; give it a short, but descriptive file name.
 3. Make sure to install any modules necessary for working with html 
 4. Open up the empty notebook, `courses.ipynb` to work on this part of the assignment
 
 ### Instructions
 
-#### 1. Read the 2020 course schedule into a DataFrame
+#### 1. Read the 2021 course schedule into a DataFrame
 
 * the frame should have the following columns:
 	* Number-Section: the course number and section number
+		* Use your discretion to deal with _issues_ encountered here
 	* Name: the name of the course
 	* Instructor: the name of the professor
 	* Time: the day(s) and time(s) the course meets
 	* (once you read in the data, you'll add a couple of rows)
-* [here's an image of some sample rows](../resources/img/hw03-courses/courses-rows.png)
+* this is what a portion of the `DataFrame` may look like (note, the courses are from a past semester, though)
+	![sample course rows](../resources/img/hw03-courses/courses-rows.png)
 * once you've read in your data, break apart the `Number-Section` column into two separate columns: `Number` and `Section`
 	* `Number` is something _like_ `CSCI-UA.0480`
 	* `Section` is something _like_ `001`
-	* __use regular expressions with groups to do this__
-	* the `str` accessor method to use is `extract`
-	* [check out the end of the regex slides](../slides/python/regex.html) or the [official pandas docs](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.extract.html)
+	* try to __use regular expressions with groups to do this__
+		* the `str` accessor method to use is `extract`
+		* [check out the end of the regex slides](../slides/python/regex.html) or the [official pandas docs](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.extract.html)
 * show:
 	* `info` to show the data types and counts
 	* the first 5 rows
 	* the last 5 rows
 	* a random sampling of 5 rows
-* hints: you'll have to...
-	* read in the html file
-	* parse the html
-	* pick out /extract the data
-	* it's very useful to use your browser's web inspector tools (right-click on element and inspect to see html and parent, sibling, and child elements
-	* ⚠️ [see this guide on using web inspector tools for chrome](https://developers.google.com/web/tools/chrome-devtools/dom/)
-	* note that in the parsing library we cover in the slides...
-	* `select` can be called on an element to find elements within it
-	* if a collection of elements is returned, you can index into it
-	* if you just one the first nested element, you can dot (`.`) the parent element, and use the name of the nested element next
-	* `.text` or `.get_text()` returns all of the text within an element (even nested elements!)
-	* pay attention to patterns in data (what _makes_ a course number, what element is a course number usually in?)
-	* also helpful to print out elements themselves (without using `.text`) to see what element was actually selected 
-	* some example markup and parsing code:
+
+__General Workflow and Hints__
+
+* read in the html file
+* parse the html
+* pick out /extract the data
+* it's very useful to use your browser's web inspector tools (right-click on element and inspect to see html and parent, sibling, and child elements
+* ⚠️ [see this guide on using web inspector tools for chrome](https://developers.google.com/web/tools/chrome-devtools/dom/)
+* note that in the parsing library we cover in the slides...
+* `select`, `select_one`, `find`, etc. can be called on an element to find elements nested within it
+	* for example, if `my_div` is the result of calling `select_one`
+	* ... and `my_div` is `<div><p class="foo">one</p><p>two</p></div>`
+	* ...you can select elements within `my_div` with `my_div.select('p')`
+* if you just want the first nested element
+	* you can dot (`.`) the parent element
+	* ... and use the name of the nested element next 
+	* for example if, `my_h1` is `<h1><a>foo</a> bar</h1>`
+	* `my_h1.a` can be used to access the nested `a`
+* if a collection of elements is returned, you can index into it with `[]` (essentially, a list)
+* `getText()`, `.text` or `.get_text()` returns all of the text within an element (even nested elements!)
+* pay attention to patterns in data (what _makes_ a course number, what element is a course number usually in?)
+* also helpful to print out elements themselves (without using `.text`) to see what element was actually selected 
+* some example markup and parsing code:
 
 ~~~
 <section class='container'>
@@ -160,13 +171,14 @@ for row in rows:
     print(paragraphs[1].text) # on 1st iteration: Alice Ahn
 ~~~
 
-#### 2. Read the 2020 course catalog into a DataFrame
+#### 2. Read the 2021 course catalog into a DataFrame
 
 * the frame should have the following columns:
 	* Number: the course number 
 	* Prereqs: a text description of the prerequisites
 	* Points: the number of credits
-* [here's an image of some sample rows from another semester](../resources/img/hw03-courses/catalog-rows.png)
+* here's example of a `DataFrame` with some course catalog rows (again, the data is from another semester)
+	![sample rows](../resources/img/hw03-courses/catalog-rows.png)
 * show:
 	* `info` to show the data types and counts
 	* the first 5 rows
@@ -178,7 +190,7 @@ for row in rows:
 
 
 * create a new DataFrame by....
-* finding a way to show all scheduled classes in spring 2020 along with their points and prereqs
+* finding a way to show all scheduled classes in spring 2021 along with their points and prereqs
 * only show the following columns, in this order:
 	* Number: course number
 	* Name: course name
@@ -188,41 +200,51 @@ for row in rows:
 	* Points: number of credits
 * hints:
 	* use [`pd.merge` to do this](../slides/python/pandas-join-combine.html)
-	* `how=left` will keep all rows in the first DataFrame
-* can you spot any anomalies or discrepancies?
-	* if so, in a markdown cell, describe any problem(s) you see
-	* additionally, describe how you might fix them
-	* lastly, based on the resulting DataFrame, describe the behavior of `how=left` on these particular DataFrames
-	* if you need to see all rows, use `pd.set_option('display.max_rows', 200)`
+	* `how=left` will keep all rows in the first `DataFrame`
+
+#### 4. Conclusion
+
+* did you spot any anomalies, discrepancies, or unexpected data or relationships between data? 
+* if so, in a markdown cell, describe any problem(s) you saw
+* additionally, describe how you might fix them (or _if you already fixed them_!)
+* lastly, based on the resulting `DataFrame`, describe the behavior of `how=left` on these particular `DataFrames`
+* if you need to see all rows, use `pd.set_option('display.max_rows', 200)`
 
 ## Part 2 - Using an API
 
 
-Find an API that offers data that you're interested in. If you need help finding a data source, [here's a collective list of free APIs](https://github.com/public-apis/public-apis) or check out some additional [sources from our course site](../data-sets.html). Please try to work with an API that uses JSON as its data interchange formatj. 
-1. <span class="hl">don't use the tumblr or nytimes api</span> (or _really_, any other data set that we've used in class, 🙁)
-2. (for the next part) write <span class="hl">code that's different from the programs that we've done in class</span> (it's not adequate to simply use class sample code with a different data set 🙅)
 
-### 1. Write some documentation 
 
-1. Open up the empty notebook, `project.ipynb`, in jupyterlab / jupyter notebook
-2. In a markdown cell, describe the API that you've selected
-	* what _is_ the data; if it's relevant, also add where the data came from (how it was collected)
-	* link to the API's documentation 
-	* link to the specific endpoint(s) that you'll be using (you'll have to make at least two requests, which can be multiple requests to the same endpoint, but with different parameters to retrieve multiple "pages" of data, or two requests to different _kinds_ of related data from the same API)
-	* if it's a JSON response, describe the keys / general structure (is it a list of objects, is it a single object per API call, etc.)
-3. Make a test request to the API
-	* <span class="hl">If the API requires a key</span>
-		* put that key in a variable clearly named `api_key` 
-		* add a comment above the variable saying `TODO: fill api key`... 
-		* before you commit, set the variable to an empty string; <span class="hl">you should not have your API keys in the repository</span>
-		* I will send out a google form for you to specify your API key... the grader will use this to run your notebook
-		* feel free to use a throwaway email account to procure your API key 
-		* (note that... typically API keys are in configuration files or environment variables, but to easy the complexity of bootstrapping your projects, we'll use this simple variable based method)
-	* describe the parameters that you'll be sending to the API end point (for example, do you have to send a page number? a search tag?)
-	* send a request to the API
-	* display some of the results (either as parsed json or as the raw response text)... so that the structure can be compared to the documented structure in the previous step
 
-### 2. Retrieve the data, create a DataFrame
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.concat.html
+
+
+### Overview
+
+In this part of the assignment, you'll request data from a server in json format, parse it, and load it into a `DataFrame`. Using this `DataFrame` you'll use aggregations to produce a report.
+
+The data set is composed of films from the Japanese animation film studio, [Studio Ghibli](https://en.wikipedia.org/wiki/Studio_Ghibli).
+
+It is being served from a mirror of the data on `linserv1.cims.nyu.edu`. Note, however, that the original data is from [https://ghibliapi.herokuapp.com/](https://ghibliapi.herokuapp.com/), which is under an [MIT License](https://github.com/janaipakos/ghibliapi/blob/master/LICENSE). This is mirrored so that we do not overwhelm the original data source with requests.
+
+
+### Instructions
+
+
+The goal of the assignment is to create a report showing director's names, the number of Ghibli films that the directors was involved in, and the average rotten tomatoes score of the Studio Ghibli films made by that director. 
+
+The expected output is shown below:
+
+<img alt="example output" src="hw05-ghibli.png" style="width:25%;">
+
+
+#### 1. Retrieve the data, and examine it.
+
+* Retrieve one page of json from this URL: (http://linserv1.cims.nyu.edu:10000/films?_page=1)
+* Examine the keys
+{% comment %}
+comment_
+{% endcomment %}
 
 1. Make at least two requests to the API "endpoint(s)" and load the data into a DataFrame
 	* For example if there's pagination, get at least 2 pages and combine into a single DataFrame
@@ -237,12 +259,4 @@ Find an API that offers data that you're interested in. If you need help finding
 	* 1 concat or append
 
 In a markdown cell above your code, write out which of the above requirements you're implementing. As you write your code, document your process in an accompanying markdown cell.
-
-## Part 3 - Prepping for Next Homework; Installing Postgres
-
-To prepare for the following homework, please to install postgres, the relational database that we'll be using for the next few weeks. Install links are below:
-
-* MacOS: https://www.postgresql.org/download/macosx/ (Interactive installer by EnterpriseDB)
-* Windows 10: https://www.postgresql.org/download/windows/ (Interactive installer by EnterpriseDB)
-* Linux: use your distribution's package manager (apt, yum, pacman)
 

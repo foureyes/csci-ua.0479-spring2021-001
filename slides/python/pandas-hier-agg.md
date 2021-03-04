@@ -29,28 +29,22 @@ To do this, we'll use data extracted from the US Department of Labor's [Occupati
 
 ```
 cols = ["Year", "State", "Title", "Employment", "Salary"]
-```
 
-```
-data = [[2018, "CA", "Web Dev", 20170, 86160],
-        [2018, "CA", "DB Admin", 10970, 100890],
-        [2018, "NY", "Web Dev", 12030, 79880],
-        [2018, "NY", "DB Admin", 7100, 99000],
+data = [[2016, "CA", "Web Dev", 22650, 82930],
+        [2016, "CA", "DB Admin", 12370, 93960],
+        [2016, "NY", "Web Dev", 11410, 81140],
+        [2016, "NY", "DB Admin", 6650, 91720],
         [2017, "CA", "Web Dev", 21150, 84270],
         [2017, "CA", "DB Admin", 12030, 95630],
         [2017, "NY", "Web Dev", 11900, 82360],
         [2017, "NY", "DB Admin", 7170, 94330],
-        [2016, "CA", "Web Dev", 22650, 82930],
-        [2016, "CA", "DB Admin", 12370, 93960],
-        [2016, "NY", "Web Dev", 11410, 81140],
-        [2016, "NY", "DB Admin", 6650, 91720]]
-```
-{:.fragment}
+        [2018, "CA", "Web Dev", 20170, 86160],
+        [2018, "CA", "DB Admin", 10970, 100890],
+        [2018, "NY", "Web Dev", 12030, 79880],
+        [2018, "NY", "DB Admin", 7100, 99000]]
 
-```
 df = pd.DataFrame(data, columns=cols)
 ```
-{:.fragment}
 
 
 </section>
@@ -80,7 +74,7 @@ some_df.reindex([1, 4, 2, 3])
 <section markdown="block">
 ## `.set_index`
 
-An index can also be specified by using the `set_index` method on a frame to convert a column into an index (which returns a new frame)...
+An index can also be specified by using the `set_index` method on a `DataFrame` to convert a column into an index (which returns a new `DataFrame`)...
 
 __Here's an example of turning a column into an index:__ &rarr;
 
@@ -94,12 +88,18 @@ Now we can do something like slice based on year as index!
 {:.fragment}
 
 ```
-tmp.loc[2016:2017]
+tmp.loc[2016:2017] # note we're using loc (otherwise slice positional)
 ```
 {:.fragment}
 
-Note however, that the column `Year`, no longer exists
-{:.fragment}
+
+</section>
+
+<section markdown="block">
+## What Happens to the Column?
+
+__Note that the column `Year`, no longer exists__ &rarr;
+
 
 ```
 tmp['Year] # KeyError 😞
@@ -140,7 +140,7 @@ Uh... what? This is an example of __hierarchical indexing__....
 
 __Hierarchical Indexing__ allows multiple levels of indexes on an axis. We'll be concentrating mainly on rows, though...
 
-To interpret the previous frame: 
+To interpret the previous `DataFrame`: 
 
 * __you can think of the year as being the same for all rows underneath the row with an actual value for year__
 * additionally, each index can be considered a __level__ in the hierarchy of indexes
@@ -159,7 +159,7 @@ df.loc[2016]
 ```
 {:.fragment}
 
-We get back get a DataFrame with the outer index removed
+We get back a `DataFrame` with the outer index removed
 {:.fragment}
 
 ```
@@ -309,11 +309,37 @@ Notice that some columns are left out... in the case of `mean`, `Title` was not 
 
 __A list of methods that can be used with groupby__ &rarr;
 
-* count
-* sum, prod
-* mean, median 
-* std, var 
-* min, max 
-* first, last
+* `count`
+* `sum`, `prod`
+* `mean`, `median` 
+* `std`, `var` 
+* `min`, `max`
+* `first`, `last`
+</section>
+
+<section markdown="block">
+## Something More General
+
+If you need to _apply_ a custom function, __you can use `aggregate` on the `GroupBy` object__ &rarr;
+
+* it can take a function as an argument
+* or a dictionary with keys as column names and values as functions or list of functions
+* [see other possibilities](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.core.groupby.DataFrameGroupBy.aggregate.html)
+
+
+Here we use `aggregate` (also called `agg`) on the `GroupBy` object  to specify our custom function `f` as the function to apply to each group:
+{:.fragment}
+
+```
+f = lambda group: sum(group) / len(group)
+df.groupby('State').aggregate({'Salary': f})
+```
+{:.fragment}
+
+```
+# works like this:
+# df['Salary'].groupby(df['State']).mean()
+```
+{:.fragment}
 </section>
 
