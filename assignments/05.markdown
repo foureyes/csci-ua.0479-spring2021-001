@@ -216,7 +216,6 @@ for row in rows:
 
 
 
-https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.concat.html
 
 
 ### Overview
@@ -269,3 +268,5 @@ Create a report that shows:
 	(Note that the `index.name` can be set to get what appears to be a [title for the index](https://cs.nyu.edu/courses/spring21/CSCI-UA.0479-001/_site/slides/python/pandas-basics.html#62))
 * the average rotten tomatoes score (review aggregator website)
 * the number of films directed
+* `concat` and `groupby` may be helpful
+	* [concat](https://cs.nyu.edu/courses/spring21/CSCI-UA.0479-001/_site/slides/python/pandas-basics.html#62)
