@@ -239,7 +239,7 @@ The expected output is shown below:
 
 #### 1. Retrieve the data, and examine it.
 
-* Retrieve one page of json from this URL: [http://linserv1.cims.nyu.edu:10000/films?_page=1](http://linserv1.cims.nyu.edu:10000/films?_page=1)
+* In `films.ipynb', programmatically retrieve one page of json from this URL: [http://linserv1.cims.nyu.edu:10000/films?_page=1](http://linserv1.cims.nyu.edu:10000/films?_page=1)
 * You can use `requests` to do this
 	* you can use the `json` module to manually parse the response content
 	* __Or__ .... use a feature of the `requests` module that allows immediate parsing of a json response by calling the `json()` method 
