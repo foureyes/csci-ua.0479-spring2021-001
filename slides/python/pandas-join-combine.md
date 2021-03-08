@@ -28,8 +28,8 @@ b = pd.DataFrame([[4, 2], [4, 3], [8, 7]],
 # column k ...  and put data togther!
 pd.merge(a, b, on='k')
 
-# result will have col1 and col2, but one row will
-# be left out
+# result will have col1 and col2, but rows without 
+# a matching key will be left out
 ```
 {:.fragment}
 </section>
