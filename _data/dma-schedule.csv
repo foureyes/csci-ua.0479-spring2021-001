@@ -541,7 +541,7 @@ Time Series
  * [creating tables](https://www.postgresql.org/docs/current/static/sql-createtable.html)
  * [INSERT](https://www.postgresql.org/docs/current/static/sql-insert.html)
  * [SELECT](https://www.postgresql.org/docs/current/static/sql-select.html)"
-y,,11,08-Mar,Mon,"Relational Database Overview
+,,11,08-Mar,Mon,"Relational Database Overview
 
 * [Databases Intro](slides/db/intro.html)
 
@@ -598,9 +598,10 @@ Postgrestutorial
  * [DISTINCT](http://www.postgresqltutorial.com/postgresql-select-distinct/)
  * [WHERE](http://www.postgresqltutorial.com/postgresql-where/)
  * [LIMIT](http://www.postgresqltutorial.com/postgresql-limit/)
-","__Quiz #06__ and __Quiz #07__ – due Mon morning, 3/15, at 11am
+","__Quiz #06__ and __Quiz #07__ – attempt to finish Mon morning, 3/15, at 11am
 
 * posted on NYU Brightspace
+* will remain open for one week after (3/22)
 
 
 <!--
@@ -647,7 +648,7 @@ Commandline Client, SQL, and Simple Queries
  * [WHERE](http://www.postgresqltutorial.com/postgresql-where/)
  * [LIMIT](http://www.postgresqltutorial.com/postgresql-limit/)
  * [COPY, Import](http://www.postgresqltutorial.com/import-csv-file-into-posgresql-table/)"
-y,,12,10-Mar,Wed,"Basic Postgres Administration
+,,12,10-Mar,Wed,"Basic Postgres Administration
 
 Data Types
 
