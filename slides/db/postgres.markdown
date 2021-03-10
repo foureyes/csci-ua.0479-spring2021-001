@@ -40,9 +40,9 @@ __If you're on MacOS:__
 
 * preferred installation is to use [homebrew](https://brew.sh/)
 	* `brew install postgresql`
-	* watch output of install, and copy command given
-	* (`pg_ctl -D /usr/local/var/postgres start` # start server!)
-	* super user is your username, no password if connect locally
+	* start with `brew services start postgresql` 
+	* (it's possible to manage outside of brew as well with `pg_ctl -D /usr/local/var/postgres start`)
+	* super user is your username, no password if connected locally
 * Linux or Windows 10 - WSL 
 	* Linux - apt / pacman / etc. (super user is `postgres`)
 
@@ -70,19 +70,17 @@ __Installation installs both server and client:__
 <section markdown="block">
 ## Start, Stop, Restart
 
+Prefer using your platform's recommended service manager (such as `brew services` or `launchctl` on MacOS or services panel on windows). If you need to, you can also use `pg_ctl`:
+
 * `pg_ctl start` 
 	* `-D datadir` - directory where postgres stores data
 	* `-l filename` - where to log output
 	* (on MacOS) `pg_ctl -D /usr/local/var/postgres start`
 	* add `-l /usr/local/var/postgres/server.log`
-* `pg_ctl stop`
-* `pg_ctl restart` - stop and then start
+* `pg_ctl stop` and `pg_ctl restart`
 * `pg_ctl reload` - reread config, but no need to completely stop and start again
 
 Want to stop specifying the `-D` when starting?  ...use `export PGDATA=/foo/bar`, add export to`.bashrc` or add export to `bash_profile` ... or modify `postgresql.conf`
-{:.fragment}
-
-<span class="hl">If `pg_ctl` isn't available, then the instance installed must be managed with different tools, like `launchctl` on MacOS, the Services app on Windows, etc.!</span>
 {:.fragment}
 
 </section>
@@ -100,7 +98,9 @@ Want to stop specifying the `-D` when starting?  ...use `export PGDATA=/foo/bar`
 
 Or... when connected to any database through `psql`:
 
-`SELECT name, setting FROM pg_settings WHERE category = 'File Locations';`
+* {:.fragment} `show hba_file`
+* {:.fragment} `show config_file`
+* {:.fragment} `SELECT name, setting FROM pg_settings WHERE category = 'File Locations';`
 
 
 </section>
@@ -216,7 +216,7 @@ Note that as we examine types, we'll use:
 __Check the docs on [numeric data types](https://www.postgresql.org/docs/current/static/datatype-numeric.html)__ &rarr;
 
 * {:.fragment} `serial` (auto incrementing, pk if no "natural pk" apparent, called artificial / surrogate)
-* {:.fragment} `integer` - typical choice for integer, 4 bytes
+* {:.fragment} `integer` - typical choice for integer (signed), 4 bytes
 * {:.fragment} `smallint` - 2 bytes, signed
 * {:.fragment} `bigint` - 8 bytes, signed
 * {:.fragment} `decimal` / `numeric` - user specified precision numbers
@@ -231,8 +231,8 @@ __`numeric` and `decimal` types can be used to store values that contain a _very
 
 * {:.fragment} calculations (such as addition, subtraction and multiplication) with these types <span class="hl">give back exact results</span>, but slower than using floating point types! 
 * {:.fragment} the __precision__ and __scale__ of these types can be set
-	* {:.fragment} __precision__: total count of significant digits
-	* {:.fragment} __scale__: the number of decimal digits
+	* {:.fragment} __precision__: total count of significant digits (total number of digits)
+	* {:.fragment} __scale__: the number of decimal digits (total number of digits of fractional part)
 	* {:.fragment} specified when declaring type: `numeric(4, 2)`
 	* {:.fragment} precision first, then scale (alternatively, only precision)
 	* {:.fragment} without precision or scale, precision and scale only limited by current implementation
@@ -266,6 +266,10 @@ __See docs on [character data types](https://www.postgresql.org/docs/current/sta
 ⚠️If casting to lesser length, string will be truncated to fit!
 {:.fragment}
 
+* {:.fragment} with specifying `n`, `varchar` will behave like `text`
+* {:.fragment} performance mostly same btwn `varchar` and `text`, y use `varchar`?
+* {:.fragment} enforce max length
+
 </section>
 
 <section markdown="block">
@@ -274,12 +278,12 @@ __See docs on [character data types](https://www.postgresql.org/docs/current/sta
 See [docs on Date/Time types](https://www.postgresql.org/docs/current/static/datatype-datetime.html)
 
 * {:.fragment} `timestamptz` (timestamp __with timezone__, __use this__!)
-	* {:.fragment} stored as UTC (universal coordinated time, sometimes GMT is synonym), queried, shown in local time zone
+	* {:.fragment} stored as UTC (universal coordinated time, sometimes GMT is synonym... but GMT is actual timezone, while UTC is a time standard), queried, shown in local time zone
 * {:.fragment} `timestamp` (no timezone)
 * {:.fragment} `date`
 * {:.fragment} `time`
 
-It's sometimes useful to store date or time date in a regular `integer` field. For example, year can be represented by:
+What are some options for storing year only?
 {:.fragment}
 
 * {:.fragment} a `timestamptz` or `date` but with consistent values for month, day etc.
@@ -296,7 +300,7 @@ __Boolean literals can be represented multiple ways!__ &rarr;
 * {:.fragment} `'t'`
 * {:.fragment} even `'yes'`, `'y'`, quoted true, etc...
 
-However, when querying, the representation can depend on the client - for example, psql shows `t` or `f`, but datagrip shows a check box
+However, when querying, the representation can depend on the client - for example, psql shows `t` or `f`, but another client may show `true` or even a check box
 {:.fragment}
 
 </section>
