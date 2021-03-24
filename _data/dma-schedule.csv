@@ -781,7 +781,7 @@ Sample Questions for Midterm and About Exam
  * [Left outer join](http://www.postgresqltutorial.com/postgresql-left-join/)
  * [Full outer join](http://www.postgresqltutorial.com/postgresql-full-outer-join/)
  * [Self join](http://www.postgresqltutorial.com/postgresql-self-join/)"
-y,,15,22-Mar,Mon,"Constraints and Naming Conventions
+,,15,22-Mar,Mon,"Constraints and Naming Conventions
 
 * [Constraints and Naming Conventions](slides/db/constraints-conventions.html)
 
@@ -794,16 +794,13 @@ Multiple Tables (Joins)
 ","Practical SQL
  
  * Ch 6: Joining Tables in a Relational Database
- * Ch 7: Table Design That Works for You (Naming Tables, Columns, and Other Identifiers, Controlling Column Values with Constraints)","__Homework #06__ – due Thursday 4/2 at 11pm
-
-* [Homework #06](assignments/06.html)
-* repositories will be created after break","ADD QUIZ FOR THESE TOPICS!
+ * Ch 7: Table Design That Works for You (Naming Tables, Columns, and Other Identifiers, Controlling Column Values with Constraints)",,"ADD QUIZ FOR THESE TOPICS!
 
 MATERIAL:
 
 TODO - add constraints
 TODO - add naming conventions",,
-y,,16,24-Mar ,24-Mar ,"Multiple Tables (Joins) Continued
+,,16,24-Mar ,24-Mar ,"Multiple Tables (Joins) Continued
 
 * See previous slides on Joins
 
@@ -832,7 +829,10 @@ Database Design, Entities and Relationships, The Relational Data Model and Diagr
  * [Inner join](http://www.postgresqltutorial.com/postgresql-inner-join/)
  * [Left outer join](http://www.postgresqltutorial.com/postgresql-left-join/)
  * [Full outer join](http://www.postgresqltutorial.com/postgresql-full-outer-join/)
- * [Self join](http://www.postgresqltutorial.com/postgresql-self-join/)",,,"Multiple Tables (Joins) Continued
+ * [Self join](http://www.postgresqltutorial.com/postgresql-self-join/)","__Homework #06__ – due Wednesday 3/31 at 11pm
+
+* [Homework #06](assignments/06.html)
+",,"Multiple Tables (Joins) Continued
 
 
 * [Movies Revisited](sql/joins/movies.sql)
@@ -859,7 +859,7 @@ Diagrams","Practical SQL
  
  * Ch 12. Advanced Query Techniques
  * Ch 13: Mining Text to Find Meaningful Data"
-y,,17,29-Mar,Mon,"Normalization
+s,,17,29-Mar,Mon,"Normalization
 
 *  [Normalization](slides/db/normalization.html) 
 
