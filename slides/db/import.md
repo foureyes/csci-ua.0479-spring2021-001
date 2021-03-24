@@ -122,6 +122,7 @@ __Options can be__ &rarr;
 * {:.fragment} `DELIMITER AS 'some char'` - specify delimiter (default is comma for csv)
 * {:.fragment} `NULL AS 'null_string'` - determines what string to treat as null (default for csv is empty string)
 * {:.fragment} `HEADER` - presence specifies that header is included in file
+* {:.fragment} `ENCODING 'ENCODING_NAME'` - specify encoding of file being imported (`ENCODING 'LATING'`), if not specified, client encoding is used (`psql` will auto detect based on your _locale_ settings, likely 'UTF8')
 * {:.fragment} `QUOTE AS 'quote_character'` - specify quote character
 
 </section>
