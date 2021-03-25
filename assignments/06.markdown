@@ -50,7 +50,7 @@ function onClick(evt) {
 }
 </script>
 
-# Assignment #6 - Single Table, Importing Data, SQL - Due Thursday, 3/31  at 11pm
+# Assignment #6 - Single Table, Importing Data, SQL - Due Wednesday, 3/31  at 11pm
 
 In this homework, you'll:
 
@@ -64,12 +64,14 @@ In this homework, you'll:
 
 ## Reuse or generate a csv File
 
+
 1. copy over your data set from homework 3
 	* if your data did not come in a csv or if you'd like to do some preprocessing before you import it into a database, it's ok to use `pandas` (for example [to_csv](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html)) to do so
 	* save any script or notebook that you used to do this within your repository as `convert.py` or `convert.ipynb`
 	* save the result (the new csv) of running your script or notebook in your repository - choose a descriptive name for the resulting `.csv (`students.csv`, `dog_bites.csv`) 
 	* the csv should be contain your original data set or a cleaned/transformed data set
 	* if the resulting csv is over 100mb, use a subset of the data
+    * finally, it is possible to import JSON objects (one object perf line) into a `jsonb` field (but you'd have to consult the documentation for dealing with these objects in queries)
 3. __in your `report.md`, under a heading called `# Overview`, once again, copy over your documentation citing the source of the data and what it contains based on the previous homeworks (columns, expected types, etc.)__
 
 ## Design and Create a Table
