@@ -87,7 +87,7 @@ In this homework, you'll:
 	* make sure that the appropriate constraints are set (`NOT NULL`, `UNIQUE`, etc.)
 	* use descriptive names for the table and columns
 	* make sure all names are lowercase and separated with underscore
-4. create and connect to a database called homework04
+4. create and connect to a database called <strike>homework04</strike> (edited) `homework06`
 5. run the SQL in your `create_table.sql` file by using copying and pasting, using `\i`, or using psql dbname < `/path/to/create_table.sql`
 
 ## Import Your .csv
