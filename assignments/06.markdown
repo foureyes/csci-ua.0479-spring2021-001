@@ -50,7 +50,7 @@ function onClick(evt) {
 }
 </script>
 
-# Assignment #6 - Single Table, Importing Data, SQL - Due Wednesday, 3/31  at 11pm
+# Assignment #6 - Single Table, Importing Data, SQL - Due <strike>Wednesday, 3/31</strike> Monday, 4/5  at 11pm
 
 In this homework, you'll:
 

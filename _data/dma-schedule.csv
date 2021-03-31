@@ -829,7 +829,7 @@ Database Design, Entities and Relationships, The Relational Data Model and Diagr
  * [Inner join](http://www.postgresqltutorial.com/postgresql-inner-join/)
  * [Left outer join](http://www.postgresqltutorial.com/postgresql-left-join/)
  * [Full outer join](http://www.postgresqltutorial.com/postgresql-full-outer-join/)
- * [Self join](http://www.postgresqltutorial.com/postgresql-self-join/)","__Homework #06__ – due Wednesday 3/31 at 11pm
+ * [Self join](http://www.postgresqltutorial.com/postgresql-self-join/)","__Homework #06__ – due <strike>Wednesday 3/31</strike> Monday 4/5 at 11pm
 
 * [Homework #06](assignments/06.html)
 ",,"Multiple Tables (Joins) Continued
@@ -902,7 +902,7 @@ Manipulating Text
  * Ch 6. Normalization
  * Ch 8. Codd's Rules for Relational Database Design
  * Ch 9. Using SQL to Implement a Relational Design"
-y,,18,31-Mar,Wed,"Manipulating Text
+,,18,31-Mar,Wed,"Manipulating Text
 
 * [Strings and Arrays](slides/db/strings.html)
 
@@ -934,7 +934,9 @@ Conditionals
  
  * Ch 12. Advanced Query Techniques
  * Ch 13: Mining Text to Find Meaningful Data
-",,,"TODO - move subqueries and / or CTE's up
+","__Due Monday 4/5 at 11am__
+
+* Quiz #08 on constraints and joins (NYU Brightspace)",,"TODO - move subqueries and / or CTE's up
 
 Normalization
 
