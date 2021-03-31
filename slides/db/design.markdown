@@ -177,33 +177,50 @@ We can use an __Entity Relationship Diagram__ to show entities, their attributes
 
 Some are picky about what's a true ER diagram, but for our purposes, it could refer to any style of ER diagram
 
-* [wikipedia has a list of 'em](https://en.wikipedia.org/wiki/Entity–relationship_model)
-* however, we'll stick to either:
+* you can use Chapter 3, Entities and Relationships from [Relational Database Design and Implementation by Jan L. Harrington on O'Reilly Safari via NYU Libraries](https://learning-oreilly-com.proxy.library.nyu.edu/library/view/relational-database-design/9780123747303/) to see a list of possible diagrams
+* if you don't a tl;dr version [wikipedia has a list of 'em](https://en.wikipedia.org/wiki/Entity–relationship_model) too
+* We'll stick to either:
 	1. Chen
 	2. _crow's feet_
 
 </section>
-
-
-
 <section markdown="block">
-## Demo
+## Chen
 
-Please [see the book](https://learning-oreilly-com.proxy.library.nyu.edu/library/view/relational-database-design/9780123747303/B9780123747303000048.xhtml) for a more complete guide on ER diagrams. Let's using the following types of diagrams:
+__Demo__ &rarr;
 
-1. {:.fragment} Chen
-2. {:.fragment} Crow's Feet
-
-To model...
-{:.fragment}
-
-* entities
-* attributes
-* relationships
-* join tables
-{:.fragment}
-
+1. Entities in boxes
+2. No attributes or attributes in circles
+3. Relationships:
+	* names in diamonds or (to read both ways) written adjacent to relationship line
+	* either arrows or numbers to note cardinality
 
 </section>
 
 
+<section markdown="block">
+## Crow's Feet / IE
+
+__Demo__ &rarr;
+
+1. Entities in boxes
+2. Attributes listed in boxes
+3. Relationships:
+	* name adjacent to relationship line
+	* `||` one and only one (mandatory)
+	* `O|` zero or one (optional) 
+	* `|<` one or many (mandatory)
+	* `O<` zero or many (optional)
+
+</section>
+
+<section markdown="block">
+## Drawing Diagrams
+
+
+1. obv, pen and paper
+2. google drawings / visio / dia / etc.
+3. [pgmodeler](https://pgmodeler.io/)
+3. although not specific to postgres, [mysql workbench](https://www.mysql.com/products/workbench/)
+
+</section>
