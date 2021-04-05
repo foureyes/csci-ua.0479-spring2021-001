@@ -199,12 +199,30 @@ A relation is in __second normal form__ if:
 1. {:.fragment} it's in 1NF
 2. {:.fragment} __AND__ there are no partial dependencies
 	* {:.fragment} a __partial dependency__ is when a non-prime attribute has a _functional dependency_ on a part of composite primary key (or even on a candidate key)
-	* {:.fragment} a __candidate key__ is a column or set of columns that can uniquely identify a row... but it is not necessarily _the_ primary key
-	* {:.fragment} there can be multiple candidate keys in a table, but only one primary key
-	* {:.fragment} if a table has a primary key that consists of only one column, it's already in 2NF
-3. {:.fragment} deals with _most_ insertion / deletion anomalies left over from 1NF
+	* {:.fragment} we'll see more about this in the next slide
+3. {:.fragment} if a table has a primary key that consists of only one column, it's already in 2NF
+4. {:.fragment} deals with _most_ insertion / deletion anomalies left over from 1NF
 </section>
 
+<section markdown="block">
+## Candidate Keys and Functional Dependency
+
+A __candidate key__ is a column or set of columns that:
+
+* {:.fragment} can uniquely identify a row... 
+* {:.fragment} but it is not necessarily _the_ primary key
+* {:.fragment} there can be multiple candidate keys in a table, but only one primary key
+
+A __functional dependency__ is one when one attribute's value depends on / is determined by another attribute's value.
+
+* {:.fragment} if you have two attributes, `X` and `Y`...
+* {:.fragment} (from our book "for every valid instance of X, that value of X uniquely determines the value of Y")
+* {:.fragment} `Y` is functionally dependent on `X` if every row having the same value `X` has the same value for `Y`
+* {:.fragment} or, more simply: if you know the value of `X`, you can determine the value of `Y`
+* {:.fragment} (two different values for `X` may produce the same `Y`)
+
+
+</section>
 <section markdown="block">
 ## 2NF or Not?
 
@@ -223,7 +241,7 @@ __Student takes many courses; course has many students__
 	* {:.fragment} a composite key: `netid`, `course number`
 	* {:.fragment} a composite key: `last`, `course number` (there would like be duplicate last names, tho!)
 2. {:.fragment} name a part-key dependency
-	* {:.fragment} `first` depends on `netid` or `last`
+	* {:.fragment} `first` depends on `netid` or `last` (every time we see `abc123` for  `netid`, we have the same `first` name, `alice`)
 	* {:.fragment} `course name` depends on `course number`
 
 </section>
@@ -231,7 +249,7 @@ __Student takes many courses; course has many students__
 <section markdown="block">
 ## 2NF Continued
 
-__Break up composite keys, and move out keys and attributes that are functionaly dependent... into other tables__. __Will this work?__ &rarr;
+__Break up composite keys, and move out keys and attributes that are functionally dependent... into other tables__. __Will this work?__ &rarr;
 
 * {:.header .colspan} student
 * {:.header} netid (pk), first, last, course num (fk)
