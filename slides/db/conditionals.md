@@ -204,6 +204,39 @@ select count(*) from caers_event where event_date is not null;
 </section>
 
 <section markdown="block">
+## Same, but in a Single Query
+
+__Can we show the counts of null versus not null for these `event_date` in a single query?__ &rarr;
+
+A couple of attempts:
+{:.fragment}
+
+```
+select (event_date is null) as is_null, count(*)
+from caers_event
+group by (event_date is null);
+```
+{:.fragment}
+
+```
+select
+    case
+        when event_date is null then 'is null'
+        else 'not null'
+    end as date_is_null,
+    count(*) as is_null_count
+from caers_event
+group by 
+	case 
+		when event_date is null then 'is null' 
+		else 'not null' 
+	end;
+```
+{:.fragment}
+
+</section>
+
+<section markdown="block">
 ## Assigning a Date 
 
 __Perhaps you want to have _some sort of date_ assigned to an event, even if it's a year off (!)__ &rarr;
