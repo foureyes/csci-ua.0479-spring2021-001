@@ -972,7 +972,17 @@ Implementation
  
  * [GROUP BY](http://www.postgresqltutorial.com/postgresql-group-by/)
  * [HAVING](http://www.postgresqltutorial.com/postgresql-having/)"
-,,19,05-Apr,Mon,"Conditionals
+,,19,05-Apr,Mon,"Review
+
+* CAERS dataset
+* pgAdmin: client, data modelling, importing
+* HAVING
+* Subqueries revisited
+* MIN / MAX (and subqueries) vs GROUP and LIMIT
+* Subqueries for nested aggregates
+* Previous slides on: Strings and Arrays
+
+Conditionals
 
 * [Conditional Expressions](slides/db/conditionals.html)
 
@@ -983,6 +993,8 @@ Subqueries Continued
 Dates and Times
 
 * [Working with Dates, Times](slides/db/datetime.html)
+
+
 
 
 
