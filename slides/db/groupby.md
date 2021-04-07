@@ -233,3 +233,35 @@ Sometimes we really want ungrouped columns to appear in our query result. __One 
 </section>
 
 
+<section markdown="block">
+## MAX / MIN vs ORDER BY and LIMIT
+
+__If you want to retrieve the maximum or minimum value from a column (and potentially other column data), which do you think would be faster?__ &rarr;
+
+1. {:.fragment} using `MAX` or `MIN`
+2. {:.fragment} using `ORDER BY` and `LIMIT` (perhaps limit 1)
+
+* {:.fragment} order by may take longer as it must sort all rows, but max or min simply has to do a sequential scan of rows
+* {:.fragment} there are, of course, other factors, such as the total number of rows (sorting probably takes longer larger number of rows), and if __indexes__ are involved (we'll see this later)
+
+</section>
+
+<section markdown="block">
+## MAX / MIN vs ORDER BY and LIMIT Continued
+
+__Performance isn't the whole story, though... what are some scenarios where one would work better than another__ &rarr;
+
+* {:.fragment} `ORDER BY` allows more than just the grouped column and the aggregate function!
+* {:.fragment} `ORDER BY` with `LIMIT 1` assumes only one min or max row, when there may be more than one (a tie)
+	* {:.fragment} (if this is the case, `MAX` with a subquery may be better)
+</section>
+
+<section markdown="block">
+## Nested Aggregates
+
+__Note that you cannot nest aggregate functions: `MAX(AVG(col))`__ &rarr;
+
+* {:.fragment} each aggregate requires a grouping
+* {:.fragment} the way around this is to use subqueries
+
+</section>
