@@ -11,6 +11,7 @@ This dataset is a subset of data from the [Sakila sample database](https://dev.m
 
 * The DVD rental database (yes, very much dated!) to be used for the quiz contains information about the business processes of a DVD rental store
 * It originally had 15 tables related to DVD Rental.
+* Some of the field types are types that we have not covered or custom types; there will not be any questions regarding concepts related to these types.
 * The database was __reduced to 4 related tables__ to make it concise for the purpose of the quiz. 
 * After dropping the other tables, the ER diagram below was regenerated and the modified database was saved 
 * The tables retained are: film, language, actor, and film_actor.
