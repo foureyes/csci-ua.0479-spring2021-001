@@ -1011,6 +1011,16 @@ Postgres Documentation
  
 * [Conditionals](https://www.postgresql.org/docs/current/functions-conditional.html)
 * [WITH Queries (CTEs)](https://www.postgresql.org/docs/current/queries-with.html)","
+__Homework #07__ – due Wednesday 4/14 at 11pm
+
+1. [Homework #07 Instructions](assignments/07.html)
+
+<!--
+* create view
+* cli inventory app maybe???
+* aggregates, time series, etc. on data set with multiple tables
+-->
+
 
 <!--
 __Homework #07__ – due Monday 4/5 at 11pm
@@ -1132,16 +1142,7 @@ Practical SQL
 
 * Ch 7: Table Design That Works for You (Speeding Up Queries with Indexes)
 * Ch 9: Inspecting and Modifying Data
--->","__Homework #07__ – due Wednesday 4/14 at 11pm
-
-1. [Homework #07 Instructions](assignments/07.html)
-
-<!--
-* create view
-* cli inventory app maybe???
-* aggregates, time series, etc. on data set with multiple tables
--->
-","
+-->",,"
 
 MATERIAL:
 
@@ -1178,7 +1179,7 @@ Triggers
 Documentation
 
 * [psycopg2 example usage from official documentation](http://initd.org/psycopg/docs/usage.html)"
-y,,21,12-Apr,Mon,"
+,,21,12-Apr,Mon,"
 <!--
 Security
 
@@ -1221,7 +1222,10 @@ Postgres and Python
 
 Documentation
 
-* [psycopg2 example usage from official documentation](http://initd.org/psycopg/docs/usage.html)",,,"Security
+* [psycopg2 example usage from official documentation](http://initd.org/psycopg/docs/usage.html)","__⚠️In-Class Quiz #03__ - given in class Wed 4/14, at 11:00am
+
+* taken in class (or during make-up session) on NYU Brightspace
+* [er diagram and optional dataset for restore](assignments/inclassq03.html)",,"Security
 
 * TODO - Security
 
