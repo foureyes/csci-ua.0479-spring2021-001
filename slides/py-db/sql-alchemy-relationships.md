@@ -403,7 +403,7 @@ __Create base class for ORM classes, `Engine` and `session`__ &rarr;
 <pre><code data-trim contenteditable>
 username, password = 'joe', 'data0480'
 host, database = 'localhost', 'scratch'
-dsn = f'postgres://{username}:{password}@{host}/{database}'
+dsn = f'postgresql://{username}:{password}@{host}/{database}'
 </code></pre>
 {:.fragment}
 

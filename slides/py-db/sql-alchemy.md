@@ -69,7 +69,7 @@ __These slides use [the Museum of Modern Art (MoMA) collection data](https://git
 
 from sqlalchemy import create_engine
 
-db = create_engine("postgres://localhost/databasename")
+db = create_engine("postgresql://localhost/databasename")
 
 artworks = db.execute("""select artwork.title, artwork.artwork_date
 from artist
@@ -92,7 +92,7 @@ for a in artworks:
 * {:.fragment} ...a database connection string as the first argument:
     * {:.fragment} this connection string is sometimes referred to as a __DSN__ (data source name)
     * {:.fragment} it consists of a protocol, username, password, host and database name:
-	* {:.fragment} `postgres://username:password@hostname/databasename`
+	* {:.fragment} `postgresql://username:password@hostname/databasename`
 * {:.fragment} and a keyword argument `echo=True` if you'd like to see the SQL it generates
 
 __`create_engine` returns an `Engine` object, representing the core interface to the database__  
@@ -362,7 +362,7 @@ Of course... create the engine
 {:.fragment}
 
 <pre><code data-trim contenteditable>
-db = create_engine("postgres://localhost/scratch")
+db = create_engine("postgresql://localhost/scratch")
 </code></pre>
 {:.fragment}
 

@@ -1255,7 +1255,7 @@ Postgres and Python
 * [moma-queries.sql](sql/py/moma-queries.sql)","* [MongoDB Data Model Design](https://docs.mongodb.com/manual/core/data-model-design/)
  * [MongoDB Data Model Examples and Patterns](https://docs.mongodb.com/manual/applications/data-models/)
  * (see all sections under Model Relationships Between Documents)"
-y,,22,14-Apr,Wed,"NoSQL (mongodb)
+,,22,14-Apr,Wed,"NoSQL (mongodb)
 
 * [MongoDB Intro](slides/mongo/intro.html)
 * [books.csv](mongo/books.csv)
