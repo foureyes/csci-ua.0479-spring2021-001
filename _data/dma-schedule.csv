@@ -1280,8 +1280,13 @@ HW 09:
 * [MongoDB Database Design](slides/mongo/design.html)
 
 ",Same as Previous
-y,holiday,22,19-Apr,Mon,Spring Break,,,,,
-y,,23,21-Apr,Wed,NoSQL (mongodb) Continued,Same as Previous,"__Quiz #07 and #08__ – due Thursday morning, 4/24, at 9:30am",,NoSQL (mongodb) Continued,"Practical SQL
+,holiday,22,19-Apr,Mon,Spring Break,,,,,
+,,23,21-Apr,Wed,NoSQL (mongodb) Continued,Same as Previous,"__Homework #08__ – due Monday 4/26 at 11pm
+
+1. [Homework #08 Instructions](assignments/08.html) (posted 4/19 at 11pm)
+
+<!-- __Quiz #07 and #08__ – due Thursday morning, 4/24, at 9:30am -->
+",,NoSQL (mongodb) Continued,"Practical SQL
  
  Ch 14: Analyzing Spatial Data with PostGIS"
 y,,24,26-Apr,Mon,"NoSQL (mongodb) Continued
