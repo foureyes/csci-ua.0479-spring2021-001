@@ -410,6 +410,9 @@ db.snakes.find(null, {_id: 0}).sort({length: -1, name: 1})
 ```
 {:.fragment}
 
+Note: without sort, order is [not guaranteed, and is implementation dependant](https://stackoverflow.com/a/11599283)
+{:.fragment}
+
 </section>
 
 <section markdown="block">
