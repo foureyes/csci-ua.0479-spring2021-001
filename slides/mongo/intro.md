@@ -167,6 +167,8 @@ The __Object ID__ is a 12-byte value, consists of: a 4-byte timestamp (seconds s
 [Comprehensive docs are here](http://docs.mongodb.org/manual/installation/)
 
 * basically, just [use the appropriate installer from their downloads page](http://www.mongodb.org/downloads)
+	* choose __On-promises__ / MongoDB locally
+	* choose __MongoDB Community Server__
 * if you use a package manager, do that instead 
 	* they have .debs for Debian and Ubuntu
 	* since I'm on MacOS, and I use homebrew, I used <code>brew install mongodb-community</code>
@@ -260,6 +262,18 @@ __The following commands can be used to navigate, create and remove databases an
 To get some inline help:
 
 * `help` - get help on available commands
+
+</section>
+
+<section markdown="block">
+## A Note About Names
+
+__Although the examples in these slides don't always follow these conventions, these are some common rules for naming__:
+
+* {:.fragment} use camel case (or all lowercase)
+* {:.fragment} database names should be singular
+* {:.fragment} collection names should be plural
+* {:.fragment} keys do not have to be quoated
 
 </section>
 
