@@ -273,7 +273,9 @@ __Although the examples in these slides don't always follow these conventions, t
 * {:.fragment} use camel case (or all lowercase)
 * {:.fragment} database names should be singular
 * {:.fragment} collection names should be plural
-* {:.fragment} keys do not have to be quoated
+* {:.fragment} keys do not have to be quoted
+	* {:.fragment} unless the key is not a valid variable name
+	* {:.fragment} for example, subdoc queries (we'll see later) require quotes: `{'parent.child': value}`
 
 </section>
 
