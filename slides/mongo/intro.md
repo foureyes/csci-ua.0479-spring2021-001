@@ -177,28 +177,41 @@ The __Object ID__ is a 12-byte value, consists of: a 4-byte timestamp (seconds s
 <section markdown="block">
 ## A Whirlwind Tour
 
-Working with MongoDB on the commandline...
+__Starting your server__ &rarr; 
 
 If your OS doesn't autostart by default (Windows likely does this for you), you can run (on MacOS):
 
 <pre><code data-trim contenteditable>
 brew services start mongodb-community
 </code></pre>
+
+or
+
 <pre><code data-trim contenteditable>
 mongod
 </code></pre>
 
-To connect via the commandline MongoDB client and connect to a locally running instance:
+</section>
+
+<section markdown="block">
+## Tour Continued / Commandline Client
+
+__To connect via the commandline MongoDB client and connect to a locally running instance:__ &rarr;
 
 <pre><code data-trim contenteditable>
 mongo
 </code></pre>
+{:.fragment}
 
 This drops you into the MongoDB shell (yay... more shell). You can issue commands that
+{:.fragment}
 
-* inspect the database
-* modify and create documents and collections
-* find documents
+* {:.fragment} inspect the database
+* {:.fragment} modify and create documents and collections
+* {:.fragment} remove documents
+* {:.fragment} find documents
+* {:.fragment} use aggregation, calculate values, etc. 
+
 </section>
 
 <section markdown="block">
