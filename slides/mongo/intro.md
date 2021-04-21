@@ -51,7 +51,7 @@ __Sounds good 👍 ... why didn't we start using these in the first place?__ &ra
 
 Some compromises that a NoSQL database may have to make:
 
-* {:.fragment} not usually ACID compliant
+* {:.fragment} not usually ACID compliant (though MongoDB has had some level of [ACID compliance](https://www.mongodb.com/basics/transactions) since ~2018/ version 4)
 * {:.fragment} simple data structures and architecture moves constraints and referential integrity to application layer
 * {:.fragment} lack of standard (or at least mostly standard) language like SQL
 * {:.fragment} some NoSQL systems even exhibit lost writes or data loss (because not ACID compliant)
