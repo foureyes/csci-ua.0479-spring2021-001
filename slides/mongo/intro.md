@@ -175,7 +175,7 @@ The __Object ID__ is a 12-byte value, consists of: a 4-byte timestamp (seconds s
 </section>	
 
 <section markdown="block">
-## A Whirlwind Tour
+## A Whirlwind Tour / MongoDB Server
 
 __Starting your server__ &rarr; 
 
@@ -184,12 +184,18 @@ If your OS doesn't autostart by default (Windows likely does this for you), you 
 <pre><code data-trim contenteditable>
 brew services start mongodb-community
 </code></pre>
+{:.fragment}
 
 or
+{:.fragment}
 
 <pre><code data-trim contenteditable>
 mongod
 </code></pre>
+{:.fragment}
+
+On windows, you may find it under the services panel.
+{:.fragment}
 
 </section>
 
