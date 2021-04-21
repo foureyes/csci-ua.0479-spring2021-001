@@ -146,9 +146,9 @@ __Because we have one school to many students, we _could_ embed student document
   schoolName: "NYU",
   city: "New York",
   students: [
-    {first: "Beth", last: "Boolean", major: "CS"},
-    {first: "Alice", last: "Algo", major: "CS"},
-    {first: "Ben", last: "Bio", major: "Biology"}
+    {first: "Beth", last: "Boolean", major: "Philosophy"},
+    {first: "Ben", last: "Bio", major: "Biology"},
+    {first: "Alice", last: "Artist", major: "Fine Arts"}
     // so many more...
   ]
 }
@@ -168,7 +168,7 @@ __An alternative is to store a `school` document in a `student` document__ &rarr
 { 
   first: "Beth", 
   last: "Boolean", 
-  major: "CS",
+  major: "Philosophy",
   school: {name: "NYU", city: "New York"}
 }
 </code></pre>
@@ -218,7 +218,7 @@ __Can many-to-many be implemented using embedded documents? For example, can a m
 
 __An alternative to embedding is using references (linking by id)__
 
-* {:.fragment} this is similar to a foreign key, but there are _no actual_ constraints (an id can point to a non-existent document) 
+* {:.fragment} this is similar to a foreign key, but there are _no actual_ constraints (an it can point to a non-existent document) 
 * {:.fragment} the earlier example of a `student` document containing and embedded `school` document can be re-designed to use references instead
 * {:.fragment} (this is a bit familiar, as it mimics the _normalized_ data models that we created with relational databases)
 
@@ -297,7 +297,7 @@ db.actors.find({_id: {$in: m.actors}});
 </code></pre>
 {:.fragment}
 
-Note that as of MongoDB 3.2 (~2015), the `$lookup` aggregate operator is available to mimic a left outer join.
+Note that as of MongoDB 3.2 (~2015), the [`$lookup` aggregate operator](https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/index.html) is available to mimic a left outer join.
 {:.fragment}
 
 {% comment %}

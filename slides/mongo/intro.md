@@ -169,7 +169,7 @@ The __Object ID__ is a 12-byte value, consists of: a 4-byte timestamp (seconds s
 * basically, just [use the appropriate installer from their downloads page](http://www.mongodb.org/downloads)
 * if you use a package manager, do that instead 
 	* they have .debs for Debian and Ubuntu
-	* since I'm on OSX, and I use homebrew, I used <code>brew install mongodb</code>
+	* since I'm on MacOS, and I use homebrew, I used <code>brew install mongodb-community</code>
 * starting will vary based on OS
 * you may need to create and/or specify a directory where your data will be stored, so if mongo doesn't start up, it's missing its data directory
 </section>	
@@ -179,8 +179,11 @@ The __Object ID__ is a 12-byte value, consists of: a 4-byte timestamp (seconds s
 
 Working with MongoDB on the commandline...
 
-If your OS doesn't autostart by default, you can run:
+If your OS doesn't autostart by default (Windows likely does this for you), you can run (on MacOS):
 
+<pre><code data-trim contenteditable>
+brew services start mongodb-community
+</code></pre>
 <pre><code data-trim contenteditable>
 mongod
 </code></pre>

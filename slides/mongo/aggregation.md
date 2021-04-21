@@ -81,6 +81,7 @@ db.jobs.find(filter, fields).sort({'Job ID': 1}).pretty();
 
 __Show the top 20 jobs based on highest "to" salary (use `Salary Range To`)__ &rarr;
 
+(only show Job ID, Business Title, Posting Date, and Salary Range To)
 <pre><code data-trim contenteditable>
 var fields = {
 	_id: 0, 
@@ -88,6 +89,10 @@ var fields = {
 	"Business Title": 1, 
 	"Posting Date": 1, 
 	"Salary Range To": 1};
+</code></pre>
+{:.fragment}
+
+<pre><code data-trim contenteditable>
 var orderBy = {"Salary Range To": -1};
 db.jobs.find({}, fields).sort(orderBy).limit(20).pretty();
 </code></pre>
@@ -140,7 +145,7 @@ Pass in an Array containing a sequence of aggregation pipeline stages.
 __We'll use some of the following stages__ &rarr;
 
 1. {:.fragment} `$match` - to filter documents
-2. {:.fragment} `$count` - to count the number documents at this stage
+2. {:.fragment} `$count` - to count the number documents at this stage (only available in > 3.4)
 3. {:.fragment} `$project` - to calculate or select fields
 4. {:.fragment} `$group` - to group documents
 </section>
@@ -152,7 +157,7 @@ __Looking at some of these stages, there's something that seems _redundant_ abou
 
 * {:.fragment} don't most of these stages have a counterpart already? 
 	* `$match` is like query 
-	* `$project` and `count` are like, _well_, project, and `.count`)
+	* `$project` and `count` are like, _well_, "project", and `.count`)
 * {:.fragment} __however... these are stages in a pipeline of operations__ ...so they can be chained, repeated... and take advantage of aggregation / grouping!  🎆
 
 
@@ -161,7 +166,7 @@ __Looking at some of these stages, there's something that seems _redundant_ abou
 <section markdown="block">
 ## Other Stages
 
-__Additionally, there are more (perhaps not as _familiar stages)__: 
+__Additionally, there are more (perhaps not as _familiar_ stages)__: 
 {:.fragment}
 
 * {:.fragment} such as `$addFields` (similar to `$project`), `$bucket` (_binning values_),  and `$sample` (to select a random number of documents from its input) 
@@ -202,8 +207,7 @@ __The `$match` operator filters documents__ &rarr;
 </section>
 
 <section markdown="block">
-## $count
-
+## $count (only available in 3.4)
 __As the name implies, counts the number of documents incoming from the previous stage__ &rarr;
 
 * {:.fragment} this actually acts a bit like `$group` and `$project` together, as we'll see those capabilities later)
@@ -257,7 +261,7 @@ Some examples include:
 
 __Additional operations... and expressions__ &rarr;
 
-* {:.fragment} [`$add`](https://docs.mongodb.com/manual/reference/operator/aggregation/add/#exp._S_add), [`$subtract`](https://docs.mongodb.com/manual/reference/operator/aggregation/subtract/#exp._S_subtract), etc. ... `{$subtract: ["$field1", "$field2"]} // field1 - field2`
+* {:.fragment} [`$add`](https://docs.mongodb.com/manual/reference/operator/aggregation/add/#exp._S_add), [`$subtract`](https://docs.mongodb.com/manual/reference/operator/aggregation/subtract/#exp._S_subtract), [`$divide`](https://docs.mongodb.com/manual/reference/operator/aggregation/divide/), and [`$multiply`](https://docs.mongodb.com/manual/reference/operator/aggregation/multiply/), etc. ... `{$subtract: ["$field1", "$field2"]} // field1 - field2`
 * {:.fragment} and [sooo may others, like `$toUpper`, `$trim`, `{$arrayElemAt: someArray, someIndex}`, etc.](https://docs.mongodb.com/manual/reference/operator/aggregation/)
 
 Note that in most cases, the values can be arbitrary expressions that are: values at fields (`"$fieldName"`), a hardcoded value (`5`) or even the result of another operation (`{$op: [arg1, arg2}`)
@@ -279,6 +283,8 @@ db.jobs.aggregate([{$project: projection}]);
 __Combining `$match` and `$project`: show jobs that have "External" `Posting Type` with a subset of fields__ &rarr;
 {:.fragment}
 
+Let's retrieve only Job ID, Posting Type as ptype, and title...
+{:.fragment}
 <pre><code data-trim contenteditable>
 var projection = {
   _id:0, 
@@ -286,6 +292,10 @@ var projection = {
   ptype: "$Posting Type", 
   "title": {$toUpper: "$Business Title"}
 };
+</code></pre>
+{:.fragment}
+
+<pre><code data-trim contenteditable>
 db.jobs.aggregate([
 	{$match: {"Posting Type": "External"}}, 
 	{$project: projection}]);
@@ -297,9 +307,9 @@ db.jobs.aggregate([
 <section markdown="block">
 ## A More Complicated `$project`
 
-__Now let's try creating an arbitrary complex expression by nesting a split within an arrayElemenAt__ &Rarr;
+__Now let's try creating an arbitrary complex expression by nesting a split within an arrayElemenAt__ &rarr;
 
-The following breaks up the `Job Category` field and retrieves the first element
+The following breaks up the `Job Category` field and retrieves the first element (this will only work on 3.4 due to #split)
 {:.fragment}
 
 <pre><code data-trim contenteditable>
@@ -383,7 +393,7 @@ __Unlike sql `SELECT`, the order of the stages in a call to `aggregate` can be s
 
 
 * {:.fragment} try to place `$match` operations earlier... __why__ &rarr;
-* {:.fragment} $match reduces the total number of documents to be processed 
+* {:.fragment} `$match` reduces the total number of documents to be processed 
 * {:.fragment} which means that later stages won't have to deal with large volumes of documents!
 
 </section>
@@ -392,7 +402,7 @@ __Unlike sql `SELECT`, the order of the stages in a call to `aggregate` can be s
 <section markdown="block">
 ## Match
 
-__Make a simple aggregation pipeline that acts like find to filter such that the minimum `Salary Range From` in our results is $200,000__ &rarr;
+__Make a simple aggregation pipeline that acts like find to filter such that the minimum `Salary Range From` in our results is $155,000__ &rarr;
 
 <pre><code data-trim contenteditable>
 var min_from = {$match: {"Salary Range From": {$gt: 200000}}}
