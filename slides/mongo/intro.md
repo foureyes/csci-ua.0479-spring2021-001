@@ -479,8 +479,10 @@ db.snakes.find({name: 'hissy elliot'})
 ```
 db.collection.update(query, updateDoc, {multi: true}) // update all!
 // ⚠️  otherwise, only 1
-
 ```
+{:.fragment}
+
+`updateOne` and `updateMany` also exist with `multi` set appropriately.
 {:.fragment}
 
 </section>

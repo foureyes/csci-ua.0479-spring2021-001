@@ -291,6 +291,32 @@ __Typically, references to other documents are resolved simply by issuing multip
 * {:.fragment} get a set of documents with `find`
 * {:.fragment} use the ids in those documents to get related documents with another call to `find`
 
+Let's try this out...
+{:.fragment}
+
+```
+db.movies.insert({_id: 1, title: "Blue Velvet", actors: [2, 3] })
+```
+{:.fragment}
+```
+db.actors.insertMany([
+	{_id: 1, first: 'Riz', last: 'Ahmed'}, 
+	{_id: 2, first: 'Laura',  last: 'Dern'}, 
+	{_id: 3, first: 'Denis', last: 'Hopper'}
+])
+```
+{:.fragment}
+
+</section>
+
+<section markdown="block">
+## Joining Continued
+
+__Using multiple queries to simulate a join__ &rarr;
+
+1. find a movie
+2. find all actors that have an id that exists in that movie
+
 <pre><code data-trim contenteditable>
 var m = db.movies.findOne({title: "Blue Velvet"});
 db.actors.find({_id: {$in: m.actors}});
@@ -303,6 +329,7 @@ Note that as of MongoDB 3.2 (~2015), the [`$lookup` aggregate operator](https://
 {% comment %}
 remove italics_
 {% endcomment %}
+
 </section>
 
 
@@ -360,6 +387,23 @@ __Finally, why use MongoDB (or any document store) over a relational database__ 
 Some downsides:
 {:.fragment}
 
-* {:.fragment} lack of constraints (um... this is what makes it easy to use, tho... and constraints can be added in application layer)
+* {:.fragment} lack of constraints (um... this is what makes it easy to use, tho... and constraints can be added by using [schema validation](https://docs.mongodb.com/manual/core/schema-validation/) or in the application layer)
 * {:.fragment} no transactions (because some data can be modeled as embedded, a single atomic operation _can_ work on documents and sub-documents)
+</section>
+
+<section markdown="block">
+## A Note on Schema Validation
+
+__MongoDB does have [schema validation](https://docs.mongodb.com/manual/core/schema-validation/), but it must be enabled on a per collection basis__ &rarr;
+
+* {:.fragment} you can use it to require fields
+* {:.fragment} require specific types
+* {:.fragment} set arbitrary constraints, such as a value within a range
+
+Note, however, there are some limitations
+{:.fragment}
+
+* {:.fragment} you can add key value pairs that aren't in the schema validation
+* {:.fragment} there currently isn't functionality that's analogous to foreign key
+
 </section>
