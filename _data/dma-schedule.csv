@@ -1316,7 +1316,7 @@ __Mini Project due Monday Dec 9th at 11pm__
 
 * [Instructions for Free-form Homework Assignment](assignments/mini-project.html)
 -->",,"Geo-spatial Data (GIS with pandas, postgres, mongodb)",https://firebase.google.com/docs/firestore/ (Introduction to Secure and Validate Data)
-y,,25,28-Apr,Wed,"Aggregations, Python and MongoDB
+,,25,28-Apr,Wed,"Aggregations, Python and MongoDB
 
 * see aggregation slides
 * [Python and MongoDB with PyMongo](slides/mongo/pymongo.html)
@@ -1333,7 +1333,16 @@ Web Based Visualization and / or Cloud Databases
 * [Deployment with MongoDB Atlas and Glitch](slides/cloud/deploy.html) Cloud Storage 
 * Cloud Document Store
 -->
-",,,,Thanksgiving Recess: No classes scheduled,"https://bost.ocks.org/mike/bar/
+",,"__In-Class Workshop (Homework #09)__ – Due __End of Class Today__
+
+* to be posted
+
+<!--
+* [Workshop Instructions](assignments/09.html)
+-->
+
+<!-- __Quiz #07 and #08__ – due Thursday morning, 4/24, at 9:30am -->
+",,Thanksgiving Recess: No classes scheduled,"https://bost.ocks.org/mike/bar/
  https://bost.ocks.org/mike/bar/2/
  https://bost.ocks.org/mike/bar/3/"
 y,,26,03-May,Mon,"Web Based Visualization and / or Cloud Databases
