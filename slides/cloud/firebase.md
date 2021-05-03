@@ -4,24 +4,40 @@ title: "Firebase"
 ---
 
 <section markdown="block">
-## Firebase
+## Installing with a Database Instance
 
-* Cloud Firestore (database)
-* Firebase Hosting (static resource hosting)
+__Where can a database server _live_ (that is, where can a DBMS be "installed")__ &rarr;
+
+* {:.fragment} locally (like your local install of postgres or MongoDB)
+* {:.fragment} on a remote computer, your own (procure rack space, purchase and install server in cage)
+* {:.fragment} on a remote computer, shared with others (shared hosting, such as MongoDB on Courant)
+* {:.fragment} installed on some _virtual server_ (EC2 instance)
+* {:.fragment} offered as a service / _cloud_ (MongoDB Atlas)
 
 </section>
 
 <section markdown="block">
-## Difference Between Firebase
+## Firebase
 
-* [Docs on Firebase Realtime Database vs Cloud Firestore](https://firebase.google.com/docs/firestore/rtdb-vs-firestore)
-* [StackOverflow summary](https://stackoverflow.com/questions/46549766/whats-the-difference-between-cloud-firestore-and-the-firebase-realtime-database)
+__Popular cloud database platform; some relevant services provided include__ &rarr;
 
+* {:.fragment} Database products
+	* Cloud Firestore 
+	* Realtime Database
+* {:.fragment} Firebase Hosting (static resource hosting)
+
+</section>
+
+<section markdown="block">
+## Differences
+
+See the [docs on Firebase Realtime Database vs Cloud Firestore](https://firebase.google.com/docs/firestore/rtdb-vs-firestore) for differences between the two database products &rarr;
+
+* {:.fragment} [StackOverflow](https://stackoverflow.com/questions/46549766/whats-the-difference-between-cloud-firestore-and-the-firebase-realtime-database) also has a good summary
 * collections
 * nested documents (nested collections)
-* ordered queries
-* shallow queries
-* {:.fragment} sounds a lot like mongodb, but has a lot of interesting features not found in mongodb (such as shallow queries)
+* shallow queries (allows control of nesting depth in query results)
+* {:.fragment} sounds a lot like mongodb, but has a lot of interesting features not found in mongodb (such as shallow queries, realtime updates from the server built-in)
 
 
 </section>
@@ -150,34 +166,72 @@ doc_ref.set({
 </section>
 
 
-{% comment %}
+<section markdown="block">
+## API, Hosting Intro
+
 __Note__ When you create a Cloud Firestore project, it also enables the API in the Cloud API Manager.
 
-This means that you can use _client-side_ JavaScript (that is, JavaScript running in the browser) to access the data you have in Firestore.
+* {:.fragment} This means that you can use _client-side_ JavaScript (that is, JavaScript running in the browser) to access the data you have in Firestore.
+* {:.fragment} Additionally, Firebase allows __free hosting of static files__ (like html, images, etc.)
 
-Additionally, Firebase allows free hosting of static files (like html, images, etc.)
+This is kind of a __big deal__: it basically allows you to build a _"serverless"_ web app that connects to a database in the cloud - can there be _any more buzzwords?_
+{:.fragment}
 
-This is kind of a big deal: it basically allows you to build a _"serverless"_ web app that connects to a database in the cloud - can there be _any more buzzwords?_
+</section>
 
-In this part, we'll create a local HTML page and use the Firebase JavaScript client library to connect to the database.
 
-1. Create a file called `index.html`
-	* add the following code
-	<pre><code data-trim contenteditable>&lt;!DOCTYPE html&gt;
-&lt;head&gt;
-&lt;title&gt;&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;svg class="scooterChart"&gt;&lt;/svg&gt;
-&lt;script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"&gt;&lt;/script&gt; 
-&lt;script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-&lt;/script&gt;
-&lt;!-- your code goes here --&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-	* note that it includes the firebase client side JavaScript library (we'll use these in the next step!)
+<section markdown="block">
+## Preparing to Add an App
+
+Create an app to "show" data. We'll use a __frontend only web app__ &rarr;
+
+1. Start a new _hosted_ web app
+	* `Project Settings`
+	* In heading `Select platform to get started`...
+	* select &lt; &gt; for a web app
+2. Give your app a name
+3. Click on the hosting checkbox
+4. Finally, go to hosting &rarr; `Get Started`
+
+</section>
+
+<section markdown="block">
+## Create Frontend Only Web App
+
+Install and use the commandline tools to create and deploy web app &rarr;
+
+* {:.fragment} `npm install -g firebase-tools`
+* {:.fragment} `firebase login` to authenticate
+* {:.fragment} login w/ google account
+* {:.fragment} `firebase init`
+	* choose hosting
+	* choose existing project
+	* choose project you just created
+
+
+
+</section>
+
+<section markdown="block">
+## JavaScript
+
+__Add this JavaScript to `index.html` to read date form database and log from console.
+
+```
+document.addEventListener('DOMContentLoaded', async function() {
+    const loadEl = document.querySelector('#load');
+	const db = firebase.firestore();
+	const results = await db.collection('snakes').get()
+	results.forEach((doc) => {
+		let d = doc.data();
+		console.log('got it!', d);
+	});
+});
+```
+
+</section>
+{% comment %}
+
 2. Start writing JavaScript to connect to your database 
 	* add the following code between the script tags in your html file:
 		<pre><code data-trim contenteditable>firebase.initializeApp({
