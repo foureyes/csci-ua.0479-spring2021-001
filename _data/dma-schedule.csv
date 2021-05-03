@@ -1342,16 +1342,21 @@ Web Based Visualization and / or Cloud Databases
 ",,Thanksgiving Recess: No classes scheduled,"https://bost.ocks.org/mike/bar/
  https://bost.ocks.org/mike/bar/2/
  https://bost.ocks.org/mike/bar/3/"
-y,,26,03-May,Mon,"Web Based Visualization and / or Cloud Databases
+,,26,03-May,Mon,"Web Based Visualization and / or Cloud Databases
+
+* [firebase quickstart](slides/cloud/firebase.html)
+* [svg + d3](d3/overview.html)
 
 <!--
-* [svg + d3](d3/overview.html)
+
 
  ...or Preview Processing Large Data Sets (Spark or Hadoop)
 -->
-",,"__Homework #08__  due 5/1 at 11pm
+",,"<!--
+__Homework #08__  due 5/1 at 11pm
 
-* [Homework #08 / In-Class Group Workshop Instructions](assignments/08-mongo-py-dash.html)",,"Web Based Visualization (D3)
+* [Homework #08 / In-Class Group Workshop Instructions](assignments/08-mongo-py-dash.html)
+-->",,"Web Based Visualization (D3)
 
 * [svg + d3](d3/overview.html)
 ",Reading TBD

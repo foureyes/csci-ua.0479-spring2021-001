@@ -4,9 +4,9 @@ title: "Firebase"
 ---
 
 <section markdown="block">
-## Installing with a Database Instance
+## A Database Instance
 
-__Where can a database server _live_ (that is, where can a DBMS be "installed")__ &rarr;
+__Where can a database server _live_ (that is, where can a DBMS be "installed")?__ &rarr;
 
 * {:.fragment} locally (like your local install of postgres or MongoDB)
 * {:.fragment} on a remote computer, your own (procure rack space, purchase and install server in cage)
@@ -34,9 +34,9 @@ __Popular cloud database platform; some relevant services provided include__ &ra
 See the [docs on Firebase Realtime Database vs Cloud Firestore](https://firebase.google.com/docs/firestore/rtdb-vs-firestore) for differences between the two database products &rarr;
 
 * {:.fragment} [StackOverflow](https://stackoverflow.com/questions/46549766/whats-the-difference-between-cloud-firestore-and-the-firebase-realtime-database) also has a good summary
-* collections
-* nested documents (nested collections)
-* shallow queries (allows control of nesting depth in query results)
+* {:.fragment} collections
+* {:.fragment} nested documents (nested collections)
+* {:.fragment} shallow queries (allows control of nesting depth in query results)
 * {:.fragment} sounds a lot like mongodb, but has a lot of interesting features not found in mongodb (such as shallow queries, realtime updates from the server built-in)
 
 
@@ -79,7 +79,7 @@ Create a database
 
 1. {:.fragment} Click on `Firstore` in the left-hand navigation bar 
 2. {:.fragment} When the menu opens up, click on `Create Database`... 
-3. {:.fragment} Switch to `Test Mode` (if you're not using this for testing, make sure to [read the docs on securing your database](https://firebase.google.com/docs/firestore/security/get-started)
+3. {:.fragment} Switch to `Test Mode` (if you're not using this for testing, make sure to [read the docs on securing your database](https://firebase.google.com/docs/firestore/security/get-started))
 4. {:.fragment} Click on `Next`
 5. {:.fragment} Set location
 6. {:.fragment} Click on `Enable`
@@ -215,7 +215,7 @@ Install and use the commandline tools to create and deploy web app &rarr;
 <section markdown="block">
 ## JavaScript
 
-__Add this JavaScript to `index.html` to read date form database and log from console.
+__Add this JavaScript to `index.html` to read date form database and log from console.__ &rarr;
 
 ```
 document.addEventListener('DOMContentLoaded', async function() {
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 	const results = await db.collection('snakes').get()
 	results.forEach((doc) => {
 		let d = doc.data();
-		console.log('got it!', d);
+		console.log(d);
 	});
 });
 ```
